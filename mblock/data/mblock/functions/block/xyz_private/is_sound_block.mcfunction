@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ #mblock:soundable run function mblock:sound/sounds/block_index
