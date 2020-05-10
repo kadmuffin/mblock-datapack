@@ -1,6 +1,19 @@
 {
 	"values": [
 		"#planks",
-		"gold_block"
+		"#sand",
+		"glass",
+		"stone",
+		"gold_block",
+		"clay",
+		"packed_ice",
+		"#wool",
+		"bone_block",
+		"iron_block",
+		"soul_sand",
+		"pumpkin",
+		"emerald_block",
+		"hay_block",
+		"glowstone"
 	]
 }

@@ -1,8 +1,8 @@
 # D
-execute if score #tone _mbtmp matches 8 run playsound minecraft:block.note_block.flute block @a[distance=0..15] ~ ~ ~ 1 0.793701
+execute if score #tone _mbtmp matches 8 run playsound minecraft:block.note_block.flute block @a[distance=0..48] ~ ~ ~ 3 0.793701
 # D#/Eb
-execute if score #tone _mbtmp matches 9 run playsound minecraft:block.note_block.flute block @a[distance=0..15] ~ ~ ~ 1 0.840896
+execute if score #tone _mbtmp matches 9 run playsound minecraft:block.note_block.flute block @a[distance=0..48] ~ ~ ~ 3 0.840896
 # E
-execute if score #tone _mbtmp matches 10 run playsound minecraft:block.note_block.flute block @a[distance=0..15] ~ ~ ~ 1 0.890899
+execute if score #tone _mbtmp matches 10 run playsound minecraft:block.note_block.flute block @a[distance=0..48] ~ ~ ~ 3 0.890899
 # F
-execute if score #tone _mbtmp matches 11 run playsound minecraft:block.note_block.flute block @a[distance=0..15] ~ ~ ~ 1 0.943874
+execute if score #tone _mbtmp matches 11 run playsound minecraft:block.note_block.flute block @a[distance=0..48] ~ ~ ~ 3 0.943874

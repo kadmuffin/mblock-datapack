@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #mblock:octaves_bin/1/0-6 run function mblock:sound/tones/xyz_private/binary_tree/0-6
+execute if block ~ ~ ~ #mblock:octaves_bin/1/7-12 run function mblock:sound/tones/xyz_private/binary_tree/7-12

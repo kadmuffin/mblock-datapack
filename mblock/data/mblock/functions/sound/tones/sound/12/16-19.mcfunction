@@ -1,8 +1,8 @@
 # A#/Bb
-execute if score #tone _mbtmp matches 16 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..15] ~ ~ ~ 1 1.259921
+execute if score #tone _mbtmp matches 16 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..48] ~ ~ ~ 3 1.259921
 # B
-execute if score #tone _mbtmp matches 17 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..15] ~ ~ ~ 1 1.334840
+execute if score #tone _mbtmp matches 17 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..48] ~ ~ ~ 3 1.334840
 # C
-execute if score #tone _mbtmp matches 18 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..15] ~ ~ ~ 1 1.414214
+execute if score #tone _mbtmp matches 18 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..48] ~ ~ ~ 3 1.414214
 # C#/Db
-execute if score #tone _mbtmp matches 19 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..15] ~ ~ ~ 1 1.498307
+execute if score #tone _mbtmp matches 19 run playsound minecraft:block.note_block.didgeridoo block @a[distance=0..48] ~ ~ ~ 3 1.498307
