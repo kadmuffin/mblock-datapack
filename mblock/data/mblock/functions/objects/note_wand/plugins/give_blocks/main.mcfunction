@@ -1,0 +1,3 @@
+execute as @s[scores={mb_player=0},tag=_octave_found,tag=!holding_block,tag=!sneaking,tag=_off_hand,tag=clicking] run function mblock:objects/note_wand/plugins/note_get/langs/noteblock
+execute as @s[scores={mb_player=1},tag=_octave_found,tag=!holding_block,tag=!sneaking,tag=_off_hand,tag=clicking] run function mblock:objects/note_wand/plugins/note_get/langs/english
+execute as @s[scores={mb_player=2},tag=_octave_found,tag=!holding_block,tag=!sneaking,tag=_off_hand,tag=clicking] run function mblock:objects/note_wand/plugins/note_get/langs/spanish

@@ -6,3 +6,5 @@ execute if block ~ ~-1 ~ magenta_glazed_terracotta[facing=south] run scoreboard 
 execute if block ~ ~-1 ~ magenta_glazed_terracotta[facing=south] run scoreboard players set #dir_gen _mbtmp 1
 execute if block ~ ~-1 ~ magenta_glazed_terracotta[facing=north] run scoreboard players set #dir _mbtmp 3
 execute if block ~ ~-1 ~ magenta_glazed_terracotta[facing=north] run scoreboard players set #dir_gen _mbtmp 1
+
+execute if block ~ ~-1 ~ magenta_glazed_terracotta run scoreboard players set #z_travelled _mbtmp 0
