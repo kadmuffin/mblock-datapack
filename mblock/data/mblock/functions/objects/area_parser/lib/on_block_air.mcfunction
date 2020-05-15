@@ -12,4 +12,4 @@
 # - "on_end"
 
 # Example code (show box)
-#execute as @s[tag=on_side,tag=!on_side_center] run particle end_rod ~ ~ ~
+execute as @s[tag=on_side,tag=!on_side_center] run particle end_rod ~ ~ ~
