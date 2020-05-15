@@ -1,8 +1,8 @@
 # > NoteWand: A Tool while building songs with this datapack.
 #
 # Let's you manage more easy what blocks are notes,
-# for now external plugins need to modify the files
-# inside the plugins folder in order to work.
+# for external plugins look the setup notes
+# in the file ./xyz_private/plugins.mcfunction
 #
 # If you want to use this folder in your datapack do this:
 #  
@@ -19,5 +19,5 @@ scoreboard objectives add _rayc_tmp dummy
 scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
 
-# 10 / 2 = 5 blocks limit (change travel distance on xyz_private/raycast)
+# 10 / 2 = 5 blocks limit (change travel distance on xyz_private/raycast, default 0.5 blocks)
 scoreboard players set #LimitDistance _rayc_tmp 10

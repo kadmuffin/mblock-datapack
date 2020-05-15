@@ -1,3 +1,5 @@
+# Plays a sequence of tones based on sound
+
 execute if entity @a[tag=!_schedule] run scoreboard players set #tone _mbtmp 0
 tag @a[tag=!_schedule] add _schedule
 

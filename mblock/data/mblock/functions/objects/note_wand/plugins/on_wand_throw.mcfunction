@@ -2,7 +2,7 @@
 #
 # Place here any functions or commands
 # that should be run when the wand item is 
-# after thrown to the floor next to player legs.
+# thrown to the floor next to player legs.
 #
 # Here are some commands that should go here:
 #  /function my_pack:my_function
