@@ -1,5 +1,8 @@
 # > On Block not Air
 #
+# Disabled by default, run for enabling it:
+#  /tag @s check_air
+#
 # Put here any code that should be run 
 # when the block is not air.
 #

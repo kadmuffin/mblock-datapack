@@ -5,4 +5,3 @@ execute if score @s aparse.xsize matches 1.. run function mblock:objects/area_pa
 
 execute positioned ~1 ~ ~ if score @s[tag=!look_neg] _aparse_tmp2 < @s aparse.zsize run function mblock:objects/area_parser/lib/movement/depth_z
 execute positioned ~-1 ~ ~ if score @s[tag=look_neg] _aparse_tmp2 < @s aparse.zsize run function mblock:objects/area_parser/lib/movement/depth_z
-
