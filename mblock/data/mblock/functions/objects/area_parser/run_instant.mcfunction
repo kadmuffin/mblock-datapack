@@ -18,10 +18,8 @@
 #   * Invert the looking direction
 #
 
-tag @s[tag=!x_axis,tag=!z_axis] add x_axis
-tag @s[tag=x_axis,tag=z_axis] remove x_axis
-
 execute unless score @s aparse.ysize matches 1.. run scoreboard players set @s aparse.ysize 1
 
 scoreboard players reset @s _aparse_tmp
-execute align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/area_parser/lib/movement/vertical
+execute as @s[tag=!_not_align] align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/area_parser/lib/movement/vertical
+execute as @s[tag=_not_align] run function mblock:objects/area_parser/lib/movement/vertical

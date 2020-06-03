@@ -5,7 +5,7 @@
 
 scoreboard players reset @s _aparse_tmp2
 
-execute if entity @s[tag=x_axis] run function mblock:objects/area_parser/lib/movement/depth_x
-execute if entity @s[tag=z_axis] run function mblock:objects/area_parser/lib/movement/depth_z
+execute if entity @s[scores={aparse.dir=0}] run function mblock:objects/area_parser/lib/movement/depth_x
+execute if entity @s[scores={aparse.dir=1}] run function mblock:objects/area_parser/lib/movement/depth_z
 
 scoreboard players reset @s _aparse_tmp2

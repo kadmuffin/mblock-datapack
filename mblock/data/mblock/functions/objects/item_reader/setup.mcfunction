@@ -1,0 +1,1 @@
+scoreboard objectives add _array_tmp dummy
