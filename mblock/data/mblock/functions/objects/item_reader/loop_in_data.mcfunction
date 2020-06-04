@@ -1,7 +1,7 @@
 execute as @s[tag=!counting_air] run scoreboard players remove length _array_tmp 1
 
 setblock ~ ~ ~ air
-setblock ~ ~-1 ~ stripped_spruce_wood
+execute if entity @s[tag=on_y_zero] run setblock ~ ~-1 ~ stripped_spruce_wood
 
 particle portal ~ ~ ~ 0.2 0.2 0.2 0.1 5
 

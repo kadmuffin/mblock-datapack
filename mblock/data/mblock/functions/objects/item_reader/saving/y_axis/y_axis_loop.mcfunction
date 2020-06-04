@@ -3,11 +3,13 @@ scoreboard players operation length _array_tmp = @e[tag=music_player,sort=neares
 
 scoreboard players reset estimated_zsize _array_tmp
 scoreboard players reset air_count _array_tmp
+scoreboard players reset total_air _array_tmp
 
 data modify entity @s Item.tag.z_data set value []
 
 tag @s remove look_neg
 tag @s remove skip_z_save
+tag @s remove counting_air
 
 execute if entity @e[tag=music_player,tag=look_neg,distance=0..1,limit=1] run tag @s add look_neg
 execute if entity @e[tag=music_player,scores={aparse.dir=0},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 0
