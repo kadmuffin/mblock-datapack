@@ -3,11 +3,15 @@ tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Saving Son
 
 execute store result score bpm _array_tmp run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
 execute store result entity @s Item.tag.song.bpm int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
+execute store result entity @s Item.tag.song.xsize int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
+execute store result score @s aparse.zsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
+execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 
 scoreboard players operation length _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
+scoreboard players reset estimated_zsize _array_tmp
 scoreboard players reset air_count _array_tmp
 #scoreboard players reset total_air _array_tmp
-scoreboard players operation zsize _array_tmp = length _array_tmp
+#scoreboard players operation zsize _array_tmp = length _array_tmp
 
 execute if entity @e[tag=music_player,tag=look_neg,distance=0..1,limit=1] run tag @s add look_neg
 execute if entity @e[tag=music_player,scores={aparse.dir=0},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 0
@@ -23,7 +27,7 @@ execute as @s[tag=look_neg,scores={aparse.dir=0}] positioned ~ ~-1 ~-3 run funct
 execute as @s[tag=look_neg,scores={aparse.dir=1}] positioned ~-3 ~-1 ~ run function mblock:objects/item_reader/saving/loop_in_blocks
 
 
-execute store result entity @s Item.tag.song.zsize int 1 run scoreboard players get zsize _array_tmp
+execute store result entity @s Item.tag.song.zsize int 1 run scoreboard players get estimated_zsize _array_tmp
 
 execute store result entity @s Item.tag.song.array_size int 1 run data get entity @s Item.tag.data
 

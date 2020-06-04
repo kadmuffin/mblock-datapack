@@ -8,5 +8,5 @@
 # Example (show the path that the code is going through)
 execute as @s[tag=_show_path] run particle sweep_attack ~ ~ ~
 
-execute as @s if block ~ ~ ~ magenta_glazed_terracotta run function mblock:objects/area_parser/lib/block/check_direc
+execute as @s[tag=!direction_protection] if block ~ ~ ~ magenta_glazed_terracotta run function mblock:objects/area_parser/lib/block/check_direc
 
