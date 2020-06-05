@@ -9,6 +9,8 @@ execute store result score @s aparse.zsize run scoreboard players get @e[tag=mus
 execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 
+scoreboard players remove @s aparse.zsize 2
+
 scoreboard players operation ylength _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 
 scoreboard players reset estimated_zsize _array_tmp
@@ -33,6 +35,9 @@ function mblock:objects/item_reader/saving/metadata/bpm
 function mblock:objects/item_reader/saving/metadata/travel_time
 function mblock:objects/item_reader/saving/metadata/array_size
 
+data modify entity @s Item.tag.display.Lore append value "\"§6Optimized on Save:\""
+data modify entity @s[tag=!optimize_data] Item.tag.display.Lore append value "\"§4False\""
+data modify entity @s[tag=optimize_data] Item.tag.display.Lore append value "\"§aTrue\""
 
 data modify entity @s PickupDelay set value 0s
 

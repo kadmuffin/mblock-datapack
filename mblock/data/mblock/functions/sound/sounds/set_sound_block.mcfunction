@@ -5,7 +5,7 @@ execute if score #sound _mbtmp matches 4 run setblock ~ ~ ~ stone
 execute if score #sound _mbtmp matches 5 run setblock ~ ~ ~ gold_block
 execute if score #sound _mbtmp matches 6 run setblock ~ ~ ~ clay
 execute if score #sound _mbtmp matches 7 run setblock ~ ~ ~ packed_ice
-execute if score #sound _mbtmp matches 8 run setblock ~ ~ ~ white_wool
+execute if score #sound _mbtmp matches 8 run setblock ~ ~ ~ orange_wool
 execute if score #sound _mbtmp matches 9 run setblock ~ ~ ~ bone_block
 execute if score #sound _mbtmp matches 10 run setblock ~ ~ ~ iron_block
 execute if score #sound _mbtmp matches 11 run setblock ~ ~ ~ soul_sand
