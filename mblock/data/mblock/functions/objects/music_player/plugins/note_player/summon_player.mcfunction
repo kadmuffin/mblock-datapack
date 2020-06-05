@@ -1,4 +1,4 @@
-function mblock:objects/music_player/plugins/tellraw_menu/kill_player
+function mblock:interface/commands/kill_player
 
 # Compute backend BPM
 function mblock:objects/music_player/plugins/note_player/utils/compute_bpm
@@ -22,3 +22,5 @@ scoreboard players operation @s aparse.zsize = @s mb_tmpz
 tag @s remove _summon_player
 tag @s remove _not_align
 tag @s remove instant_start
+
+playsound minecraft:block.barrel.close block @s ~ ~ ~ 1 1.8

@@ -1,4 +1,4 @@
-execute as @s[nbt={OnGround:1b},tag=sneaking,tag=clicking,tag=!_off_hand] if block ~ ~ ~ note_block positioned ~ ~1 ~ if entity @e[tag=music_player,distance=0..1] run tag @s add __menu
+execute as @s[nbt={OnGround:1b},tag=sneaking,tag=clicking,tag=!_off_hand] if block ~ ~ ~ note_block positioned ~ ~1 ~ if entity @e[tag=music_player,distance=0..1] run function mblock:interface/open
 
 # Get the tone integer from the block
 function mblock:objects/note_wand/plugins/note_get/main

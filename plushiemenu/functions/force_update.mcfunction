@@ -1,0 +1,2 @@
+scoreboard players reset VERSION _plushieSettings
+reload
