@@ -14,17 +14,19 @@ scoreboard players remove @s aparse.zsize 2
 scoreboard players operation ylength _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 
 scoreboard players reset estimated_zsize _array_tmp
+scoreboard players reset internal_zsize _array_tmp
 scoreboard players set array_size _array_tmp 0
 
 #scoreboard players reset total_air _array_tmp
 #scoreboard players operation zsize _array_tmp = length _array_tmp
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"BPM: ","color":"gray"},{"score":{"objective":"mb.bpm","name":"@e[tag=music_player,sort=nearest,limit=1]"},"color":"blue"}]
-tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Travel Time: ","color":"gray"},{"score":{"objective":"aparse.zsize","name":"@e[tag=music_player,sort=nearest,limit=1]"},"color":"blue"}]
 execute if entity @s[tag=optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Enabled","color":"blue"}]
 execute if entity @s[tag=!optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Disabled","color":"red"}]
 
 execute positioned ~ ~-1 ~ run function mblock:objects/item_reader/saving/y_axis/y_axis_loop
+
+tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Travel Time: ","color":"gray"},{"score":{"objective":"_array_tmp","name":"estimated_zsize"},"color":"blue"}]
 
 execute store result entity @s Item.tag.song.zsize int 1 run scoreboard players get estimated_zsize _array_tmp
 

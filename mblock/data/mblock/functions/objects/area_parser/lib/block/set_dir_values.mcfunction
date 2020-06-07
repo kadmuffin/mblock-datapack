@@ -1,4 +1,5 @@
-tag @s[tag=look_neg] add _look_neg
+scoreboard players reset @s aparse.dir
+tag @s remove look_neg
 
 execute if block ~ ~ ~ magenta_glazed_terracotta[facing=west] run scoreboard players set .new_direction _aparse_tmp5 1
 execute if block ~ ~ ~ magenta_glazed_terracotta[facing=west] run tag @s remove _look_neg
