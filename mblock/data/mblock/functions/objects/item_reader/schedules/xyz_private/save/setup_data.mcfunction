@@ -11,9 +11,11 @@ execute store result score @s aparse.zsize run scoreboard players get @e[tag=mus
 execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 
+scoreboard players add @s aparse.ysize 1
 scoreboard players remove @s aparse.zsize 2
 
 scoreboard players operation ylength _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
+scoreboard players add ylength _array_tmp 1
 
 scoreboard players reset estimated_zsize _array_tmp
 scoreboard players reset internal_zsize _array_tmp

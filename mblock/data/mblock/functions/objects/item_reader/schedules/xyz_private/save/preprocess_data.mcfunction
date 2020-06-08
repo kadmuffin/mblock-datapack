@@ -6,7 +6,8 @@ tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Travel Tim
 
 execute store result entity @s Item.tag.song.zsize int 1 run scoreboard players get estimated_zsize _array_tmp
 
-execute store result entity @s Item.tag.song.array_size int 1 run data get entity @s Item.tag.data
+#execute store result score array_size _array_tmp run data get entity @s Item.tag.data.notes[0]
+execute store result entity @s Item.tag.song.array_size int 1 run data get entity @s Item.tag.data.notes
 
 
 function mblock:objects/item_reader/saving/metadata/bpm
