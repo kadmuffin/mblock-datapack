@@ -11,6 +11,8 @@ execute if entity @s[tag=disable_bpm,tag=disable_size] run tag @e[tag=song] add 
 
 data modify entity @e[tag=song,limit=1] Item set from entity @s Item
 
+kill @s
+
 execute as @e[tag=song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/prepare_loop
 
 data modify entity @s PickupDelay set value 0s

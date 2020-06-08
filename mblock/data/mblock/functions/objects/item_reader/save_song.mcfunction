@@ -4,6 +4,6 @@ execute at @e[tag=music_player,sort=nearest,limit=1] align xyz positioned ~.5 ~.
 
 #data modify entity @e[tag=new_song,limit=1] Item set from entity @s Item
 
-execute as @e[tag=new_song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/saving/prepare_song
-
 kill @s
+
+execute as @e[tag=new_song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/saving/prepare_song
