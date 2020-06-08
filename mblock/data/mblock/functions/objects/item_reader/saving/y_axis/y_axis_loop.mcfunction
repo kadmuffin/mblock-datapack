@@ -10,7 +10,9 @@ scoreboard players operation length _array_tmp = @s aparse.zsize
 
 scoreboard players reset internal_zsize _array_tmp
 scoreboard players reset air_count _array_tmp
+scoreboard players reset tone_count _array_tmp
 scoreboard players reset total_air _array_tmp
+scoreboard players reset total_tones _array_tmp
 
 execute store result score @s aparse.zsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
 execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize

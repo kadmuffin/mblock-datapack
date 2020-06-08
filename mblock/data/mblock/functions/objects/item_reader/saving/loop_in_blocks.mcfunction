@@ -6,6 +6,7 @@ tag @s remove magenta_terracotta
 function mblock:block/get_tone
 function mblock:block/get_sound
 
+execute as @s[tag=counting_tone] run function mblock:objects/item_reader/saving/events/update_tone_event
 execute as @s[tag=counting_air] run function mblock:objects/item_reader/saving/events/update_air_event
 
 execute as @s[tag=!end_recursion,tag=on_y_zero] run function mblock:objects/item_reader/saving/events/register_events

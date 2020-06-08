@@ -3,7 +3,7 @@ execute as @s[tag=!self_align] at @e[tag=music_player,sort=nearest,limit=1] alig
 execute as @s[tag=!self_align] at @e[tag=music_player,sort=nearest,limit=1] align xyz positioned ~.5 ~.5 ~.5 run data merge entity @s {NoGravity:1b}
 execute as @s[tag=!self_align] at @e[tag=music_player,sort=nearest,limit=1] align xyz positioned ~.5 ~.5 ~.5 run data merge entity @s {Motion:[0.0,0.0,0.0]}
 
-execute as @s[tag=self_align] run summon item ~ ~ ~ {Tags:[song,self_align],Item:{id:"minecraft:note_block",Count:1b},PickupDelay:-32768s,NoGravity:1b}
+execute as @s[tag=self_align] run summon item ~ ~ ~ {Tags:[song,self_align],Item:{id:"minecraft:enchanted_book",Count:1b},PickupDelay:-32768s,NoGravity:1b}
 
 execute if entity @s[tag=disable_bpm] run tag @e[tag=song] add disable_bpm
 execute if entity @s[tag=disable_size] run tag @e[tag=song] add disable_size
