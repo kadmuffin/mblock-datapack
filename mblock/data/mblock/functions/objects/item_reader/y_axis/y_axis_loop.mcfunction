@@ -1,5 +1,7 @@
+# Notes: [ X: [ Z - Y0: [ ... ], Z - Y1: ... ] ]
+
 scoreboard players remove ylength _array_tmp 1
-execute store result score length _array_tmp run data get entity @s Item.tag.data.notes[0]
+execute store result score length _array_tmp run data get entity @s Item.tag.data.notes[0][0]
 
 #scoreboard players add length _array_tmp 1
 
@@ -16,17 +18,17 @@ execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_play
 execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set @s aparse.dir 0
 execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set @s aparse.dir 1
 
-data modify entity @s Item.tag.z_data set from entity @s Item.tag.data.notes[0]
+data modify entity @s Item.tag.z_data set from entity @s Item.tag.data.notes[0][0]
 
-execute if entity @s[tag=!self_align] if score @s _array_tmp matches 1.. as @s[tag=!look_neg,scores={aparse.dir=0}] positioned ~ ~ ~3 run function mblock:objects/item_reader/loop_in_data
-execute if entity @s[tag=!self_align] if score @s _array_tmp matches 1.. as @s[tag=!look_neg,scores={aparse.dir=1}] positioned ~3 ~ ~ run function mblock:objects/item_reader/loop_in_data
-execute if entity @s[tag=!self_align] if score @s _array_tmp matches 1.. as @s[tag=look_neg,scores={aparse.dir=0}] positioned ~ ~ ~-3 run function mblock:objects/item_reader/loop_in_data
-execute if entity @s[tag=!self_align] if score @s _array_tmp matches 1.. as @s[tag=look_neg,scores={aparse.dir=1}] positioned ~-3 ~ ~ run function mblock:objects/item_reader/loop_in_data
+execute if entity @s[tag=!self_align] if score length _array_tmp matches 1.. as @s[tag=!look_neg,scores={aparse.dir=0}] positioned ~ ~ ~3 run function mblock:objects/item_reader/loop_in_data
+execute if entity @s[tag=!self_align] if score length _array_tmp matches 1.. as @s[tag=!look_neg,scores={aparse.dir=1}] positioned ~3 ~ ~ run function mblock:objects/item_reader/loop_in_data
+execute if entity @s[tag=!self_align] if score length _array_tmp matches 1.. as @s[tag=look_neg,scores={aparse.dir=0}] positioned ~ ~ ~-3 run function mblock:objects/item_reader/loop_in_data
+execute if entity @s[tag=!self_align] if score length _array_tmp matches 1.. as @s[tag=look_neg,scores={aparse.dir=1}] positioned ~-3 ~ ~ run function mblock:objects/item_reader/loop_in_data
 
 
-execute if entity @s[tag=self_align] if score @s _array_tmp matches 1.. as @s run function mblock:objects/item_reader/loop_in_data
+execute if entity @s[tag=self_align] if score length _array_tmp matches 1.. as @s run function mblock:objects/item_reader/loop_in_data
 
-data remove entity @s Item.tag.data.notes[0]
+data remove entity @s Item.tag.data.notes[0][0]
 
 #execute if entity @s[tag=on_y_zero] run scoreboard players operation estimated_zsize _array_tmp = internal_zsize _array_tmp
 execute if entity @s[tag=on_y_zero] store result score events_length _array_tmp run data get entity @s Item.tag.data.events
