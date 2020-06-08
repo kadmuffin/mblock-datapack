@@ -1,4 +1,6 @@
 #data modify entity @s Item.tag.data
+tag @s remove _in_wait_for_save
+
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Saving Song...","color":"gray"}]
 
 execute store result score bpm _array_tmp run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
@@ -24,7 +26,8 @@ tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"BPM: ","co
 execute if entity @s[tag=optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Enabled","color":"blue"}]
 execute if entity @s[tag=!optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Disabled","color":"red"}]
 
-execute if entity @s run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Row X-0 Events...","color":"blue"}]
+data modify entity @s CustomNameVisible set value 1b
+data modify entity @s CustomName set value "\"§8[MusicBlocks] §9Storing Events...\""
 
 tag @s add middle
 tag @s add on_y_zero
@@ -32,32 +35,5 @@ tag @s add y_zero
 execute positioned ~ ~-1 ~ run function mblock:objects/item_reader/saving/y_axis/y_axis_loop
 tag @s remove middle
 
-execute positioned ~ ~ ~ run function mblock:objects/item_reader/saving/x_axis/main
-
-execute if entity @s run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Ended Saving Data","color":"green"}]
-
-tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Travel Time: ","color":"gray"},{"score":{"objective":"_array_tmp","name":"estimated_zsize"},"color":"blue"}]
-
-execute store result entity @s Item.tag.song.zsize int 1 run scoreboard players get estimated_zsize _array_tmp
-
-execute store result entity @s Item.tag.song.array_size int 1 run data get entity @s Item.tag.data
-
-
-function mblock:objects/item_reader/saving/metadata/bpm
-function mblock:objects/item_reader/saving/metadata/travel_time
-function mblock:objects/item_reader/saving/metadata/array_size
-
-data modify entity @s Item.tag.display.Lore append value "\"§6Optimized on Save:\""
-data modify entity @s[tag=!optimize_data] Item.tag.display.Lore append value "\"§4False\""
-data modify entity @s[tag=optimize_data] Item.tag.display.Lore append value "\"§aTrue\""
-
-data modify entity @s PickupDelay set value 0s
-
-#data remove entity @s Item.tag.tmp
-
-tag @s remove new_song
-
-tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Array Size: ","color":"gray"},{"score":{"objective":"_array_tmp","name":"array_size"},"color":"blue"}]
-tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Operation Finished","color":"gray"}]
-
-tp @s @p[nbt={OnGround:1b},dx=0,limit=1]
+tag @s add save_stage_2
+tag @s add _save_scheduled

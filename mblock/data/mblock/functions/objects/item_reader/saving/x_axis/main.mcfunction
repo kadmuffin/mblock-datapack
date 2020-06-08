@@ -14,3 +14,5 @@ execute if entity @s[scores={aparse.dir=0}] positioned ~1 ~ ~ run function mbloc
 execute if entity @s[scores={aparse.dir=1}] positioned ~ ~ ~1 run function mblock:objects/item_reader/saving/x_axis/horizontal_plus_z
 
 scoreboard players reset @s _aparse_tmp1
+
+function mblock:objects/item_reader/utils/reverse_data

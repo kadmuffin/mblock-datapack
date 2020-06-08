@@ -1,7 +1,5 @@
 execute store result score ylength _array_tmp run data get entity @s Item.tag.data.notes[0]
 
-setblock ~ ~1 ~ stone
-
 execute if score events_length _array_tmp matches 1.. run tag @s add _contains_events
 
 scoreboard players reset estimated_zsize _array_tmp

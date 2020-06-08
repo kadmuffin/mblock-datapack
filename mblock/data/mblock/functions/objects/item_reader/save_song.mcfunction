@@ -6,4 +6,8 @@ execute at @e[tag=music_player,sort=nearest,limit=1] align xyz positioned ~.5 ~.
 
 kill @s
 
-execute as @e[tag=new_song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/saving/prepare_song
+execute if entity @e[tag=_save_scheduled] as @e[tag=new_song,sort=nearest,limit=1] at @s run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Another saving operation is already in processing!, Waiting for it.","color":"red"}]
+execute if entity @e[tag=_save_scheduled] as @e[tag=new_song,sort=nearest,limit=1] at @s run tag @s add _in_wait_for_save
+execute unless entity @e[tag=_save_scheduled] as @e[tag=new_song,sort=nearest,limit=1] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/schedules/xyz_private/save/setup_data
+
+#execute as @e[tag=new_song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/saving/prepare_song

@@ -19,6 +19,7 @@ execute as @s[tag=!counting_air] store result score #sound _mbtmp run data get e
 execute as @s[tag=!counting_air] store result score #sound_dir _mbtmp if data entity @s Item.tag.z_data[0].sound_dir run data get entity @s Item.tag.z_data[0].sound_dir
 execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. if block ~ ~-1 ~ #mblock:replace_enabled_blocks run scoreboard players set #sound_dir _mbtmp 0
 execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. run scoreboard players set #sound_dir _mbtmp 1
+execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir if score #sound_dir _mbtmp matches 0 if score #sound _mbtmp matches 2 if block ~ ~-2 ~ air run setblock ~ ~-2 ~ stripped_spruce_wood
 # execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. if block ~1 ~ ~ #mblock:replace_enabled_blocks run scoreboard players set #sound_dir _mbtmp 2
 # execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. if block ~-1 ~ ~ #mblock:replace_enabled_blocks run scoreboard players set #sound_dir _mbtmp 3
 # execute as @s[tag=!counting_air] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. if block ~ ~ ~1 #mblock:replace_enabled_blocks run scoreboard players set #sound_dir _mbtmp 4
