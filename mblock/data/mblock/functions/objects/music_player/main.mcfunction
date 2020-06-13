@@ -5,3 +5,5 @@ execute as @e[type=item_frame,tag=music_player,tag=!dying_item_frame] at @s run 
 
 execute if score #tick mb_tmp matches 10.. run function mblock:objects/music_player/xyz_private/run_var_update_and_menu
 execute if score #tick mb_tmp matches 10.. run scoreboard players reset #tick mb_tmp
+
+function mblock:objects/music_player/plugins/note_player/main
