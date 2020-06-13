@@ -1,0 +1,2 @@
+execute if entity @e[tag=music_player,sort=nearest,limit=1] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.4 1.4
+execute as @e[tag=music_player,sort=nearest,limit=1] run function mblock:interface/commands/kill_player

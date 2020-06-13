@@ -1,0 +1,3 @@
+tellraw @s {"text":"\n"}
+
+tellraw @s ["",{"text":"[<<<]", "color":"gray", "clickEvent": {"action":"run_command","value":"/scoreboard players remove @s mb.menu.page 1"}},{"text":" "},{"text":"[>>>]", "color":"gray", "clickEvent": {"action":"run_command","value":"/scoreboard players add @s mb.menu.page 1"}},{"text":" "},{"text":"[X]","clickEvent":{"action":"run_command","value":"/function mblock:objects/music_player/plugins/tellraw_menu/utils/close_menu"}}]

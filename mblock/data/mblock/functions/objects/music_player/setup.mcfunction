@@ -31,5 +31,5 @@ scoreboard players set .scale mb.true_bpm 100
 scoreboard players set .bpm_div mb.true_bpm 112
 
 # Schedule functions at start
-function mblock:objects/music_player/plugins/note_player/schedule_update
-function mblock:objects/music_player/xyz_private/schedule_run_arrow
+#function mblock:objects/music_player/plugins/note_player/schedule_update
+#function mblock:objects/music_player/xyz_private/schedule_run_arrow
