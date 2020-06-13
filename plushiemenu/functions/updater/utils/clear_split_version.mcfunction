@@ -1,6 +1,0 @@
-scoreboard players reset VERSION_1 _plushieSettings
-scoreboard players reset VERSION_2 _plushieSettings
-scoreboard players reset VERSION_3 _plushieSettings
-scoreboard players reset VERSION_1 _plushieTMP2
-scoreboard players reset VERSION_2 _plushieTMP2
-scoreboard players reset VERSION_3 _plushieTMP2

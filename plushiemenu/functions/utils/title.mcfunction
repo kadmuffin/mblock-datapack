@@ -1,1 +1,0 @@
-tellraw @s ["",{"text":" \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020\u0020Plushie","color":"gold"},{"text":"Wolf\n","color":"dark_gray"}]

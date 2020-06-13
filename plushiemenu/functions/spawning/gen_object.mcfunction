@@ -1,6 +1,0 @@
-function plushiemenu:spawning/generation_title
-
-function plushiemenu:spawning/low_rate
-function plushiemenu:spawning/middle_rate
-function plushiemenu:spawning/high_rate
-function plushiemenu:spawning/always_rate
