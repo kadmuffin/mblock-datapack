@@ -1,5 +1,7 @@
 # MusicBlocks: Blocks as Notes (MC Datapack).
-This datapack experiment makes blocks be able to play notes and simulate NoteBlocks without using any Repeaters (CONCEPT).
+This datapack experiment makes blocks be able to play notes and simulate NoteBlocks without using any Repeaters (MAY CONTAIN BUGS).
+
+![](assets/images/banner.png)
 
 ## Warning:
 __Please do not use this datapack in your own world and use it on a new world, a lot of features modify the world and because this features may not be stable yet, they might break your world.__
