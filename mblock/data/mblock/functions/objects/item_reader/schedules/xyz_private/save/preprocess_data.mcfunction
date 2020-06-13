@@ -30,4 +30,6 @@ tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Operation 
 tp @s @p[nbt={OnGround:1b},dx=0,limit=1]
 
 scoreboard players reset @s _array_tmp2
-tag @s remove _save_scheduled
+tag @s add save_stage_6
+
+execute if score counted_blocks _array_tmp >= #bar_max _array_tmp run bossbar set item_reader:progress visible false

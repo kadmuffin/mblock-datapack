@@ -7,3 +7,8 @@ execute as @e[tag=save_stage_2,scores={_array_tmp2=20..}] at @s align xyz positi
 execute as @e[tag=save_stage_3,scores={_array_tmp2=20..}] at @s align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~1 ~ run function mblock:objects/item_reader/schedules/xyz_private/save/get_middle_row
 execute as @e[tag=save_stage_4,scores={_array_tmp2=20..}] at @s align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~1 ~ run function mblock:objects/item_reader/schedules/xyz_private/save/get_x2_row
 execute as @e[tag=save_stage_5,scores={_array_tmp2=20..}] at @s align xyz positioned ~.5 ~.5 ~.5 positioned ~ ~1 ~ run function mblock:objects/item_reader/schedules/xyz_private/save/preprocess_data
+
+execute as @e[tag=_save_scheduled,limit=1] run function mblock:objects/item_reader/plugins/progress_bar/main
+
+tag @e[tag=save_stage_6] remove _save_scheduled
+tag @e[tag=save_stage_6] remove save_stage_6

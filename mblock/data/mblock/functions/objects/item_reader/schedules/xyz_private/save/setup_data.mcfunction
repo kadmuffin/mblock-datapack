@@ -14,6 +14,8 @@ execute store result score @s aparse.xsize run scoreboard players get @e[tag=mus
 scoreboard players add @s aparse.ysize 1
 scoreboard players remove @s aparse.zsize 2
 
+scoreboard players set counted_blocks _array_tmp 0
+
 scoreboard players operation ylength _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 scoreboard players add ylength _array_tmp 1
 
@@ -39,3 +41,8 @@ tag @s remove middle
 
 tag @s add save_stage_2
 tag @s add _save_scheduled
+
+scoreboard players set @s _array_tmp2 0
+scoreboard players reset counted_blocks _array_tmp
+scoreboard players reset #bar_max _array_tmp
+scoreboard players set #xsize aparse.xsize -1

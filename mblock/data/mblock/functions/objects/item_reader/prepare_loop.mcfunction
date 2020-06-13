@@ -22,6 +22,10 @@ execute if score events_length _array_tmp matches 1.. run tag @s add _contains_e
 function mblock:objects/item_reader/x_axis/main
 
 
+execute store result score bpm _array_tmp run data get entity @s Item.tag.song.bpm
+execute store result score xsize _array_tmp run data get entity @s Item.tag.song.xsize
+execute store result score ysize _array_tmp run data get entity @s Item.tag.song.ysize
+execute store result score zsize _array_tmp run data get entity @s Item.tag.song.zsize
 
 execute if entity @s[tag=!disable_bpm] if score @s _array_tmp matches 1.. as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s mb.bpm = bpm _array_tmp
 execute if entity @s[tag=!disable_size] if score @s _array_tmp matches 1.. as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.zsize = zsize _array_tmp
