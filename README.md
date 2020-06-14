@@ -25,11 +25,11 @@ Features like Overwrite Protection and Direction Protection aren't avaliable yet
 
 __If you want to expand your area in the x (Length) or the y (Height) axis, take in account that it will generate a performance hit, so for basic testing or usage don't use big areas__, This area will cause a lot of lag when the blocks need to played as the code on the master branch generates is pretty slow.
 
+### How to save and load songs?
+Throw a book on top of the music player block to save your song with its settings, throw the generated book on to the music block player to load data. 
+
 ### Can MIDI Files be loaded?
 On the master branch this isn't still possible, please switch into the `load_nbs_file` branch for a python 3.x script to import NoteBlock Studio files.
 
 The `load_nbs_file` requires click and pynbs,
 for pynbs you would need to manually install a fork made by [Bentroen](https://github.com/Bentroen), Access his fork [here](https://github.com/Bentroen/pynbs/tree/format-update).
-
-This branch only contains the basic version of the feature Copy & Paste on a single axis (the z one),
-you can use it by throwing a noteblock on top of your MusicBlock Player, or you can use the code on the branch `copy_feature` that includes all axis.
