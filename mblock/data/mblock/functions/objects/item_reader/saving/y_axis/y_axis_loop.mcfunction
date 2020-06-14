@@ -1,4 +1,7 @@
-execute if score ylength _array_tmp >= @s aparse.ysize run tag @s add on_y_zero
+#execute if score ylength _array_tmp >= @s aparse.ysize run tag @s add on_y_zero
+
+
+# Notes: [ X: [ Z - Y0: [ ... ], Z - Y1: ... ] ]
 
 tag @s[tag=_contains_events] add contains_events
 
@@ -35,8 +38,10 @@ execute as @s[tag=look_neg,scores={aparse.dir=1}] positioned ~-3 ~ ~ run functio
 
 execute store result score z_length _array_tmp run data get entity @s Item.tag.z_data
 execute if score z_length _array_tmp matches 0 run tag @s add skip_z_save
-execute if score z_length _array_tmp matches 1 if data entity @s Item.tag.z_data[0].air unless data entity @s Item.tag.z_data[0].hass_oundable run tag @s add skip_z_save
-data modify entity @s[tag=!skip_z_save] Item.tag.data.notes append from entity @s Item.tag.z_data
+execute if score z_length _array_tmp matches 1 if data entity @s Item.tag.z_data[0].air unless data entity @s Item.tag.z_data[0].has_soundable run tag @s add skip_z_save
+data modify entity @s[tag=!skip_z_save,tag=!middle] Item.tag.y_data append from entity @s Item.tag.z_data
+
+#data modify entity @s[tag=!skip_z_save,tag=middle] Item.tag.middle append from entity @s Item.tag.z_data
 
 execute if entity @s[tag=!skip_z_save] run scoreboard players operation array_size _array_tmp += z_length _array_tmp
 
