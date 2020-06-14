@@ -1,10 +1,10 @@
-#data modify entity @s Item.tag.data 
+#data modify entity @s Item.tag.data
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Saving Song...","color":"gray"}]
 
 execute store result score bpm _array_tmp run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
-execute store result entity @s Item.tag.song.bpm int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
-execute store result entity @s Item.tag.song.xsize int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
-execute store result entity @s Item.tag.song.ysize int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
+execute store result entity @s Item.tag.song.bpm short 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
+execute store result entity @s Item.tag.song.xsize short 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
+execute store result entity @s Item.tag.song.ysize short 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 execute store result score @s aparse.zsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
 execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
@@ -24,6 +24,8 @@ tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"BPM: ","co
 execute if entity @s[tag=optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Enabled","color":"blue"}]
 execute if entity @s[tag=!optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Disabled","color":"red"}]
 
+execute if entity @s run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Row X-0 Events...","color":"blue"}]
+
 tag @s add middle
 tag @s add on_y_zero
 tag @s add y_zero
@@ -31,6 +33,8 @@ execute positioned ~ ~-1 ~ run function mblock:objects/item_reader/saving/y_axis
 tag @s remove middle
 
 execute positioned ~ ~ ~ run function mblock:objects/item_reader/saving/x_axis/main
+
+execute if entity @s run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Ended Saving Data","color":"green"}]
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Travel Time: ","color":"gray"},{"score":{"objective":"_array_tmp","name":"estimated_zsize"},"color":"blue"}]
 

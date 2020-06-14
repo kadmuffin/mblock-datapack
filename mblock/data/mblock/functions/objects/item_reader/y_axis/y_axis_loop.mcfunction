@@ -8,7 +8,8 @@ execute store result score length _array_tmp run data get entity @s Item.tag.dat
 tag @s remove look_neg
 tag @s remove counting_air
 
-scoreboard players reset internal_zsize
+scoreboard players reset internal_zsize _array_tmp
+scoreboard players reset tone_count _array_tmp
 
 tag @s[tag=_contains_events] add contains_events
 
