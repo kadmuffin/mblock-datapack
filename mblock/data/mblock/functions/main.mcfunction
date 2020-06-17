@@ -1,4 +1,6 @@
 
+function mblock:interface/main
+
 function mblock:objects/note_wand/main
 function mblock:objects/music_player/main
 function mblock:objects/item_reader/schedules/main
