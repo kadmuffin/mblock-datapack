@@ -11,6 +11,7 @@ function mblock:objects/area_parser/lib/on_every_block
 
 execute as @s[tag=on_bottom,tag=!on_end] if block ~ ~ ~ black_glazed_terracotta at @s unless block ~ ~ ~ black_glazed_terracotta run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 1
 execute as @s[tag=on_bottom,tag=!on_end] if block ~ ~ ~ magenta_glazed_terracotta at @s unless block ~ ~ ~ magenta_glazed_terracotta run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 1
+execute as @s[tag=on_bottom,tag=!on_end] if block ~ ~ ~ purple_glazed_terracotta at @s unless block ~ ~ ~ magenta_glazed_terracotta run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 1
 
 #execute as @s[tag=on_bottom,tag=!on_end] if block ~ ~ ~ magenta_glazed_terracotta at @s unless block ~ ~ ~ air unless block ~ ~ ~ magenta_glazed_terracotta run particle minecraft:totem_of_undying ~ ~1 ~ 0.3 0.3 0.3 0.1 5
 #execute as @s[tag=on_bottom,tag=!on_end] if block ~ ~ ~ magenta_glazed_terracotta at @s if block ~ ~ ~ air run tag @s add destroying_block

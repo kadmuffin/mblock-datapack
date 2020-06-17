@@ -1,3 +1,5 @@
+tag @s add runned
+
 function mblock:interface/commands/kill_player
 
 # Compute backend BPM
