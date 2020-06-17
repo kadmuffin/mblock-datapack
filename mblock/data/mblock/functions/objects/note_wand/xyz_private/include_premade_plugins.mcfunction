@@ -1,5 +1,5 @@
 execute as @s[nbt={OnGround:1b},tag=sneaking,tag=clicking,tag=!_off_hand] if block ~ ~ ~ note_block positioned ~ ~1 ~ if entity @e[tag=music_player,distance=0..1] run function mblock:interface/open
-
+execute as @s[nbt={OnGround:1b},tag=!_off_hand] if block ~ ~ ~ note_block positioned ~ ~1 ~ if entity @e[tag=music_player,distance=0..1] unless entity @e[tag=_toneName,distance=0..1] run summon area_effect_cloud ~ ~-.25 ~ {CustomName:"\"§aShift + Right Click\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
 # Get the tone integer from the block
 function mblock:objects/note_wand/plugins/note_get/main
 
