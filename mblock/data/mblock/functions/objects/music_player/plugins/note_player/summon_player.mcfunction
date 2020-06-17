@@ -9,6 +9,7 @@ tag @s add _summon_player
 tag @s add _not_align
 scoreboard players operation @s mb_tmpz = @s aparse.zsize
 scoreboard players set @s aparse.zsize 0
+scoreboard players set @s mb_ztravel 0
 
 execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~2.5 run function mblock:objects/area_parser/run_instant
 execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-2.5 run function mblock:objects/area_parser/run_instant
