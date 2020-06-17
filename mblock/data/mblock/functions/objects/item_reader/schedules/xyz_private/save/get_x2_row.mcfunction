@@ -16,3 +16,5 @@ execute if score #xsize aparse.xsize >= @s aparse.xsize run tag @s remove save_s
 
 execute if score #xsize aparse.xsize >= @s aparse.xsize run particle minecraft:cloud ~ ~-.3 ~ 0.1 0.1 0.1 0.1 20
 execute if score #xsize aparse.xsize >= @s aparse.xsize run playsound minecraft:block.lava.extinguish block @a[distance=0..25] ~ ~ ~ 0.7 1.65
+
+execute if score #xsize aparse.xsize >= @s aparse.xsize run scoreboard players operation counted_blocks _array_tmp = #bar_max _array_tmp

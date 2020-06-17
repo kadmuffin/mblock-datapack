@@ -14,9 +14,10 @@ function mblock:objects/item_reader/saving/metadata/bpm
 function mblock:objects/item_reader/saving/metadata/travel_time
 function mblock:objects/item_reader/saving/metadata/array_size
 
-data modify entity @s Item.tag.display.Lore append value "\"§6Optimized on Save:\""
-data modify entity @s[tag=!optimize_data] Item.tag.display.Lore append value "\"§4False\""
-data modify entity @s[tag=optimize_data] Item.tag.display.Lore append value "\"§aTrue\""
+#data modify entity @s Item.tag.display.Lore insert 0 value "\" \""
+#data modify entity @s Item.tag.display.Lore append value "\"§6Optimized on Save:\""
+#data modify entity @s[tag=!optimize_data] Item.tag.display.Lore append value "\"§4False\""
+#data modify entity @s[tag=optimize_data] Item.tag.display.Lore append value "\"§aTrue\""
 
 data modify entity @s PickupDelay set value 0s
 
@@ -32,4 +33,5 @@ tp @s @p[nbt={OnGround:1b},dx=0,limit=1]
 scoreboard players reset @s _array_tmp2
 tag @s add save_stage_6
 
-execute if score counted_blocks _array_tmp >= #bar_max _array_tmp run bossbar set item_reader:progress visible false
+scoreboard players operation counted_blocks _array_tmp = #bar_max _array_tmp
+bossbar set item_reader:progress visible false
