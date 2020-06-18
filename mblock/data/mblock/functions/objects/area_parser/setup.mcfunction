@@ -21,7 +21,7 @@
 #   * Invert the area direction
 # - "_ancled"
 #   * Resets the area parser each time
-#     the z limit is hit (multiplies the direction by -1 
+#     the z limit is hit (multiplies the direction by -1
 #     so end position may vary).
 # - "_ancled_pos"
 #   * Resets the area but using data modify to restart the position
@@ -48,5 +48,5 @@ scoreboard objectives add aparse.id dummy
 scoreboard players set .global aparse.id 0
 
 # Schedules functions at start
-function mblock:objects/area_parser/step/schedule_y_step
-function mblock:objects/area_parser/step/schedule_z_step
+scoreboard players set schedule_y _aparse_tmp 0
+scoreboard players set schedule_z _aparse_tmp 0
