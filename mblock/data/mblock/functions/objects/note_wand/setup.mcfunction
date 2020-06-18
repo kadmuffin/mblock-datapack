@@ -5,7 +5,7 @@
 # in the file ./xyz_private/plugins.mcfunction
 #
 # If you want to use this folder in your datapack do this:
-#  
+#
 # - Edit the main and others file to fit your needs and paths (like changing the wand tag)
 # - Delete all built-in plugins as they depends on this datapack
 # - Remove the include function in the file plugins/on_block_hit.mcfunction

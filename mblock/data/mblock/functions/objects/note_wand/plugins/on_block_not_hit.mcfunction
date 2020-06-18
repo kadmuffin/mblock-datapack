@@ -1,0 +1,1 @@
+#execute as @s[tag=_off_hand,tag=holding_block] positioned ~ ~1 ~ unless entity @e[tag=music_player,distance=0..1,limit=1] positioned ~ ~-1 ~ if block ~ ~ ~ air positioned ~ ~-1 ~ run function mblock:objects/note_wand/plugins/save_tone/tone_show

@@ -3,7 +3,7 @@ execute if entity @s[tag=!getting_tone,tag=!sneaking,tag=!_off_hand] run particl
 execute if entity @s[tag=!getting_tone,tag=sneaking,tag=!_off_hand] run scoreboard players remove #tone _mbtmp 1
 #execute if entity @s[tag=!getting_tone,tag=sneaking] run particle minecraft:angry_villager ~ ~0.7 ~ 0 0 0 0.1 0
 
-execute if score #tone _mbtmp matches ..0 run scoreboard players set #tone _mbtmp 24
+execute if score #tone _mbtmp matches ..-1 run scoreboard players set #tone _mbtmp 24
 execute if score #tone _mbtmp matches 25.. run scoreboard players set #tone _mbtmp 0
 
 function mblock:sound/tones/set_tone_block
