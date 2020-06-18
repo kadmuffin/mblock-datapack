@@ -9,6 +9,8 @@ execute store result score zsize _array_tmp run data get entity @s Item.tag.song
 execute store result score events_length _array_tmp run data get entity @s Item.tag.data.events
 execute store result score @s aparse.xsize run data get entity @s Item.tag.song.xsize
 
+tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loading Song... (WIP)","color":"gray"}]
+
 execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,tag=look_neg] run tag @s add look_neg
 execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set @s aparse.dir 0
 execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set @s aparse.dir 1
@@ -33,7 +35,8 @@ execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limi
 execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.ysize = ysize _array_tmp
 execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.xsize = xsize _array_tmp
 
-execute if score @s[tag=self_align] _array_tmp matches 1.. run tellraw @a {"text":"Notes Loaded!"}
-execute if score @s[tag=!self_align] _array_tmp matches 1.. run tellraw @a {"text":"Song and Settings Loaded!"}
+execute if entity @s[tag=self_align] run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Notes loaded!","color":"green"}]
+
+execute if entity @s[tag=!self_align] run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Notes & Settings loaded!","color":"green"}]
 
 kill @s
