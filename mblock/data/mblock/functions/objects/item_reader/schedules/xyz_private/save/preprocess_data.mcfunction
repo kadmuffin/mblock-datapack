@@ -23,6 +23,8 @@ data modify entity @s PickupDelay set value 0s
 
 #data remove entity @s Item.tag.tmp
 
+execute as @e[tag=music_player,sort=nearest,limit=1] if data entity @s Item.tag.display.Name run data modify entity @e[tag=new_song,sort=nearest,limit=1] Item.tag.display.Name set from entity @s Item.tag.display.Name
+
 tag @s remove new_song
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Array Size: ","color":"gray"},{"score":{"objective":"_array_tmp","name":"array_size"},"color":"blue"}]

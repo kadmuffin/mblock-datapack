@@ -20,4 +20,4 @@ scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
 
 # 10 / 2 = 5 blocks limit (change travel distance on xyz_private/raycast, default 0.5 blocks)
-scoreboard players set #LimitDistance _rayc_tmp 10
+scoreboard players set #LimitDistance _rayc_tmp 14
