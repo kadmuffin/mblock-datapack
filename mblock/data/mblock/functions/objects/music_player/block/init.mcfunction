@@ -10,7 +10,7 @@ playsound minecraft:block.beacon.power_select neutral @a[distance=0..25] ~ ~ ~ 1
 
 fill ~1 ~-2 ~1 ~-1 ~-2 ~-1 black_glazed_terracotta[facing=west]
 
-data merge entity @s {ItemRotation: 1b}
+function mblock:objects/music_player/xyz_private/get_player_view
 
 scoreboard players set @s mb.bpm 90
 
@@ -34,3 +34,15 @@ tag @s add _show_path
 function mblock:objects/music_player/plugins/box_display/main
 
 tag @s remove _show_path
+
+
+execute store result score @s mb_tmp run data get entity @s ItemRotation
+
+execute if score @s mb_tmp matches 1 run scoreboard players set @s aparse.dir 1
+execute if score @s mb_tmp matches 1 run tag @s remove look_neg
+execute if score @s mb_tmp matches 3 run scoreboard players set @s aparse.dir 0
+execute if score @s mb_tmp matches 3 run tag @s remove look_neg
+execute if score @s mb_tmp matches 5 run scoreboard players set @s aparse.dir 1
+execute if score @s mb_tmp matches 5 run tag @s add look_neg
+execute if score @s mb_tmp matches 7 run scoreboard players set @s aparse.dir 0
+execute if score @s mb_tmp matches 7 run tag @s add look_neg

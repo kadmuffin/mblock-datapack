@@ -6,3 +6,6 @@ execute positioned ~ ~1 ~ run function mblock:sound/tones/set_tone_block
 #execute unless block ~ ~ ~ stripped_spruce_wood run function mblock:sound/tones/set_tone_block
 scoreboard players reset @s[tag=!sneaking] _mbtmp1
 tag @s[tag=!sneaking] remove holding_block
+
+execute positioned ~ ~1 ~ run function mblock:objects/note_wand/plugins/note_get/main
+execute positioned ~ ~1 ~ run function mblock:objects/note_wand/plugins/note_get/play_note
