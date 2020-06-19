@@ -29,7 +29,7 @@ execute as @s[tag=!counting_air,tag=!counting_tone] unless data entity @s Item.t
 execute as @s[tag=!counting_air,tag=!counting_tone] unless data entity @s Item.tag.z_data[0].sound_dir unless score #sound_dir _mbtmp matches 0.. run scoreboard players set #sound_dir _mbtmp 0
 execute as @s[tag=!counting_air,tag=!counting_tone] store result score tone_count _array_tmp run data get entity @s Item.tag.z_data[0].count
 execute as @s[tag=!counting_air,tag=!counting_tone] if score tone_count _array_tmp matches 1.. run tag @s add counting_tone
-execute as @s[tag=!counting_air,tag=!counting_tone] if score tone_count _array_tmp matches 1.. run scoreboard players remove @s _
+#execute as @s[tag=!counting_air,tag=!counting_tone] if score tone_count _array_tmp matches 1.. run scoreboard players remove @s _
 
 execute as @s[tag=!counting_air,tag=!overwrite_protection] run function mblock:sound/tones/set_tone_block
 execute as @s[tag=!counting_air,tag=!overwrite_protection] run function mblock:sound/sounds/xyz_private/set_sound_block_dir
