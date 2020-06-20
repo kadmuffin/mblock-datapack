@@ -19,7 +19,7 @@ Example settings:
 ## Notes
 Notes contain a tone number (between 0 - 24) and a sound number (between 1 - 15, if no sound is store it's assumed that is 0 or harp), if a sound direction is specified is stored in a range of 0 to 5.
 
-Sometimes for reducing memory usage the notes a group together when possible, for example 3 notes with the same tone and sound get store as one note with a count value that indicates how many times paste the note.
+Sometimes for reducing memory usage the notes a group together when possible, for example, 3 notes with the same tone and sound get stored as one-note with a count value that indicates how many times paste the note.
 
 Here is a example note with all parameters:
 
@@ -28,7 +28,7 @@ Here is a example note with all parameters:
 ```
 
 ## Events
-They are stored in `data.events`, there are 3 types of events (magenta still not supported), they range between 1 and 3, the datapack will ignore any events that has contains a 0 in the event tag, for example:
+They are stored in `data.events`, there are 3 types of events (magenta still not supported), they range between 1 and 3, the datapack will ignore events that have a zero in the event tag, for example:
 
 This will be ignored:
 ```json
@@ -39,7 +39,7 @@ This due to minecraft data get command will return always zero if no value was f
 
 ### End & Repetition of Song
 
-Events that range from 1 to 2 will be considered as end of song in the loading sequence an the proper event block will be placed, for 1 it will be `black_glazed_terracotta` that forces a song end, for 2 it will be `purple_glazed_terracotta` that repeats the song until stopped or moved from the center line.
+Events that range from one to two will be considered as the end of the song in the loading sequence, then proper event block will be placed, for 1 it will be `black_glazed_terracotta` that forces a song end, for 2 it will be `purple_glazed_terracotta` that repeats the song until stopped or moved from the centerline.
 
 ```json
 {"event":1, "z_pos": 5}, // This is black glazed terracotta
@@ -59,7 +59,7 @@ The last event (still not supported) is redirection that uses the value 3, this 
 
 ## How 3D data is stored
 
-All the data is stored in a array, each element is the data array represents a X-Axis from left to right.
+All the data is stored in an array, each element is the data array represents an X-Axis from left to right.
 
 For example:
 ```python
@@ -72,7 +72,7 @@ For example:
 }
 ```
 
-Inside of each X-Axis Array there is data stored on the Z Axis, the index of the element represents the Y position of the element.
+Inside of each X-Axis Array, there is data stored on the Z-Axis, the index of the element represents the Y position of the element.
 
 ```python
 [
@@ -82,7 +82,7 @@ Inside of each X-Axis Array there is data stored on the Z Axis, the index of the
 ```
 
 ## Example Item.tag:
-This Item.tag contains three sequencial notes (note: 15), the code is formated as a json to make it more redeable:
+This Item.tag contains three sequential notes (note: 15), the code is formatted as a json to make it more readable:
 ```python
 {
  "contains_song": 1,
