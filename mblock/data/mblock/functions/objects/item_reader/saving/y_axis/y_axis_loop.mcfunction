@@ -5,6 +5,7 @@
 
 tag @s[tag=_contains_events] add contains_events
 
+
 scoreboard players remove ylength _array_tmp 1
 scoreboard players operation length _array_tmp = @s aparse.zsize
 
@@ -14,10 +15,9 @@ scoreboard players reset tone_count _array_tmp
 scoreboard players reset total_air _array_tmp
 scoreboard players reset total_tones _array_tmp
 
-execute store result score @s aparse.zsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
-execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
-execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
-
+#execute store result score @s aparse.zsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
+#execute store result score @s aparse.ysize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
+#execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 
 data modify entity @s Item.tag.z_data set value []
 data modify entity @s Item.tag.tmp_events set from entity @s Item.tag.data.events
@@ -25,9 +25,11 @@ data modify entity @s Item.tag.tmp_events set from entity @s Item.tag.data.event
 tag @s remove look_neg
 tag @s remove skip_z_save
 tag @s remove counting_air
+tag @s remove counting_tone
 tag @s remove end_recursion
 
 execute at @s if entity @e[tag=music_player,tag=look_neg,distance=0..1,limit=1] run tag @s add look_neg
+execute at @s if entity @e[tag=music_player,tag=!look_neg,distance=0..1,limit=1] run tag @s remove look_neg
 execute at @s if entity @e[tag=music_player,scores={aparse.dir=0},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 0
 execute at @s if entity @e[tag=music_player,scores={aparse.dir=1},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 1
 
@@ -52,4 +54,4 @@ execute if entity @s[tag=on_y_zero] store result score events_length _array_tmp 
 execute if entity @s[tag=on_y_zero] if score events_length _array_tmp matches 1.. run tag @s add _contains_events
 tag @s remove on_y_zero
 
-execute positioned ~ ~1 ~ if score ylength _array_tmp matches 1.. run function mblock:objects/item_reader/saving/y_axis/y_axis_loop
+execute positioned ~ ~1 ~ if score ylength _array_tmp matches 2.. run function mblock:objects/item_reader/saving/y_axis/y_axis_loop

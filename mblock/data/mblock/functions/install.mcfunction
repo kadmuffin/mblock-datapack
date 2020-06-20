@@ -1,6 +1,7 @@
 scoreboard objectives add _mbtmp dummy
 scoreboard objectives add _mbtmp1 dummy
 scoreboard objectives add mb_player dummy
+scoreboard objectives add flying minecraft.custom:minecraft.fly_one_cm
 
 # Include objects setups
 function mblock:objects/note_wand/setup

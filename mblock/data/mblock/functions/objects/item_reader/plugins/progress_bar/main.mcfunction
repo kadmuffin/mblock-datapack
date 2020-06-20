@@ -1,5 +1,5 @@
 scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
-scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
+#scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
 scoreboard players add #bar_max _array_tmp 1
 scoreboard players operation #bar_max _array_tmp *= @s aparse.ysize
 scoreboard players operation #bar_max _array_tmp *= @s aparse.zsize
