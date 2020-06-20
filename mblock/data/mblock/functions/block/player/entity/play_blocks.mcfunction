@@ -14,7 +14,7 @@ execute as @s[tag=extended] at @s run function mblock:objects/music_player/xyz_p
 
 #execute as @s[nbt={OnGround:1b},gamemode=!spectator] at @s positioned ~ ~ ~ align xz positioned ~.5 ~ ~.5 run function mblock:block/player/play_block
 execute as @s[nbt={OnGround:1b},gamemode=!spectator] at @s positioned ~ ~-1 ~ align xyz positioned ~.5 ~.5 ~.5 run function mblock:block/player/play_block
-execute as @s[nbt={OnGround:1b},tag=extended] at @s positioned ~ ~1 ~ align xyz positioned ~.5 ~.5 ~.5 run function mblock:block/player/play_block
+execute as @s[nbt={OnGround:1b},tag=extended] at @s positioned ~ ~2 ~ align xyz positioned ~.5 ~.5 ~.5 run function mblock:block/player/play_block
 
 execute as @s[nbt={OnGround:1b},tag=extended,scores={aparse.dir=0}] at @s run function mblock:objects/music_player/plugins/entity_play/dir_0
 execute as @s[nbt={OnGround:1b},tag=extended,scores={aparse.dir=1}] at @s run function mblock:objects/music_player/plugins/entity_play/dir_1
