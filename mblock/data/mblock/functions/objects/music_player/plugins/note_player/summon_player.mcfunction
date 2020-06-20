@@ -1,4 +1,6 @@
 tag @s add runned
+tag @e[tag=restarting_song] remove restarting_song
+
 
 function mblock:interface/commands/kill_player
 
