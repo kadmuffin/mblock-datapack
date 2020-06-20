@@ -62,7 +62,7 @@ def parse_metadata(song):
 
 @click.command()
 @click.option('--input_file', help='The path to your NoteBlock Studio file (.nbs).')
-@click.option('--output_path',
+@click.option('--output_path', default=".",
               help='The path used at exporting the song .mcfunction file.')
 @click.option('--tick_diff', default=-1, help='Sets the minimum difference between ticks to add a space (Default=0, Auto=-1).')
 def main(input_file,output_path,tick_diff):
