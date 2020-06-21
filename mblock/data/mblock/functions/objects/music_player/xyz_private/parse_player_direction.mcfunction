@@ -1,4 +1,4 @@
-execute store result score @s mb.dir run data get entity @p Rotation[0]
+execute store result score @s mb.dir run data get entity @s Rotation[0]
 
 scoreboard players set #360 mb.dir 360
 

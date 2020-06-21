@@ -1,10 +1,33 @@
-execute store result score #player_view mb.dir run data get entity @p Rotation[0]
+execute store result score @s mb.dir run data get entity @p Rotation[0]
 
-execute if score #player_view mb.dir matches -135..-44 run data merge entity @s {ItemRotation: 1b}
+scoreboard players set #360 mb.dir 360
 
-execute if score #player_view mb.dir matches -44..0 run data merge entity @s {ItemRotation: 3b}
-execute if score #player_view mb.dir matches -360..-315 run data merge entity @s {ItemRotation: 3b}
+scoreboard players operation @s mb.dir %= #360 mb.dir
+scoreboard players operation @s mb.dir += #360 mb.dir
+scoreboard players operation @s mb.dir %= #360 mb.dir
 
-execute if score #player_view mb.dir matches -315..-225 run data merge entity @s {ItemRotation: 5b}
+tag @s add else_if
 
-execute if score #player_view mb.dir matches -225..-135 run data merge entity @s {ItemRotation: 7b}
+# South
+execute as @s[tag=else_if] if score @s mb.dir matches 315.. run data merge entity @s {ItemRotation: 3b}
+execute as @s[tag=else_if] if score @s mb.dir matches 315.. run tag @s remove else_if
+execute as @s[tag=else_if] if score @s mb.dir matches ..44 run data merge entity @s {ItemRotation: 3b}
+execute as @s[tag=else_if] if score @s mb.dir matches ..44 run tag @s remove else_if
+
+# West
+execute as @s[tag=else_if] if score @s mb.dir matches ..134 run data merge entity @s {ItemRotation: 5b}
+execute as @s[tag=else_if] if score @s mb.dir matches ..134 run tag @s remove else_if
+
+# North
+execute as @s[tag=else_if] if score @s mb.dir matches ..224 run data merge entity @s {ItemRotation: 7b}
+execute as @s[tag=else_if] if score @s mb.dir matches ..224 run tag @s remove else_if
+
+# East
+execute as @s[tag=else_if] if score @s mb.dir matches ..314 run data merge entity @s {ItemRotation: 1b}
+execute as @s[tag=else_if] if score @s mb.dir matches ..314 run tag @s remove else_if
+
+# North
+execute as @s[tag=else_if] run data merge entity @s {ItemRotation: 7b}
+execute as @s[tag=else_if] run tag @s remove else_if
+
+tag @s remove else_if
