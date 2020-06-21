@@ -1,4 +1,5 @@
 tag @s add runned
+tag @s remove playing
 tag @e[tag=restarting_song] remove restarting_song
 
 

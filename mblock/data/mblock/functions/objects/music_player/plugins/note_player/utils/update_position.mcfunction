@@ -18,4 +18,6 @@ execute as @s unless score @s mb_tmpz = .z _mbtmp run scoreboard players add @s 
 scoreboard players operation @s mb_tmpx = .x _mbtmp
 scoreboard players operation @s mb_tmpz = .z _mbtmp
 
+execute if score @s mb_ztravel >= @s aparse.zsize run tag @s add updating_playing_state
+execute if score @s mb_ztravel >= @s aparse.zsize as @e[tag=music_player,tag=playing,sort=nearest] if score @s mb_id = @e[tag=updating_playing_state,limit=1] mb_id run tag @s remove playing
 execute if score @s mb_ztravel >= @s aparse.zsize run kill @s
