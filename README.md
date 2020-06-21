@@ -3,8 +3,8 @@ This datapack experiment makes blocks be able to play notes and simulate NoteBlo
 
 ![](assets/images/banner.webp)
 
-## Warning:
-__Please do not use this datapack in your world and use it on a new world, a lot of features modify the world and because this features may not be stable yet, they might break your world.__
+## Warning (Disclaimer):
+__Please do never use this datapack in your world and use it on a new world or make a backup first, a lot of features modify the world and because this features may not be stable and could cause some extreme lags or change blocks, they might break your world (use at your own risk).__
 
 ## Installation:
 You can grab the latest release of the datapack from [here](https://github.com/kadmuffin/mblock-datapack/releases).
@@ -30,7 +30,7 @@ Throw a book on top of the music player block to save your song with its setting
 
 If you want to create your own app or code that parses songs, you can check the Item Format [here](https://github.com/kadmuffin/mblock-datapack/blob/master/mblock/data/mblock/functions/objects/item_reader/README.md).
 
-### Can MIDI Files be loaded?
+### Can NBS Files be loaded?
 Yes while the song you want to load is simple the Python 3.x script should be able to parse it, this script however is still WIP so you will probably have some errors on the parsed songs.
 
 The python script requires click and pynbs,
