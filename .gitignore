@@ -1,2 +1,4 @@
 *.nbs
 *.nbs.mcfunction
+*.vscode
+*.pyc

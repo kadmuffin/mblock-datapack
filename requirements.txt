@@ -1,2 +1,2 @@
-git+git://github.com/Bentroen/pynbs.git
+pynbs
 click
