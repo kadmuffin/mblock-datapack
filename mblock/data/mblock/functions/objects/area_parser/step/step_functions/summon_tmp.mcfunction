@@ -27,6 +27,8 @@ execute as @e[tag=_new_schedule] at @s store result score @s _aparse_tmp4 run da
 
 scoreboard players operation @e[tag=_new_schedule] aparse.xsize = @s aparse.xsize
 scoreboard players operation @e[tag=_new_schedule] aparse.ysize = @s aparse.ysize
+scoreboard players remove @e[tag=_new_schedule] aparse.ysize 1
+
 scoreboard players operation @e[tag=_new_schedule] aparse.zsize = @s aparse.zsize
 scoreboard players operation @e[tag=_new_schedule] aparse.dir = @s aparse.dir
 scoreboard players set @e[tag=_new_schedule] _aparse_tmp 0

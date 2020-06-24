@@ -21,5 +21,8 @@
 execute unless score @s aparse.ysize matches 1.. run scoreboard players set @s aparse.ysize 1
 
 scoreboard players reset @s _aparse_tmp
+scoreboard players set @s[tag=_summon_player] _aparse_tmp3 5
+tag @s remove middle_layer
+
 execute as @s[tag=!_not_align] align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/area_parser/lib/movement/vertical
 execute as @s[tag=_not_align] run function mblock:objects/area_parser/lib/movement/vertical

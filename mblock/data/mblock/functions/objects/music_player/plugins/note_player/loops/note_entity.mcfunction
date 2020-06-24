@@ -4,4 +4,4 @@ execute as @s[tag=!_played] at @s if score #sound _mbtmp matches 1..4 align xyz 
 tag @s add _played
 
 execute if block ~ ~ ~ air run kill @s
-execute unless entity @e[tag=note_player,distance=0..1.6] run kill @s
+execute unless entity @e[tag=note_player,distance=0..2.6] run kill @s
