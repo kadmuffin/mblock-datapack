@@ -36,6 +36,9 @@ class song(object):
         else:
             self.metadata.xsize = len(self.data)
 
+        self.metadata.length = len(self.data[-1][0])
+
+
     def generate_give(self):
         """Creates a command for your song"""
         return (
