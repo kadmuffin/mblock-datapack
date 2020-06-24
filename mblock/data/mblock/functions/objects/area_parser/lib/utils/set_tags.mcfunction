@@ -17,7 +17,7 @@ scoreboard players remove #tmp_z _aparse_tmp 1
 execute as @s[tag=check_air] if block ~ ~ ~ air run tag @s add is_air
 
 tag @s[scores={_aparse_tmp2=0..1}] add on_start
-tag @s[scores={_aparse_tmp=0..1}] add on_bottom
+tag @s[tag=!_disable_z,scores={_aparse_tmp=0..1}] add on_bottom
 execute if entity @s[scores={_aparse_tmp=0..1}] unless score @s _aparse_tmp1 matches 1.. run tag @s add on_z_center
 execute if score @s _aparse_tmp2 >= #tmp_z _aparse_tmp run tag @s add on_end
 execute if score @s _aparse_tmp2 >= @s aparse.zsize run tag @s add on_true_end

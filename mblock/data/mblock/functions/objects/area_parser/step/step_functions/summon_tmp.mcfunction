@@ -21,6 +21,9 @@ execute as @s[tag=_ancled] run tag @e[tag=_new_schedule] add _ancled
 execute as @s[tag=_ancled_pos] run tag @e[tag=_new_schedule] add _ancled_pos
 execute as @s[tag=_show_path] run tag @e[tag=_new_schedule] add _show_path
 execute as @s[tag=show_top] run tag @e[tag=_new_schedule] add show_top
+tag @e[tag=_new_schedule] add __skip_x
+
+
 
 execute as @e[tag=_new_schedule] at @s store result score @s _aparse_tmp3 run data get entity @s Pos[0] 10
 execute as @e[tag=_new_schedule] at @s store result score @s _aparse_tmp4 run data get entity @s Pos[2] 10
@@ -30,6 +33,9 @@ scoreboard players operation @e[tag=_new_schedule] aparse.ysize = @s aparse.ysiz
 scoreboard players remove @e[tag=_new_schedule] aparse.ysize 1
 
 scoreboard players operation @e[tag=_new_schedule] aparse.zsize = @s aparse.zsize
+scoreboard players operation @e[tag=_new_schedule] _aparse_tmp1 = @s aparse.zsize
+scoreboard players set #2 aparse.zsize 2
+scoreboard players operation @e[tag=_new_schedule] _aparse_tmp1 %= #2 aparse.zsize
 scoreboard players operation @e[tag=_new_schedule] aparse.dir = @s aparse.dir
 scoreboard players set @e[tag=_new_schedule] _aparse_tmp 0
 scoreboard players set @e[tag=_new_schedule] _aparse_tmp2 0
