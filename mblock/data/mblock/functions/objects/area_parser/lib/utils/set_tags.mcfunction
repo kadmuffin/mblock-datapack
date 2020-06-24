@@ -1,7 +1,7 @@
 tag @s remove on_side
 tag @s remove on_side_center
-tag @s remove on_center
 tag @s remove on_z_center
+tag @s remove on_center
 tag @s remove on_corner
 tag @s remove on_start
 tag @s remove on_end
@@ -31,5 +31,7 @@ tag @s[tag=on_x_end] add on_side
 
 tag @s[tag=on_start,tag=on_x_end] add on_corner
 tag @s[tag=on_true_end,tag=on_x_end] add on_corner
+
+tag @s[tag=!on_start,tag=!on_end] add on_center
 
 tag @s[tag=on_side,tag=!on_corner,tag=!on_bottom,tag=!on_top] add on_side_center

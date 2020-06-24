@@ -3,6 +3,10 @@
 # Goes thought an area based on
 # size declared in a scoreboard.
 #
+# This folder is not longer recommended
+# for use outside this datapack as lot of 
+# things changed.
+#
 # Avaliable modes:
 #  - on_block_air
 #  - on_block_not_air
@@ -31,7 +35,8 @@
 scoreboard objectives add _aparse_tmp dummy
 scoreboard objectives add _aparse_tmp1 dummy
 scoreboard objectives add _aparse_tmp2 dummy
-# Used for x, z pos storing (remove if _ancled_pos tag isn't used)
+# Used for x, z pos storing (remove if _ancled_pos tag isn't used
+# , on summon_sequence is used to count spacing)
 scoreboard objectives add _aparse_tmp3 dummy
 scoreboard objectives add _aparse_tmp4 dummy
 # Redirect Tp Count

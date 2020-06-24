@@ -1,3 +1,4 @@
+scoreboard players add @s[scores={_aparse_tmp2=1..}] _aparse_tmp2 1
 scoreboard players add @s _aparse_tmp2 1
 
 execute as @s at @s if block ~ ~ ~ magenta_glazed_terracotta if score @s _aparse_tmp2 >= @s aparse.zsize run tag @s add disable_redirection
@@ -19,8 +20,12 @@ execute as @s[tag=!_ancled,tag=!_ancled_pos] unless score @s _aparse_tmp2 < @s a
 #execute as @s[tag=!look_neg,scores={aparse.dir=1}] at @s positioned ~1 ~ ~
 #execute as @s[tag=look_neg,scores={aparse.dir=1}] at @s positioned ~-1 ~ ~
 
-function mblock:objects/area_parser/step/movement/z_step/vertical
-scoreboard players reset @s _aparse_tmp
+function mblock:objects/area_parser/lib/utils/set_tags
+execute if entity @s[tag=!show_top,tag=!on_center] run function mblock:objects/area_parser/step/step_functions/summon_y
+execute if entity @s[tag=show_top] run function mblock:objects/area_parser/step/step_functions/summon_y
+#scoreboard players reset @s _aparse_tmp
+
+function mblock:objects/area_parser/lib/utils/clean_and_run_horiz
 
 execute if entity @s[scores={aparse.dir=0},tag=!_not_pos_update] run function mblock:objects/area_parser/step/movement/z_step/depth_x
 execute if entity @s[scores={aparse.dir=1},tag=!_not_pos_update] run function mblock:objects/area_parser/step/movement/z_step/depth_z
