@@ -40,14 +40,22 @@ class metadata(object):
 
     def __init__(self, header):
         super(metadata, self).__init__()
-        self.loop = header.loop
-        self.name = header.song_name
-        if self.name == "":
-            self.name = header.song_origin
-        self.bpm = int(header.tempo * 20)
-        self.tempo = header.tempo
-        self.artist = header.song_author
-        self.length = header.song_length
 
+        self.loop = False
+        self.name = ""
+        self.bpm = 90
+        self.tempo = 4.5
+        self.artist = ""
+        self.length = 0
         # Updated on song.py by get_notes()
         self.xsize = 0
+
+        if header != None:
+            self.loop = header.loop
+            self.name = header.song_name
+            if self.name == "":
+                self.name = header.song_origin
+            self.bpm = int(header.tempo * 20)
+            self.tempo = header.tempo
+            self.artist = header.song_author
+            self.length = header.song_length

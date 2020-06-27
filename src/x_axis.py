@@ -1,6 +1,3 @@
-import numpy as np
-
-
 class x_data(object):
     """Manages data on the YZ Axis."""
 

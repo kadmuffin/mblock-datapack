@@ -37,5 +37,6 @@ execute if entity @s[tag=on_y_zero] if score events_length _array_tmp matches 1.
 
 tag @s remove on_y_zero
 tag @s remove y_zero
+tag @s remove on_ground
 
 execute positioned ~ ~1 ~ if score ylength _array_tmp matches 1.. run function mblock:objects/item_reader/y_axis/y_axis_loop

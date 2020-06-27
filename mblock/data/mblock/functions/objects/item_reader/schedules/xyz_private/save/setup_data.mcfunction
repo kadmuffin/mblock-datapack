@@ -16,6 +16,7 @@ scoreboard players remove @s aparse.zsize 2
 
 scoreboard players set counted_blocks _array_tmp 0
 
+scoreboard players operation @s mb_tmp2 = @e[tag=music_player,sort=nearest,limit=1] mb_tmp2
 scoreboard players operation ylength _array_tmp = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 scoreboard players add ylength _array_tmp 1
 
