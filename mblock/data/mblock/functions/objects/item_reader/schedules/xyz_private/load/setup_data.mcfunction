@@ -10,7 +10,7 @@ execute store result score ysize _array_tmp run data get entity @s Item.tag.song
 execute store result score zsize _array_tmp run data get entity @s Item.tag.song.zsize
 execute store result score events_length _array_tmp run data get entity @s Item.tag.data.events
 execute store result score @s aparse.xsize run data get entity @s Item.tag.song.xsize
-scoreboard players add @s aparse.xsize 1
+#scoreboard players add @s aparse.xsize 1
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loading Song... (WIP)","color":"gray"}]
 
@@ -31,4 +31,4 @@ tag @s add _load_scheduled
 scoreboard players set @s _array_tmp2 0
 scoreboard players reset counted_blocks _array_tmp
 scoreboard players reset #bar_max _array_tmp
-scoreboard players set #xsize aparse.xsize -1
+scoreboard players operation #xsize aparse.xsize = @s aparse.xsize

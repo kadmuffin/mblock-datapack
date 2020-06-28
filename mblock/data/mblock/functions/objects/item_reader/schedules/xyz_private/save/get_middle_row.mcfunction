@@ -1,3 +1,5 @@
+#function mblock:objects/item_reader/utils/reverse_data
+
 tag @s remove save_stage_3
 
 data modify entity @s CustomName set value "\"§8[MusicBlocks] §9Saving Blocks on Center\""
