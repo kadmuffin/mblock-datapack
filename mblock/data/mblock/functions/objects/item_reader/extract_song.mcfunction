@@ -17,6 +17,7 @@ tag @s add _loaded
 
 data modify entity @e[type=item,tag=_loaded,sort=nearest,limit=1] PickupDelay set value -32760s
 
+
 execute if entity @s[tag=disable_bpm,tag=disable_size] store result score @s aparse.zsize run data get entity @s Item.tag.song.zsize
 
 execute if entity @s[tag=disable_bpm,tag=disable_size] if score @s aparse.zsize matches ..100 as @e[tag=song] at @s align xyz positioned ~.5 ~.5 ~.5 run function mblock:objects/item_reader/prepare_loop
