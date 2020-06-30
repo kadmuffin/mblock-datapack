@@ -11,4 +11,4 @@ execute as @s[tag=!not_update,tag=!disable_extended] run function mblock:objects
 
 #execute as @s[tag=!not_update] unless block ~ ~1 ~ air positioned ~ ~1 ~ run function mblock:objects/music_player/plugins/note_player/utils/block_events
 
-execute as @s[tag=!not_update] unless entity @e[tag=music_player,limit=1] run kill @s
+#execute as @s[tag=!not_update] unless entity @e[tag=music_player,limit=1] run kill @s

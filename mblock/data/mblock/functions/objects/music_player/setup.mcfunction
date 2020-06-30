@@ -23,7 +23,9 @@ scoreboard objectives add mb_tmp dummy
 scoreboard objectives add mb_tmp1 dummy
 scoreboard objectives add mb_tmp2 dummy
 scoreboard objectives add mb_tmpx dummy
+scoreboard objectives add mb_x_pos dummy
 scoreboard objectives add mb_tmpz dummy
+scoreboard objectives add mb_z_pos dummy
 scoreboard objectives add mb_id dummy
 
 scoreboard players set global mb_id 0
