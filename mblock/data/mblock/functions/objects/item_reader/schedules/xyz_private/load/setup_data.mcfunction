@@ -1,4 +1,5 @@
 tag @s remove _in_wait_for_load
+tag @s add _ls_scheduled
 
 data modify entity @e[type=item,tag=_loaded,sort=nearest,limit=1] PickupDelay set value -32760s
 
@@ -32,3 +33,9 @@ scoreboard players set @s _array_tmp2 0
 scoreboard players reset counted_blocks _array_tmp
 scoreboard players reset #bar_max _array_tmp
 scoreboard players operation #xsize aparse.xsize = @s aparse.xsize
+bossbar set item_reader:progress visible true
+
+scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
+scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
+scoreboard players add #bar_max _array_tmp 1
+execute store result bossbar item_reader:progress max run scoreboard players get #bar_max _array_tmp

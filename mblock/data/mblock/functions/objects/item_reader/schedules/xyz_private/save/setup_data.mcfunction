@@ -1,5 +1,6 @@
 #data modify entity @s Item.tag.data
 tag @s remove _in_wait_for_save
+tag @s add _ls_scheduled
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Saving Song... (WIP)","color":"gray"}]
 

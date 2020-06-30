@@ -8,6 +8,7 @@ execute if score @s aparse.xsize matches 2.. if score #xsize aparse.xsize < @s a
 execute if score @s aparse.xsize matches 2.. if score #xsize aparse.xsize < @s aparse.xsize if entity @s[scores={aparse.dir=1}] positioned ~ ~ ~-1 run function mblock:objects/item_reader/schedules/xyz_private/load/x_axis/horizontal_neg_z
 
 execute if score #xsize aparse.xsize >= @s aparse.xsize run scoreboard players reset @s _aparse_tmp1
+scoreboard players add counted_blocks _array_tmp 1
 
 scoreboard players set @s _array_tmp2 0
 execute if score #xsize aparse.xsize >= @s aparse.xsize run scoreboard players set @s _array_tmp2 15

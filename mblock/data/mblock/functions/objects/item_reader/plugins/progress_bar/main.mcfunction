@@ -1,8 +1,8 @@
-scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
+execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
 #scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
-scoreboard players add #bar_max _array_tmp 1
-scoreboard players operation #bar_max _array_tmp *= @s aparse.ysize
-scoreboard players operation #bar_max _array_tmp *= @s aparse.zsize
+execute if entity @s[tag=!_load_scheduled] run scoreboard players add #bar_max _array_tmp 1
+execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp *= @s aparse.ysize
+execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp *= @s aparse.zsize
 
 scoreboard players set #2 _mbtmp 2
 
@@ -10,7 +10,7 @@ execute if entity @s[tag=saving_with_error] run scoreboard players operation #ba
 
 bossbar add item_reader:progress "§5Item Reader"
 
-execute if entity @s[tag=_save_scheduled,tag=!saving_with_erros] run bossbar set item_reader:progress name "§9Saving Status"
+execute if entity @s[tag=_save_scheduled,tag=!saving_with_error] run bossbar set item_reader:progress name "§9Saving Status"
 execute if entity @s[tag=_load_scheduled] run bossbar set item_reader:progress name "§9Load Status"
 execute if entity @s[tag=saving_with_error] run bossbar set item_reader:progress name "§5Saved item could contain bugs!"
 

@@ -1,6 +1,7 @@
 data modify entity @s CustomName set value "\"§8[MusicBlocks] §9Loading Blocks on X-\""
 
 scoreboard players remove #xsize aparse.xsize 1
+scoreboard players add counted_blocks _array_tmp 1
 
 scoreboard players set @s _aparse_tmp1 0
 

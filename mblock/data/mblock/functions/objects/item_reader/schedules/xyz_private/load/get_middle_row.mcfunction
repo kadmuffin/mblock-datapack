@@ -1,6 +1,7 @@
 tag @s remove load_stage_3
 
 data modify entity @s CustomName set value "\"§8[MusicBlocks] §9Saving Blocks on Center\""
+scoreboard players add counted_blocks _array_tmp 1
 
 tag @s add on_y_zero
 tag @s add y_zero
