@@ -1,4 +1,5 @@
 scoreboard players add @s _aparse_tmp2 1
+tag @s add step_runned
 
 tag @s[tag=skip_x] add __skip_x
 tag @s[tag=skip_x] remove skip_x

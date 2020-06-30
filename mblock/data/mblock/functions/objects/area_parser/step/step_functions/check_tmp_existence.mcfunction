@@ -1,6 +1,7 @@
 tag @s add checking_entities
+tag @e[tag=finished] remove finished
 
-execute as @e[tag=z_step] unless entity @e[tag=finished] if score @s aparse.id = @e[tag=checking_entities,limit=1] aparse.id run tag @e[tag=checking_entities,limit=1] add finished
+execute as @e[tag=z_step,sort=random] unless entity @e[tag=finished] if score @s aparse.id = @e[tag=checking_entities,limit=1] aparse.id run function mblock:objects/area_parser/step/step_functions/check_extra
 
 tag @e[tag=z_step,tag=same_id,limit=1] remove same_id
 
