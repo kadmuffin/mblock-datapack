@@ -11,6 +11,8 @@ execute if score #xsize aparse.xsize >= @s aparse.xsize run scoreboard players r
 scoreboard players add counted_blocks _array_tmp 1
 
 scoreboard players set @s _array_tmp2 0
+function mblock:objects/item_reader/utils/load_dir
+
 execute if score #xsize aparse.xsize >= @s aparse.xsize run scoreboard players set @s _array_tmp2 15
 execute if score #xsize aparse.xsize >= @s aparse.xsize run tag @s add load_stage_5
 execute if score #xsize aparse.xsize >= @s aparse.xsize run tag @s remove load_stage_4

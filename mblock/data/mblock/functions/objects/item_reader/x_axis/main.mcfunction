@@ -1,7 +1,7 @@
 scoreboard players operation #xsize aparse.xsize = @s aparse.xsize
 scoreboard players reset @s _aparse_tmp1
 
-
+function mblock:objects/item_reader/utils/load_dir
 execute positioned ~ ~1 ~ run function mblock:objects/item_reader/x_axis/get_x1_row
 
 scoreboard players reset @s _aparse_tmp1
@@ -13,7 +13,7 @@ function mblock:objects/item_reader/y_axis/prepare_y_axis
 tag @s remove on_y_zero
 tag @s remove y_zero
 
-
+function mblock:objects/item_reader/utils/load_dir
 scoreboard players set #xsize aparse.xsize -1
 scoreboard players reset @s _aparse_tmp1
 

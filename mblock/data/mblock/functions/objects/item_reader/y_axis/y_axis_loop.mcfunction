@@ -14,9 +14,7 @@ tag @s[tag=_contains_events] add contains_events
 
 data modify entity @s Item.tag.tmp_events set from entity @s Item.tag.data.events
 
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,tag=look_neg] run tag @s add look_neg
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set @s aparse.dir 0
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set @s aparse.dir 1
+function mblock:objects/item_reader/utils/load_dir
 
 data modify entity @s Item.tag.z_data set from entity @s Item.tag.data.notes[0][0]
 

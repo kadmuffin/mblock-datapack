@@ -12,9 +12,9 @@ execute store result score @s aparse.xsize run data get entity @s Item.tag.song.
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loading Song... (WIP)","color":"gray"}]
 
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,tag=look_neg] run tag @s add look_neg
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set @s aparse.dir 0
-execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set @s aparse.dir 1
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,tag=look_neg] run tag @s add has_look_neg
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set #dir aparse.dir 0
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set #dir aparse.dir 1
 
 
 scoreboard players add zsize _array_tmp 2
@@ -22,6 +22,8 @@ scoreboard players add zsize _array_tmp 2
 execute if score events_length _array_tmp matches 1.. run tag @s add _contains_events
 
 tag @s add on_ground
+
+function mblock:objects/item_reader/utils/load_dir
 
 function mblock:objects/item_reader/x_axis/main
 
