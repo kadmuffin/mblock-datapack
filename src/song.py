@@ -59,12 +59,12 @@ class song(object):
         if align:
             self.metadata.xsize = len(self.data) // 2
 
-            for i in range(self.metadata.xsize):
+            for i in range(self.metadata.xsize - 1):
                 self.data.insert(0, [])
         else:
-            self.metadata.xsize = len(self.data)
+            self.metadata.xsize = len(self.data) // 2
 
-        self.metadata.length = len(self.data[-1][0])
+        self.metadata.length = len(self.data[-1].blocks[0])
 
     def generate_give(self):
         """Creates a command for your song"""

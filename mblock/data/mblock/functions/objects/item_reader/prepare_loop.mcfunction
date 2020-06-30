@@ -1,4 +1,5 @@
 # Save Array Length
+tag @s add no_sound
 
 execute store result score @s _array_tmp run data get entity @s Item.tag.data.notes[0]
 execute store result score ylength _array_tmp run data get entity @s Item.tag.data.notes[0]

@@ -22,15 +22,15 @@ def create_datapack(target_path, datapack_name, input_file, nbs_song):
             file.write(
                 str(
                     {
-                        "pack": {
-                            "pack_format": 5,
-                            "description": "§7MusicBlocks: §9Exported NBS files!",
+                        '"pack"': {
+                            '"pack_format"': 5,
+                            '"description"': '"\u00c2\u00a77MusicBlocks: \u00c2\u00a79Exported NBS files!"',
                         }
                     }
-                )
+                ).replace("'", "")
             )
 
-    with open(os.path.join(datapack_dir, input_file), "w") as file:
+    with open(os.path.join(datapack_dir, input_file) + ".mcfunction", "w") as file:
         file.write(nbs_song.generate_give())
     pass
 

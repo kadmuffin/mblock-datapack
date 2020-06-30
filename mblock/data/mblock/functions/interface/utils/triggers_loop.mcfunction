@@ -1,3 +1,7 @@
+scoreboard players enable @a mb.menu.tp
+execute as @a[scores={mb.menu.tp=-2..}] at @s at @e[tag=music_player,sort=nearest,limit=1] rotated as @s run tp ~ ~3 ~
+execute as @a[scores={mb.menu.tp=-2..}] run scoreboard players set @s mb.menu.tp -3
+
 scoreboard players enable @a mb.menu.play
 execute as @a[scores={mb.menu.play=-2..}] at @s run function mblock:interface/commands/start_player
 execute as @a[scores={mb.menu.play=-2..}] run scoreboard players set @s mb.menu.play -3

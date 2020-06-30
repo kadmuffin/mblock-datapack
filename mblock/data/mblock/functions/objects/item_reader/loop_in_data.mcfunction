@@ -1,7 +1,9 @@
 scoreboard players add internal_zsize _array_tmp 1
+scoreboard players add counted_blocks _array_tmp 1
 
 setblock ~ ~ ~ air
-execute if entity @s[tag=on_ground] run setblock ~ ~-1 ~ stripped_spruce_wood
+execute if entity @s[tag=on_ground] if block ~ ~-1 ~ #minecraft:soundable run setblock ~ ~-1 ~ stripped_spruce_wood
+execute if entity @s[tag=on_ground] if block ~ ~-1 ~ #minecraft:octaves run setblock ~ ~-1 ~ stripped_spruce_wood
 
 execute as @s[tag=!counting_air] store result score air_count _array_tmp run data get entity @s Item.tag.z_data[0].air
 execute as @s[tag=!counting_air] if score air_count _array_tmp matches 1.. run tag @s add counting_air

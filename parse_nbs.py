@@ -20,7 +20,9 @@ from src import create_datapack
     help="Sets the datapack folder name.  (Default : 'exported')",
 )
 @click.option(
-    "--align_data", default=True, help="Aligns the data to the center (Default : True)",
+    "--align_data",
+    default=False,
+    help="Aligns the data to the center (Default : True)",
 )
 @click.argument("input_file")
 def main(target_path, datapack, datapack_name, align_data, input_file):
@@ -30,12 +32,12 @@ def main(target_path, datapack, datapack_name, align_data, input_file):
     nbs_song = song(raw_data.header)
 
     align_data_ = False
-    if str.lower(align_data) == "true":
+    if (align_data is str and str.lower(align_data) == "true") or align_data:
         align_data_ = True
 
     nbs_song.get_notes(raw_data, align_data_)
 
-    if str.lower(datapack) == "true":
+    if (datapack is str and str.lower(datapack) == "true") or datapack:
         create_datapack(target_path, datapack_name, input_file, nbs_song)
         return
 
