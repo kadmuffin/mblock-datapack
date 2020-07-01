@@ -17,6 +17,10 @@ execute as @s[tag=look_neg] run tag @e[tag=new_note_player,limit=1] add look_neg
 execute as @s[tag=middle_layer] run tag @e[tag=new_note_player,limit=1] add middle_layer
 execute as @s[tag=disable_extended] run tag @e[tag=new_note_player,limit=1] add disable_extended
 
+execute as @s[tag=on_z_center] store result score @s mb_x_pos run data get entity @s Pos[0] 1000
+execute as @s[tag=on_z_center] store result score @s mb_z_pos run data get entity @s Pos[2] 1000
+
+
 execute as @e[tag=new_note_player,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/assign_tags
 
 tag @e[tag=new_note_player,limit=1] remove new_note_player

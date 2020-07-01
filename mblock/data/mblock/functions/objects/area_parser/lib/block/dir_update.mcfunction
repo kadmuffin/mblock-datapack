@@ -24,3 +24,5 @@ execute if entity @s[tag=!disable_redirection,tag=direction_changed] run tp ~ ~ 
 scoreboard players operation @s _aparse_tmp6 = @s aparse.xsize
 
 execute if entity @s[tag=!disable_redirection,tag=direction_changed] run function mblock:objects/area_parser/lib/redirect
+
+tag @s add __skip_x
