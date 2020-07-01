@@ -1,5 +1,7 @@
 tag @s add runned
 tag @s add playing
+tag @s[tag=play_next_tick] add instant_start
+tag @s remove play_next_tick
 tag @e[tag=restarting_song] remove restarting_song
 
 execute if entity @s[scores={aparse.xsize=9..,aparse.ysize=9..}] run tellraw @p ["", {"text": "[MusicBlocks] ", "color":"gray"}, {"text": "Your Area is above the recommended limit, Disabling box rendering to increase performance!", "color":"yellow"}]
@@ -21,10 +23,10 @@ scoreboard players operation @s mb_tmpz = @s aparse.zsize
 scoreboard players set @s aparse.zsize 0
 scoreboard players set @s mb_ztravel 0
 
-execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~2.5 run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-2.5 run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~2.5 ~ ~ run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~-2.5 ~ ~ run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~2.6 run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-2.6 run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~2.6 ~ ~ run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~-2.6 ~ ~ run function mblock:objects/area_parser/run_instant
 
 execute as @s[tag=!instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~2 run function mblock:objects/area_parser/run_instant
 execute as @s[tag=!instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-2 run function mblock:objects/area_parser/run_instant

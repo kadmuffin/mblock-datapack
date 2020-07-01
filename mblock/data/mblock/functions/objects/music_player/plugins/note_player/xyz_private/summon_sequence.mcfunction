@@ -6,6 +6,7 @@ scoreboard players operation @e[tag=new_note_player,limit=1] aparse.xsize = @s a
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.ysize = @s aparse.ysize
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.zsize = @s mb_tmpz
 
+scoreboard players set @e[tag=new_note_player,limit=1] mb_ztravel 0
 scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 1
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.dir = @s aparse.dir
 
