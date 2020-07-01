@@ -13,7 +13,7 @@ execute store result score @s aparse.ysize run scoreboard players get @e[tag=mus
 execute store result score @s aparse.xsize run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 
 scoreboard players add @s aparse.ysize 1
-scoreboard players remove @s aparse.zsize 2
+scoreboard players remove @s aparse.zsize 1
 
 scoreboard players set counted_blocks _array_tmp 0
 

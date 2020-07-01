@@ -14,6 +14,11 @@ function mblock:interface/langs/english/width_size
 
 function mblock:interface/utils/jump_line
 
+# [x] Use Raw BPM
+function mblock:interface/langs/english/raw_bpm
+
+function mblock:interface/utils/jump_line
+
 function mblock:interface/langs/english/play_and_stop
 
 function mblock:interface/utils/end_line

@@ -32,6 +32,8 @@ scoreboard players set global mb_id 0
 scoreboard players set .scale mb.true_bpm 100
 scoreboard players set .bpm_div mb.true_bpm 112
 scoreboard players set #2 mb.true_bpm 2
+scoreboard players set .multiplier mb.true_bpm 2
+
 
 # Schedule functions at start
 #function mblock:objects/music_player/plugins/note_player/schedule_update

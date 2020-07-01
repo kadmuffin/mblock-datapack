@@ -8,5 +8,6 @@ execute if block ~ ~ ~ magenta_glazed_terracotta run function mblock:objects/ite
 execute if block ~ ~ ~ black_glazed_terracotta run function mblock:objects/item_reader/saving/events/stop_air_count
 execute if block ~ ~ ~ purple_glazed_terracotta run function mblock:objects/item_reader/saving/events/stop_air_count
 
-execute if score @s aparse.zsize <= internal_zsize _array_tmp run function mblock:objects/item_reader/saving/events/stop_air_count
+execute if score @s aparse.zsize < internal_zsize _array_tmp run function mblock:objects/item_reader/saving/events/stop_air_count
 execute unless score #tone _mbtmp matches -1 run function mblock:objects/item_reader/saving/events/stop_air_count
+#execute unless score length _array_tmp matches 0.. run function mblock:objects/item_reader/saving/events/stop_air_count

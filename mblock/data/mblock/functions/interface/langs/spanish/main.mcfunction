@@ -14,6 +14,10 @@ function mblock:interface/langs/spanish/width_size
 
 function mblock:interface/utils/jump_line
 
+function mblock:interface/langs/spanish/raw_bpm
+
+function mblock:interface/utils/jump_line
+
 function mblock:interface/langs/spanish/play_and_stop
 
 function mblock:interface/utils/end_line

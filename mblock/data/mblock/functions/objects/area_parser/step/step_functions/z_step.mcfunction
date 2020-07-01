@@ -1,5 +1,8 @@
 scoreboard players add @s _aparse_tmp2 1
-tag @s add step_runned
+tag @s add step_executed
+
+# Debug tellraw
+#tellraw @p ["",{"score": {"objective": "_aparse_tmp2", "name": "@s"}}, {"text": " X: "},{"score": {"objective": "_aparse_tmp1", "name": "@s"}}, {"text": " Z MAX: "},{"score": {"objective": "aparse.zsize", "name": "@s"}}, {"text": " Y[]: "},{"score": {"objective": "_aparse_tmp", "name": "@s[tag=skip_x]"}}]
 
 tag @s[tag=skip_x] add __skip_x
 tag @s[tag=skip_x] remove skip_x
@@ -14,8 +17,9 @@ execute if block ~ ~ ~ #mblock:event_block run tag @s add event_block
 #execute as @s[tag=_ancled_pos] at @s unless score @s _aparse_tmp2 < @s aparse.zsize run function mblock:objects/area_parser/step/reverse_pos
 scoreboard players operation #x_1 aparse.zsize = @s aparse.zsize
 scoreboard players remove #x_1 aparse.zsize 1
-execute as @s if score @s _aparse_tmp2 >= #x_1 aparse.zsize run tag @s remove skip_x
-execute as @s unless score @s _aparse_tmp2 < @s aparse.zsize run kill @s
+execute as @s if score @s _aparse_tmp2 > #x_1 aparse.zsize run tag @s remove skip_x
+execute as @s if score @s _aparse_tmp2 >= #x_1 aparse.zsize run tag @s remove step_executed
+execute as @s if score @s _aparse_tmp2 > @s aparse.zsize run kill @s
 
 function mblock:objects/area_parser/lib/utils/set_tags
 execute if entity @s[tag=!skip_x,tag=!show_top,tag=!on_center] run function mblock:objects/area_parser/step/step_functions/summon_y

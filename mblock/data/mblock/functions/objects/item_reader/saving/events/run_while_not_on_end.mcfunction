@@ -1,4 +1,3 @@
-execute as @s[tag=!counting_air,tag=!counting_tone,tag=!magenta_terracotta] if score #tone _mbtmp matches -1 run data modify entity @s Item.tag.tmp set value {air:-1}
 execute as @s[tag=!counting_air,tag=!counting_tone,tag=!magenta_terracotta] if score #tone _mbtmp matches -1 run tag @s add counting_air
 
 #execute as @s[tag=!counting_air,tag=!magenta_terracotta,tag=!counting_tone] unless score #tone _mbtmp matches -1 run data modify entity @s Item.tag.tmp set value {tone:-1}

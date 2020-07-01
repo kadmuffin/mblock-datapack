@@ -7,7 +7,9 @@ execute if entity @s[scores={aparse.xsize=9..,aparse.ysize=9..}] run tellraw @p 
 function mblock:interface/commands/kill_player
 
 # Compute backend BPM
-function mblock:objects/music_player/plugins/note_player/utils/compute_bpm
+execute if entity @s[tag=!direct_bpm] run function mblock:objects/music_player/plugins/note_player/utils/compute_bpm
+execute if entity @s[tag=direct_bpm] run scoreboard players operation @s mb.true_bpm = @s mb.bpm
+execute if entity @s[tag=direct_bpm,tag=!disable_double] run scoreboard players operation @s mb.true_bpm *= #2 mb.true_bpm
 
 tag @s add _summon_player
 tag @s add _not_align
