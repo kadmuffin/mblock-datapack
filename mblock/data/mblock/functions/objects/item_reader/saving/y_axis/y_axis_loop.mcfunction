@@ -28,10 +28,7 @@ tag @s remove counting_air
 tag @s remove counting_tone
 tag @s remove end_recursion
 
-execute at @s if entity @e[tag=music_player,tag=look_neg,distance=0..1,limit=1] run tag @s add look_neg
-execute at @s if entity @e[tag=music_player,tag=!look_neg,distance=0..1,limit=1] run tag @s remove look_neg
-execute at @s if entity @e[tag=music_player,scores={aparse.dir=0},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 0
-execute at @s if entity @e[tag=music_player,scores={aparse.dir=1},distance=0..1,limit=1] run scoreboard players set @s aparse.dir 1
+function mblock:objects/item_reader/utils/load_dir
 
 execute as @s[tag=!look_neg,scores={aparse.dir=0}] positioned ~ ~ ~3 run function mblock:objects/item_reader/saving/loop_in_blocks
 execute as @s[tag=!look_neg,scores={aparse.dir=1}] positioned ~3 ~ ~ run function mblock:objects/item_reader/saving/loop_in_blocks

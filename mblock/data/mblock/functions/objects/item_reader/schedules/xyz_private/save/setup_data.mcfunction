@@ -25,6 +25,11 @@ scoreboard players reset estimated_zsize _array_tmp
 scoreboard players reset internal_zsize _array_tmp
 scoreboard players set array_size _array_tmp 0
 
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,tag=look_neg] run tag @s add has_look_neg
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=0}] run scoreboard players set #dir aparse.dir 0
+execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_player,distance=0,limit=1,scores={aparse.dir=1}] run scoreboard players set #dir aparse.dir 1
+
+
 #scoreboard players reset total_air _array_tmp
 #scoreboard players operation zsize _array_tmp = length _array_tmp
 

@@ -1,6 +1,5 @@
 tag @s add runned
 tag @s add playing
-tag @s[tag=play_next_tick] add instant_start
 tag @s remove play_next_tick
 tag @e[tag=restarting_song] remove restarting_song
 
