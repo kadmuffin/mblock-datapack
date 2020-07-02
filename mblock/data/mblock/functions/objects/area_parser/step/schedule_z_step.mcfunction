@@ -1,4 +1,4 @@
-tag @e[tag=step_executed] remove step_executed
+#tag @e[tag=step_executed] remove step_executed
 scoreboard players set schedule_z _aparse_tmp 1
 
 execute at @r if entity @e[tag=_scheduled2] run function mblock:objects/area_parser/step/step_functions/run_on_mblocks
