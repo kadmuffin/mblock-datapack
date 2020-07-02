@@ -1,7 +1,7 @@
 execute if score .tick mb.menu.page matches 9.. run scoreboard players set .tick mb.menu.page 0
 scoreboard players add .tick mb.menu.page 1
 
-function mblock:interface/utils/triggers_loop
+execute if score .tick mb.menu.page matches 9.. run function mblock:interface/utils/triggers_loop
 
 execute if score .tick mb.menu.page matches 9.. as @a[tag=__menu] at @s if score @s mb.menu.lang matches ..-1 run scoreboard players set @s mb.menu.lang 0
 execute if score .tick mb.menu.page matches 9.. as @a[tag=__menu] at @s if score @s mb.menu.lang > #max_lang mb.menu.lang run scoreboard players set @s mb.menu.lang 0
