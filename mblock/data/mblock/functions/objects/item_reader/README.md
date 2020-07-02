@@ -1,12 +1,13 @@
-# Item Reader: Save my Notes, Load my Song!.
+# Item Reader: Save my Notes, Load my Song
+
 This folder focuses on the ability to load songs and saving them, the next documentation describes the saving format.
 
-## The data format.
-
 ## Sound Settings
+
 The sound settings are stored on the parameter `song` inside of the Item, this parameter holds the next data types:
 
 Example settings:
+
 ```json
 {
   "xsize": 4,
@@ -17,6 +18,7 @@ Example settings:
 ```
 
 ## Notes
+
 Notes contain a tone number (between 0 - 24) and a sound number (between 1 - 15, if no sound is store it's assumed that is 0 or harp), if a sound direction is specified is stored in a range of 0 to 5.
 
 Sometimes for reducing memory usage the notes a group together when possible, for example, 3 notes with the same tone and sound get stored as one-note with a count value that indicates how many times paste the note.
@@ -24,15 +26,17 @@ Sometimes for reducing memory usage the notes a group together when possible, fo
 Here is a example note with all parameters:
 
 ```json
-{"tone": 5, "sound": 1, "sound_dir": 3, "count": 12}
+{ "tone": 5, "sound": 1, "sound_dir": 3, "count": 12 }
 ```
 
 ## Events
+
 They are stored in `data.events`, there are 3 types of events (magenta still not supported), they range between 1 and 3, the datapack will ignore events that have a zero in the event tag, for example:
 
 This will be ignored:
+
 ```json
-{"event":0, "something": 1}
+{ "event": 0, "something": 1 }
 ```
 
 This due to minecraft data get command will return always zero if no value was found, so values that range 1-3 are used.
@@ -42,8 +46,8 @@ This due to minecraft data get command will return always zero if no value was f
 Events that range from one to two will be considered as the end of the song in the loading sequence, then proper event block will be placed, for 1 it will be `black_glazed_terracotta` that forces a song end, for 2 it will be `purple_glazed_terracotta` that repeats the song until stopped or moved from the centerline.
 
 ```json
-{"event":1, "z_pos": 5}, // This is black glazed terracotta
-{"event":2, "z_pos": 5} // This is purple glazed terracotta
+({ "event": 1, "z_pos": 5 }, // This is black glazed terracotta
+{ "event": 2, "z_pos": 5 }) // This is purple glazed terracotta
 ```
 
 ### Redirection
@@ -51,10 +55,10 @@ Events that range from one to two will be considered as the end of the song in t
 The last event (still not supported) is redirection that uses the value 3, this one contains one extra parameter: `dir` that indicates the direction of the arrow:
 
 ```json
-{"event":3, "dir": 0, "z_pos": 2}, // This is magenta glazed terracotta facing west
-{"event":3, "dir": 1, "z_pos": 2}, // This is magenta glazed terracotta facing south
-{"event":3, "dir": 2, "z_pos": 2}, // This is magenta glazed terracotta facing east
-{"event":3, "dir": 3, "z_pos": 2} // This is magenta glazed terracotta facing north
+({ "event": 3, "dir": 0, "z_pos": 2 }, // This is magenta glazed terracotta facing west
+{ "event": 3, "dir": 1, "z_pos": 2 }, // This is magenta glazed terracotta facing south
+{ "event": 3, "dir": 2, "z_pos": 2 }, // This is magenta glazed terracotta facing east
+{ "event": 3, "dir": 3, "z_pos": 2 }) // This is magenta glazed terracotta facing north
 ```
 
 ## How 3D data is stored
@@ -62,6 +66,7 @@ The last event (still not supported) is redirection that uses the value 3, this 
 All the data is stored in an array, each element is the data array represents an X-Axis from left to right.
 
 For example:
+
 ```python
 {
   "data": [
@@ -81,8 +86,10 @@ Inside of each X-Axis Array, there is data stored on the Z-Axis, the index of th
 ]
 ```
 
-## Example Item.tag:
+## Example Item.tag
+
 This Item.tag contains three sequential notes (note: 15), the code is formatted as a json to make it more readable:
+
 ```python
 {
  "contains_song": 1,
@@ -90,7 +97,8 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
   "xsize": 3,
   "ysize": 2,
   "zsize": 4,
-  "bpm": 35
+  "bpm": 35,
+  "raw_bpm": 0
 },
  "data": {
   "notes": [
@@ -98,7 +106,7 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
     [
       [{"tone": 15},{"tone": 15},{"tone": 15}]
     ],
-    [] # X + 1 
+    [] # X + 1
   ],
   "events": [
     {

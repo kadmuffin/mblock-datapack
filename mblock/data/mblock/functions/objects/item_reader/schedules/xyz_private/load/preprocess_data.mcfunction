@@ -7,9 +7,13 @@ execute store result score zsize _array_tmp run data get entity @s Item.tag.song
 scoreboard players add zsize _array_tmp 2
 
 
+execute if entity @s[tag=!disable_bpm,tag=!disable_size] store result score #direct_bpm _array_tmp run data get entity @s Item.tag.song.direct_bpm
+execute if entity @s[tag=!disable_bpm,tag=!disable_size] if score #direct_bpm _array_tmp matches 1.. run tag @e[tag=music_player,sort=nearest,limit=1] add direct_bpm
+
 execute if entity @s[tag=!disable_bpm,tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] run data modify entity @s Item.tag.display.Name set from entity @e[tag=song,sort=nearest,limit=1] Item.tag.display.Name
 execute if entity @s[tag=!disable_bpm] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s mb.bpm = bpm _array_tmp
 execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.zsize = zsize _array_tmp
+execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players remove @s aparse.zsize 1
 execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.ysize = ysize _array_tmp
 execute if entity @s[tag=!disable_size] as @e[tag=music_player,sort=nearest,limit=1] at @s run scoreboard players operation @s aparse.xsize = xsize _array_tmp
 

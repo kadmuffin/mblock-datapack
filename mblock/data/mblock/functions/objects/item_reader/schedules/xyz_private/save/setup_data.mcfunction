@@ -4,6 +4,8 @@ tag @s add _ls_scheduled
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Saving Song... (WIP)","color":"gray"}]
 
+execute at @s if entity @e[tag=music_player,tag=direct_bpm,distance=0..1] run data modify entity @s Item.tag.song.direct_bpm set value 1b
+
 execute store result score bpm _array_tmp run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
 execute store result entity @s Item.tag.song.bpm int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] mb.bpm
 execute store result entity @s Item.tag.song.xsize int 1 run scoreboard players get @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
@@ -34,7 +36,7 @@ execute at @e[tag=music_player,sort=nearest,limit=1] if entity @e[tag=music_play
 #scoreboard players operation zsize _array_tmp = length _array_tmp
 
 tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"BPM: ","color":"gray"},{"score":{"objective":"mb.bpm","name":"@e[tag=music_player,sort=nearest,limit=1]"},"color":"blue"}]
-tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Enabled (by default)","color":"blue"}]
+#tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Enabled (by default)","color":"blue"}]
 #execute if entity @s[tag=!optimize_data] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Data Optimization: ","color":"gray"},{"text":"Disabled","color":"red"}]
 
 data modify entity @s CustomNameVisible set value 1b
