@@ -16,9 +16,9 @@ tag @s add _summon_player
 tag @s add _not_align
 scoreboard players operation #x mb_tmpz = @s aparse.xsize
 scoreboard players operation #y mb_tmpz = @s aparse.ysize
+scoreboard players operation @s mb_tmpz = @s aparse.zsize
 scoreboard players remove @s aparse.xsize 1
 #scoreboard players remove @s aparse.ysize 1
-scoreboard players operation @s mb_tmpz = @s aparse.zsize
 scoreboard players set @s aparse.zsize 0
 scoreboard players set @s mb_ztravel 0
 

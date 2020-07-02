@@ -25,15 +25,15 @@ execute as @a[scores={mb.menu.zsize=-2}] at @s if entity @e[tag=music_player] ru
 execute as @a[scores={mb.menu.zsize=-2..}] run scoreboard players set @s mb.menu.zsize -3
 
 scoreboard players enable @a mb.menu.ysize
-execute as @a[scores={mb.menu.ysize=-2..15}] at @s if entity @e[tag=music_player] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.75 1.6
-execute as @a[scores={mb.menu.ysize=1..15}] at @s if entity @e[tag=music_player] run scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.ysize = @s mb.menu.ysize
+execute as @a[scores={mb.menu.ysize=-2..14}] at @s if entity @e[tag=music_player] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.75 1.6
+execute as @a[scores={mb.menu.ysize=1..14}] at @s if entity @e[tag=music_player] run scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.ysize = @s mb.menu.ysize
 execute as @a[scores={mb.menu.ysize=-1}] at @s if entity @e[tag=music_player] run scoreboard players remove @e[tag=music_player,sort=nearest,limit=1] aparse.ysize 1
 execute as @a[scores={mb.menu.ysize=-2}] at @s if entity @e[tag=music_player] run scoreboard players add @e[tag=music_player,sort=nearest,limit=1] aparse.ysize 1
 execute as @a[scores={mb.menu.ysize=-2..}] run scoreboard players set @s mb.menu.ysize -3
 
 scoreboard players enable @a mb.menu.xsize
-execute as @a[scores={mb.menu.xsize=-2..15}] at @s if entity @e[tag=music_player] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.75 1.6
-execute as @a[scores={mb.menu.xsize=1..15}] at @s if entity @e[tag=music_player] run scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.xsize = @s mb.menu.xsize
+execute as @a[scores={mb.menu.xsize=-2..14}] at @s if entity @e[tag=music_player] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.75 1.6
+execute as @a[scores={mb.menu.xsize=1..14}] at @s if entity @e[tag=music_player] run scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.xsize = @s mb.menu.xsize
 execute as @a[scores={mb.menu.xsize=-1}] at @s if entity @e[tag=music_player] run scoreboard players remove @e[tag=music_player,sort=nearest,limit=1] aparse.xsize 1
 execute as @a[scores={mb.menu.xsize=-2}] at @s if entity @e[tag=music_player] run scoreboard players add @e[tag=music_player,sort=nearest,limit=1] aparse.xsize 1
 execute as @a[scores={mb.menu.xsize=-2..}] run scoreboard players set @s mb.menu.xsize -3
