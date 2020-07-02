@@ -8,5 +8,6 @@ scoreboard objectives add mb.menu.bpm trigger
 scoreboard objectives add mb.menu.zsize trigger
 scoreboard objectives add mb.menu.ysize trigger
 scoreboard objectives add mb.menu.xsize trigger
+scoreboard objectives add mb.gb.box_speed trigger
 
 execute unless score #max_lang mb.menu.lang matches 1.. run scoreboard players set #max_lang mb.menu.lang 1

@@ -1,3 +1,7 @@
+scoreboard players enable @a mb.gb.box_speed
+execute as @a[scores={mb.gb.box_speed=1}] run function mblock:interface/commands/increase_render_speed
+execute as @a[scores={mb.gb.box_speed=1}] run scoreboard players set @s mb.gb.box_speed 0
+
 scoreboard players enable @a mb.menu.tp
 execute as @a[scores={mb.menu.tp=-2..}] at @s at @e[tag=music_player,sort=nearest,limit=1] rotated as @s run tp ~ ~3 ~
 execute as @a[scores={mb.menu.tp=-2..}] run scoreboard players set @s mb.menu.tp -3
