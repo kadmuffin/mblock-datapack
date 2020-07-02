@@ -1,2 +1,2 @@
 execute if entity @e[tag=music_player,sort=nearest,limit=1] run playsound minecraft:block.barrel.close block @s ~ ~ ~ 0.4 1.8
-execute as @e[tag=music_player,sort=nearest,limit=1] at @s align xyz positioned ~.5 ~-1.2 ~.5 run function mblock:objects/music_player/plugins/note_player/summon_player
+execute as @e[tag=music_player,sort=nearest,limit=1] at @s align xyz positioned ~.5 ~-1.2 ~.5 run tag @s add play_next_tick

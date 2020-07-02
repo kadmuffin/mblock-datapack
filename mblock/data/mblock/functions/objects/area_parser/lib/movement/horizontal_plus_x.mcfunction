@@ -1,5 +1,5 @@
 scoreboard players add @s _aparse_tmp1 1
 
-execute as @s positioned ~ ~ ~ run function mblock:objects/area_parser/lib/block/check_block
+function mblock:objects/area_parser/lib/block/check_block
 
-execute positioned ~1 ~ ~ if entity @s if score @s _aparse_tmp1 < @s aparse.xsize run function mblock:objects/area_parser/lib/movement/horizontal_plus_x
+execute positioned ~1 ~ ~ if score @s _aparse_tmp1 < @s aparse.xsize run function mblock:objects/area_parser/lib/movement/horizontal_plus_x
