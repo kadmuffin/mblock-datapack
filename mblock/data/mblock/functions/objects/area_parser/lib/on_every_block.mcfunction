@@ -28,11 +28,8 @@ scoreboard players set @s[tag=_summon_player,scores={_aparse_tmp3=2..,aparse.xsi
 scoreboard players set @s[tag=_summon_player,scores={_aparse_tmp3=1..,aparse.xsize=..3}] _aparse_tmp3 0
 
 
-execute as @s[tag=!_summon_player,tag=on_bottom] if entity @p[gamemode=creative] run fill ~ ~-1 ~ ~ ~-1 ~ stripped_spruce_wood replace air
-execute as @s[tag=!_summon_player,tag=on_bottom,scores={aparse.dir=0},tag=look_neg] if entity @p[gamemode=creative] run fill ~ ~-1 ~1 ~ ~-1 ~ stripped_spruce_wood replace air
-execute as @s[tag=!_summon_player,tag=on_bottom,scores={aparse.dir=0},tag=!look_neg] if entity @p[gamemode=creative] run fill ~ ~-1 ~-1 ~ ~-1 ~ stripped_spruce_wood replace air
-execute as @s[tag=!_summon_player,tag=on_bottom,scores={aparse.dir=1},tag=look_neg] if entity @p[gamemode=creative] run fill ~1 ~-1 ~ ~ ~-1 ~ stripped_spruce_wood replace air
-execute as @s[tag=!_summon_player,tag=on_bottom,scores={aparse.dir=1},tag=!look_neg] if entity @p[gamemode=creative] run fill ~-1 ~-1 ~ ~ ~-1 ~ stripped_spruce_wood replace air
+execute as @s[tag=!_summon_player,tag=on_bottom] unless score @s _mb.floor matches 1.. run function mblock:objects/area_parser/lib/block/floors/set_default_floor
+execute as @s[tag=!_summon_player,tag=on_bottom] if score @s _mb.floor matches 1.. run function mblock:objects/area_parser/lib/block/floors/main
 
 
 execute if entity @s[tag=on_bottom,tag=!on_side] run function mblock:objects/music_player/plugins/item_events/note_block_load_area_parser

@@ -1,9 +1,9 @@
 {
-	"values": [
-		"air",
-		"stripped_spruce_wood",
-		"#minecraft:signs",
-		"#minecraft:rails",
-		"#minecraft:saplings"
-	]
+  "values": [
+    "air",
+    "#mblock:floor",
+    "#minecraft:signs",
+    "#minecraft:rails",
+    "#minecraft:saplings"
+  ]
 }

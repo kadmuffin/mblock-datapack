@@ -14,6 +14,7 @@
 #  - ../note_wand (not directly required)
 #    * Used for music player interaction.
 
+scoreboard objectives add _mb.floor dummy
 scoreboard objectives add mb_ztravel dummy
 scoreboard objectives add mb.bpm dummy
 scoreboard objectives add mb.true_bpm dummy

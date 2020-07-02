@@ -12,6 +12,7 @@ execute as @s[tag=_not_align,tag=look_neg,scores={aparse.dir=1}] run summon mine
 scoreboard players add .global aparse.id 1
 scoreboard players operation @s aparse.id = .global aparse.id
 scoreboard players operation @e[tag=_new_schedule] aparse.id = .global aparse.id
+scoreboard players operation @e[tag=_new_schedule] _mb.floor = @s _mb.floor
 
 scoreboard players operation @e[tag=_new_schedule] aparse.dir = @s aparse.dir
 
