@@ -1,12 +1,4 @@
-execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
-#scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
-execute if entity @s[tag=!_load_scheduled] run scoreboard players add #bar_max _array_tmp 1
-execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp *= @s aparse.ysize
-execute if entity @s[tag=!_load_scheduled] run scoreboard players operation #bar_max _array_tmp *= @s aparse.zsize
-
-scoreboard players set #2 _mbtmp 2
-
-execute if entity @s[tag=saving_with_error] run scoreboard players operation #bar_max _array_tmp /= #2 _mbtmp
+#execute if entity @s[tag=saving_with_error] run scoreboard players operation #bar_max _array_tmp /= #2 _mbtmp
 
 bossbar add item_reader:progress "§5Item Reader"
 

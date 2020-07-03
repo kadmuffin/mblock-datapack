@@ -1,6 +1,8 @@
 #function mblock:objects/item_reader/utils/reverse_data
 
 tag @s remove save_stage_3
+#scoreboard players add counted_blocks _array_tmp 1
+
 
 data modify entity @s CustomName set value "\"§8[MusicBlocks] §9Saving Blocks on Center\""
 

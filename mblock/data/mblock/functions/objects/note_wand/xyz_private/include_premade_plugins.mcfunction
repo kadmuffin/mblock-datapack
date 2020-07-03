@@ -12,7 +12,7 @@ execute as @s[tag=_octave_found,tag=clicking] run function mblock:objects/note_w
 
 # Returns the block to the player while on off hand and sneaking  (depends on note_get)
 #function mblock:objects/note_wand/plugins/give_blocks/main
-execute as @s[tag=_octave_found,tag=_off_hand,tag=clicking,tag=!holding_block] run function mblock:objects/note_wand/plugins/note_get/play_note
+#execute as @s[tag=_octave_found,tag=_off_hand,tag=clicking,tag=!holding_block] run function mblock:objects/note_wand/plugins/note_get/play_note
 execute as @s[tag=!_off_hand,tag=holding_block] run function mblock:objects/note_wand/plugins/save_tone/forget_tone
 
 # Saves the block for latter use while sneaking for 4s (depends on note_get)
@@ -24,3 +24,5 @@ execute if block ~ ~ ~ #mblock:soundable as @s[tag=clicking,tag=!sneaking,tag=!h
 
 # Rotates the magenta glazed terracotta block
 function mblock:objects/note_wand/plugins/rotate_magenta/main
+
+execute as @s[tag=!holding_block,tag=_octave_found,tag=sneaking,tag=clicking,tag=_off_hand] run function mblock:objects/note_wand/plugins/change_scale/main

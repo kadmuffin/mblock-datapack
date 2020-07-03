@@ -1,5 +1,4 @@
 scoreboard players add internal_zsize _array_tmp 1
-scoreboard players add counted_blocks _array_tmp 1
 scoreboard players remove length _array_tmp 1
 
 tag @s remove magenta_terracotta
