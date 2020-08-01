@@ -13,3 +13,5 @@ execute if block ~ ~ ~ pumpkin run scoreboard players set #sound _mbtmp 12
 execute if block ~ ~ ~ emerald_block run scoreboard players set #sound _mbtmp 13
 execute if block ~ ~ ~ hay_block run scoreboard players set #sound _mbtmp 14
 execute if block ~ ~ ~ glowstone run scoreboard players set #sound _mbtmp 15
+
+execute if score #external_sounds _mbtmp matches 1.. run function mbe_sound:set_to_score

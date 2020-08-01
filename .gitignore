@@ -2,3 +2,8 @@
 *.nbs.mcfunction
 *.vscode
 *.pyc
+*.lock
+*.packages
+*.dart_tool
+*.deps
+*.map
