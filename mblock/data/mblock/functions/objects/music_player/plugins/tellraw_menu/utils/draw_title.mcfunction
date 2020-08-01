@@ -1,1 +1,0 @@
-tellraw @s ["",{"text":" \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020\u0020"},{"text":"MusicBlocks\n","color":"dark_gray"}]
