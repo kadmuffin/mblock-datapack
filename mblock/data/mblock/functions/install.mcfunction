@@ -13,4 +13,7 @@ function mblock:interface/setup
 execute unless score $.installed _mbtmp matches 1 run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loaded and installed!, ","color":"gold"}, {"text":"(Click for Notes)", "color": "blue", "clickEvent":{"action":"run_command", "value":"/function mblock:interface/commands/set_notes"}}]
 execute if score $.installed _mbtmp matches 1 run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loaded and started! ","color":"gold"}, {"text":"(Click for Notes)", "color": "blue", "clickEvent":{"action":"run_command", "value":"/function mblock:interface/commands/set_notes"}}]
 scoreboard players set $.installed _mbtmp 1
+
+# Custom addons
 scoreboard players set #external_sounds _mbtmp 0
+scoreboard players set #external_events _mbtmp 0

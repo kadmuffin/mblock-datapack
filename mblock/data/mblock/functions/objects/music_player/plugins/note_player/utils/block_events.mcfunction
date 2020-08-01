@@ -1,3 +1,5 @@
+execute if score #external_events _mbtmp matches 1.. run function mbe_event:event_call
+
 function mblock:objects/music_player/plugins/note_player/utils/summon_note
 
 execute as @s[tag=note_player_center] at @s positioned ~ ~1 ~ if block ~ ~ ~ black_glazed_terracotta run function mblock:objects/music_player/plugins/note_player/block_events/black_glazed_terracotta
