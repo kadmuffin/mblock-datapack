@@ -5,14 +5,12 @@ execute store result score song_xsize sload run data get entity @s Item.tag.data
 execute store result score song_ysize sload run data get entity @s Item.tag.song.ysize
 
 scoreboard players operation song_xmiddle sload = song_xsize sload
-#scoreboard players operation song_xmiddle sload += song_xsize sload
 scoreboard players add song_xmiddle sload 1
 scoreboard players operation song_xmiddle sload /= #2 sload
 
 scoreboard players operation maxRuns_x sload_run = song_xsize sload
 scoreboard players operation maxRuns_x sload_run /= #2 sload
-scoreboard players operation maxRuns_y sload_run = song_xsize sload
-scoreboard players operation maxRuns_y sload_run /= #2 sload
+scoreboard players add maxRuns_x sload_run 4
 
 scoreboard players reset #middle sload_tmp
 function song_load:utils/summon/z_axis
