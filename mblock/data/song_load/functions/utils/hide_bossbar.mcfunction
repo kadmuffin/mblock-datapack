@@ -1,0 +1,1 @@
+bossbar set song_load:progress visible false
