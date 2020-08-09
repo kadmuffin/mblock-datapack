@@ -1,5 +1,8 @@
 scoreboard players set @s sload_tick 0
 
+execute unless entity @a[distance=..40] run title @a actionbar {"text": "Teleporting to Pointer Position"}
+execute unless entity @a[distance=..40] at @s as @p positioned ~ ~ ~ run tp ~ ~ ~
+
 function song_load:utils/summon/y_axis
 
 #execute unless entity @e[tag=x_pointer] run function song_load:utils/summon/x_axis

@@ -51,6 +51,8 @@ tag @s remove middle
 tag @s add save_stage_2
 tag @s add _save_scheduled
 
+scoreboard players operation #xsize aparse.xsize = @s aparse.xsize
+#scoreboard players remove #xsize aparse.xsize 3
 scoreboard players set @s _array_tmp2 0
 scoreboard players operation #bar_max _array_tmp = @s aparse.xsize
 scoreboard players operation #bar_max _array_tmp += @s aparse.xsize
