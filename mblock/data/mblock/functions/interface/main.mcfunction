@@ -10,4 +10,4 @@ execute if score .tick mb.menu.page matches 9.. as @a[tag=__menu] at @s unless s
 
 execute if score .tick mb.menu.page matches 9.. as @a[tag=__menu] at @s if score @s mb.menu.lang matches 1 run function mblock:interface/langs/spanish/main
 
-execute as @a[tag=__menu] at @s unless entity @e[tag=music_player,sort=nearest] run function mblock:interface/utils/close_menu
+execute as @a[tag=__menu,tag=!load_menu,tag=!load_question] at @s unless entity @e[tag=music_player,sort=nearest] run function mblock:interface/utils/close_menu

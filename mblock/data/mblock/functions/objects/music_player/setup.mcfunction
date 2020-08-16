@@ -34,6 +34,7 @@ scoreboard players set .scale mb.true_bpm 10000
 #scoreboard players set .bpm_div mb.true_bpm 112
 scoreboard players set .bpm_div_s mb.true_bpm 60
 scoreboard players set .bpm_div mb.true_bpm 20
+scoreboard players set .bpm_div_nbs mb.true_bpm 6
 scoreboard players set #2 mb.true_bpm 2
 scoreboard players set #10 mb.true_bpm 10
 #scoreboard players set .multiplier mb.true_bpm 2

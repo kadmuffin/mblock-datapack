@@ -10,8 +10,10 @@ scoreboard players add song_xmiddle sload 1
 scoreboard players operation song_xmiddle sload /= #2 sload
 
 scoreboard players operation maxRuns_x sload_run = song_xsize sload
-scoreboard players operation maxRuns_x sload_run *= song_ysize sload
-scoreboard players operation maxRuns_x sload_run /= #4 sload
+scoreboard players remove maxRuns_x sload_run 1
+scoreboard players operation #maxDefault sload_run = maxRuns_x sload_run
+scoreboard players operation #maxMin sload_run = song_xsize sload
+scoreboard players remove #maxMin sload_run 3
 
 scoreboard players reset #middle sload_tmp
 execute as @e[tag=music_player,sort=nearest,limit=1] run function song_load:utils/summon/z_axis_2
@@ -24,12 +26,6 @@ function song_load:utils/copy_data
 execute as @e[tag=new_pointer] run function song_load:utils/load_dir
 execute as @e[tag=z_pointer_extra] run function song_load:utils/load_dir
 
-execute as @e[tag=new_pointer] run function song_load:utils/array/precompute/spaces
-
-bossbar set song_load:progress name "§6Loading Song!"
-bossbar set song_load:progress value 0
-execute store result bossbar song_load:progress max run scoreboard players get song_length sload
-bossbar set song_load:progress visible true
-bossbar set song_load:progress color green
+tag @e[tag=new_pointer,limit=1] add asking
 
 tag @e[tag=new_pointer] remove new_pointer

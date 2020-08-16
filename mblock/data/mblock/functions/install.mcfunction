@@ -17,3 +17,7 @@ scoreboard players set $.installed _mbtmp 1
 # Custom addons
 scoreboard players set #external_sounds _mbtmp 0
 scoreboard players set #external_events _mbtmp 0
+
+kill @e[tag=_block]
+kill @e[tag=z_step]
+kill @e[tag=y_step]
