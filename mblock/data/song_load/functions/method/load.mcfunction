@@ -23,6 +23,7 @@ execute as @e[tag=music_player,sort=nearest,limit=1] run function song_load:util
 execute as @e[tag=new_pointer] at @s facing entity @e[tag=z_pointer_extra,limit=1] eyes run tp ~ ~ ~
 
 function song_load:utils/copy_data
+execute if entity @s[tag=self_align] run tag @e[tag=new_pointer] add in_box
 execute as @e[tag=new_pointer] run function song_load:utils/load_dir
 execute as @e[tag=z_pointer_extra] run function song_load:utils/load_dir
 
