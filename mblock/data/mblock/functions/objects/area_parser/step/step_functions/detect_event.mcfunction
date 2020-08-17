@@ -10,4 +10,8 @@ execute as @s if block ~ ~ ~ purple_glazed_terracotta run tag @s remove skip_x
 execute as @s if block ~ ~ ~ purple_glazed_terracotta run tag @s add repeating_end
 execute as @s if block ~ ~ ~ purple_glazed_terracotta run scoreboard players operation @s _aparse_tmp2 = @s aparse.zsize
 
+execute as @s if block ~ ~ ~ blue_glazed_terracotta run tag @s remove skip_x
+execute as @s if block ~ ~ ~ blue_glazed_terracotta run tag @s add change_sound
+execute as @s if block ~ ~ ~ blue_glazed_terracotta run scoreboard players operation @s _aparse_tmp2 = @s aparse.zsize
+
 #tp ~ ~ ~
