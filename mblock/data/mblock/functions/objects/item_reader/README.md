@@ -19,27 +19,43 @@ Example settings:
 
 ## Notes
 
-Notes contain a tone number (between 0 - 24) and a sound number (between 1 - 15, if no sound is store it's assumed that is 0 or harp), if a sound direction is specified is stored in a range of 0 to 5.
+Notes contain a tone number (between 0 - 24) and a sound number (between 0 - 15), if a sound direction is specified is stored in a range of 0 to 5.
 
-Sometimes for reducing memory usage the notes a group together when possible, for example, 3 notes with the same tone and sound get stored as one-note with a count value that indicates how many times paste the note.
+```json
+{ "tone": 0, "sound_dir": 4 }
+```
+
+Notes will be group (when possible) together for reducing memory usage:
 
 Here is a example note with all parameters:
 
 ```json
-{ "tone": 5, "sound": 1, "sound_dir": 3, "count": 12 }
+{ "tone": 5, "sound": 0, "sound_dir": 3, "count": 12 }
 ```
 
 ## Events
 
 They are stored in `data.events`, there are 3 types of events (magenta still not supported), they range between 1 and 3, the datapack will ignore events that have a zero in the event tag, for example:
 
-This will be ignored:
+Events with value `0` are ignored:
 
 ```json
 { "event": 0, "something": 1 }
 ```
 
-This due to minecraft data get command will return always zero if no value was found, so values that range 1-3 are used.
+Events with value 1-3 store the position using `z_pos`:
+
+```json
+{ "event": 1, "z_pos": 4 }
+```
+
+Newer events & custom events use the parameter `position`:
+
+```json
+// position: [x, y, z]
+// when an axis uses -1, the axis is ignored
+{ "event": 4, "position": [-1, -1, 4] }
+```
 
 ### End & Repetition of Song
 
@@ -98,7 +114,11 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
   "ysize": 2,
   "zsize": 4,
   "bpm": 35,
-  "raw_bpm": 0
+   # Raw BPM:
+   # 0 = False, 1 = True (with double)
+   # 2 = True (without double)
+  "raw_bpm": 0,
+  "compress_bpm": 0, # 0 = False, 1 = True
 },
  "data": {
   "notes": [
@@ -112,6 +132,10 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
     {
       "event": 1,
       "z_pos": 4
+    },
+    { # Custom Event Example
+      "event": 7,
+      "position": [-1, -1, 6]
     }
   ]
  }
