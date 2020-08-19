@@ -1,3 +1,6 @@
+# Deprecated File:
+# Checks the event blocks and adds a tag
+
 execute as @s if block ~ ~ ~ magenta_glazed_terracotta if score @s _aparse_tmp2 >= @s aparse.zsize run tag @s remove skip_x
 execute as @s if block ~ ~ ~ magenta_glazed_terracotta if score @s _aparse_tmp2 >= @s aparse.zsize run tag @s add disable_redirection
 execute as @s if block ~ ~ ~ magenta_glazed_terracotta if score @s _aparse_tmp2 >= @s aparse.zsize run function mblock:objects/area_parser/lib/block/check_direc

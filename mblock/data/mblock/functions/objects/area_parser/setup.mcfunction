@@ -42,6 +42,7 @@ scoreboard objectives add _aparse_tmp4 dummy
 # Redirect Tp Count
 scoreboard objectives add _aparse_tmp5 dummy
 scoreboard objectives add _aparse_tmp6 dummy
+scoreboard objectives add _aparse_tmp7 dummy
 
 scoreboard objectives add aparse.xsize dummy
 scoreboard objectives add aparse.ysize dummy

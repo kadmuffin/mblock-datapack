@@ -30,11 +30,12 @@ scoreboard objectives add mb_z_pos dummy
 scoreboard objectives add mb_id dummy
 
 scoreboard players set global mb_id 0
-scoreboard players set .scale mb.true_bpm 10000
+scoreboard players set .scale mb.true_bpm 1000000
 #scoreboard players set .bpm_div mb.true_bpm 112
 scoreboard players set .bpm_div_s mb.true_bpm 60
-scoreboard players set .bpm_div mb.true_bpm 20
-scoreboard players set .bpm_div_nbs mb.true_bpm 5
+scoreboard players set .bpm_div mb.true_bpm 4
+
+scoreboard players set .bpm_div_nbs mb.true_bpm 500
 scoreboard players set #2 mb.true_bpm 2
 scoreboard players set #10 mb.true_bpm 10
 #scoreboard players set .multiplier mb.true_bpm 2
