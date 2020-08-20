@@ -15,6 +15,7 @@ scoreboard objectives remove _aparse_tmp4
 # Redirect Tp Count
 scoreboard objectives remove _aparse_tmp5
 scoreboard objectives remove _aparse_tmp6
+scoreboard objectives remove _aparse_tmp7
 
 scoreboard objectives remove aparse.xsize
 scoreboard objectives remove aparse.ysize
@@ -50,9 +51,25 @@ scoreboard objectives remove sneak
 scoreboard objectives remove mb.menu.lang
 scoreboard objectives remove mb.menu.page
 
+scoreboard objectives remove mb.menu.tp
+scoreboard objectives remove mb.menu.play
+scoreboard objectives remove mb.menu.stop
 scoreboard objectives remove mb.menu.bpm
 scoreboard objectives remove mb.menu.zsize
 scoreboard objectives remove mb.menu.ysize
 scoreboard objectives remove mb.menu.xsize
+scoreboard objectives remove mb.menu.floor
+scoreboard objectives remove mb.gb.box_speed
+scoreboard objectives remove mb.gb.floor_type
+
+scoreboard objectives remove mb_x_pos
+scoreboard objectives remove mb_y_pos
+scoreboard objectives remove sload
+scoreboard objectives remove sload_run
+scoreboard objectives remove sload_tick
+scoreboard objectives remove sload_tmp
+
+scoreboard objectives remove mb.event
+scoreboard objectives remove _mb.floor
 
 tellraw @a {"text":"MusicBlocks was uninstalled!, Please disable the datapack or close your world and remove the mblock file from your datapack folder", "color": "green"}
