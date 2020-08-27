@@ -21,14 +21,14 @@ scoreboard players remove @s aparse.xsize 1
 scoreboard players set @s aparse.zsize 0
 scoreboard players set @s mb_ztravel 0
 
-execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~ positioned ~ ~ ~2.5 run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~ positioned ~ ~ ~-2.5 run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~ ~ ~.5 positioned ~2.5 ~ ~ run function mblock:objects/area_parser/run_instant
-execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=1}] align xz positioned ~ ~ ~.5 positioned ~-2.5 ~ ~ run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~1 run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-2 run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~2.005 ~ ~ run function mblock:objects/area_parser/run_instant
+execute as @s[tag=instant_start,tag=look_neg,scores={aparse.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~-2 ~ ~ run function mblock:objects/area_parser/run_instant
 
 execute as @s[tag=!instant_start,tag=!look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~ positioned ~ ~ ~1 run function mblock:objects/area_parser/run_instant
 execute as @s[tag=!instant_start,tag=look_neg,scores={aparse.dir=0}] align xz positioned ~.5 ~ ~ positioned ~ ~ ~-1 run function mblock:objects/area_parser/run_instant
-execute as @s[tag=!instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~ ~ ~.5 positioned ~1 ~ ~ run function mblock:objects/area_parser/run_instant
+execute as @s[tag=!instant_start,tag=!look_neg,scores={aparse.dir=1}] align xz positioned ~ ~ ~.5 positioned ~2 ~ ~ run function mblock:objects/area_parser/run_instant
 execute as @s[tag=!instant_start,tag=look_neg,scores={aparse.dir=1}] align xz positioned ~ ~ ~.5 positioned ~-1 ~ ~ run function mblock:objects/area_parser/run_instant
 
 scoreboard players operation @s aparse.zsize = @s mb_tmpz

@@ -31,7 +31,7 @@ execute as @e[tag=_new_schedule] at @s store result score @s _aparse_tmp4 run da
 
 scoreboard players operation @e[tag=_new_schedule] aparse.xsize = @s aparse.xsize
 scoreboard players operation @e[tag=_new_schedule] aparse.ysize = @s aparse.ysize
-scoreboard players remove @e[tag=_new_schedule] aparse.ysize 1
+execute if score @s aparse.ysize matches 2.. run scoreboard players remove @e[tag=_new_schedule] aparse.ysize 1
 
 scoreboard players operation @e[tag=_new_schedule] aparse.zsize = @s aparse.zsize
 scoreboard players remove @e[tag=_new_schedule] aparse.zsize 1

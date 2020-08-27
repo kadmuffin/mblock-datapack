@@ -8,6 +8,7 @@ scoreboard players operation @e[tag=new_note_player,limit=1] aparse.ysize = @s a
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.zsize = @s mb_tmpz
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.dir = @s aparse.dir
 scoreboard players operation @e[tag=new_note_player,limit=1] mb_tmp2 = @s mb_tmp2
+scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm_accuracy = @s mb.bpm_accuracy
 
 scoreboard players set @e[tag=new_note_player,limit=1] mb_ztravel 0
 scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 1
@@ -17,6 +18,7 @@ execute as @s[tag=on_z_center] run tag @e[tag=new_note_player,limit=1] add note_
 execute as @s[tag=look_neg] run tag @e[tag=new_note_player,limit=1] add look_neg
 execute as @s[tag=middle_layer] run tag @e[tag=new_note_player,limit=1] add middle_layer
 execute as @s[tag=disable_extended] run tag @e[tag=new_note_player,limit=1] add disable_extended
+execute as @s[scores={aparse.xsize=5..}] run tag @e[tag=new_note_player,limit=1] add height_enable
 execute as @s[tag=compress_bpm] run tag @e[tag=new_note_player,limit=1] add compress_bpm
 
 execute as @e[tag=new_note_player,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/assign_tags

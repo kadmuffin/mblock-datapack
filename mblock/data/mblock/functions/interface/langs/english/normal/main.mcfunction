@@ -10,6 +10,10 @@ function mblock:interface/langs/english/normal/width_size
 
 function mblock:interface/utils/jump_line
 
+
+# [x] Show Celling
+function mblock:interface/langs/english/normal/show_top
+
 # [x] Use Raw BPM
 function mblock:interface/langs/english/normal/raw_bpm
 

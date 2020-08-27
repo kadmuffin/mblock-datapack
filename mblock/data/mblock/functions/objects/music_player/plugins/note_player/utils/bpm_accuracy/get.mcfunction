@@ -1,0 +1,2 @@
+execute if score @s mb.bpm_accuracy matches 0..1 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/tree/get/0_1
+execute if score @s mb.bpm_accuracy matches 2..3 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/tree/get/2_3

@@ -26,8 +26,8 @@ execute as @s if score @s _aparse_tmp2 >= #x_1 aparse.zsize run tag @s remove st
 execute as @s[tag=!floor_line] if score @s _aparse_tmp2 > @s aparse.zsize run kill @s
 
 function mblock:objects/area_parser/lib/utils/set_tags
-execute if entity @s[tag=!skip_x,tag=!show_top,tag=!on_center] run function mblock:objects/area_parser/step/step_functions/summon_y
-execute if entity @s[tag=!skip_x,tag=show_top] run function mblock:objects/area_parser/step/step_functions/summon_y
+execute if entity @s[tag=!skip_x,tag=!show_top,tag=!on_center] positioned ~ ~.5 ~ run function mblock:objects/area_parser/step/step_functions/summon_y
+execute if entity @s[tag=!skip_x,tag=show_top] positioned ~ ~.5 ~ run function mblock:objects/area_parser/step/step_functions/summon_y
 
 scoreboard players reset @s _aparse_tmp1
 execute if entity @s[tag=!skip_x] run function mblock:objects/area_parser/lib/utils/clean_and_run_horiz

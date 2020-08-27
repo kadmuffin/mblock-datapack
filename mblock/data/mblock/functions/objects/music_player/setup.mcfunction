@@ -16,28 +16,32 @@
 
 scoreboard objectives add _mb.floor dummy
 scoreboard objectives add mb_ztravel dummy
+scoreboard objectives add mb.max_length dummy
 scoreboard objectives add mb.bpm dummy
 scoreboard objectives add mb.true_bpm dummy
+scoreboard objectives add mb.bpm_accuracy dummy
 scoreboard objectives add mb.dir dummy
 scoreboard objectives add mb.arrow_dir dummy
 scoreboard objectives add mb_tmp dummy
 scoreboard objectives add mb_tmp1 dummy
 scoreboard objectives add mb_tmp2 dummy
 scoreboard objectives add mb_tmpx dummy
-scoreboard objectives add mb_x_pos dummy
 scoreboard objectives add mb_tmpz dummy
+scoreboard objectives add mb_x_pos dummy
 scoreboard objectives add mb_z_pos dummy
 scoreboard objectives add mb_id dummy
 
 scoreboard players set global mb_id 0
-scoreboard players set .scale mb.true_bpm 1000000
+
 #scoreboard players set .bpm_div mb.true_bpm 112
 scoreboard players set .bpm_div_s mb.true_bpm 60
-scoreboard players set .bpm_div mb.true_bpm 4
+scoreboard players set .bpm_div mb.true_bpm 2
 
-scoreboard players set .bpm_div_nbs mb.true_bpm 500
+scoreboard players set .bpm_div_def mb.true_bpm 5
+scoreboard players set .bpm_div_nbs mb.true_bpm 67
 scoreboard players set #2 mb.true_bpm 2
 scoreboard players set #10 mb.true_bpm 10
+scoreboard players set #100 mb.true_bpm 100
 #scoreboard players set .multiplier mb.true_bpm 2
 #scoreboard players set .multiplier mb.true_bpm 100
 

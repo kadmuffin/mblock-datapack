@@ -1,3 +1,5 @@
+scoreboard players reset @s mb.bpm_accuracy
+
 tag @s remove music_player
 tag @s add dying_item_frame
 

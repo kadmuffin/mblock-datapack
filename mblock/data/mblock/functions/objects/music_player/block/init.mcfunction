@@ -20,7 +20,7 @@ scoreboard players operation @s mb.true_bpm /= .bpm_div mb.true_bpm
 #scoreboard players set @s aparse.dir 1
 scoreboard players set @s aparse.xsize 3
 scoreboard players set @s aparse.ysize 3
-scoreboard players set @s aparse.zsize 15
+scoreboard players set @s aparse.zsize 16
 
 #scoreboard players add global mb_id 1
 #scoreboard players operation @s mb_id = global mb_id
