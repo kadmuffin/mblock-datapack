@@ -27,7 +27,8 @@ class x_data(object):
 
         if spacing > 0:
             self.blocks[index].append({"air": spacing})
-            self.tick[index] = new_tick
+
+        self.tick[index] = new_tick
 
     def append_storage(self):
         self.blocks.append([])
