@@ -6,16 +6,33 @@ This folder focuses on the ability to load songs and saving them, the next docum
 
 The sound settings are stored on the parameter `song` inside of the Item, this parameter holds the next data types:
 
-Example settings:
+### Song Size
+
+Since version `0.8.0` size isn't required as the load sequence corrects the size before placing notes, **but it is still recommended to specify them to maintain compatibility with version 0.7.0**.
 
 ```json
 {
-  "xsize": 4,
-  "ysize": 3,
-  "zsize": 15,
+  "xsize": 4, // Not needed since version 0.8.0
+  "ysize": 3, // Required when "force" is declared
+  "zsize": 15, // Required when "force" is declared
   "bpm": 90
 }
 ```
+
+This will make the preview show `0` as the size isn't known until load is executed, so you may want to specify them to show an a value on preview.
+
+### Disable Correction
+
+The correction could cause some problems, if that's the case you can disable it.
+
+```json
+{
+  ...
+  "force_size": [0, 0, 1] // [x, y, z]
+}
+```
+
+**You will have to make sure that your `ysize` matches or is bigger than the array dimensions manually.**
 
 ## Notes
 
@@ -53,17 +70,18 @@ Newer events & custom events use the parameter `position`:
 
 ```json
 // position: [x, y, z]
-// when an axis uses -1, the axis is ignored
+// when an axis uses -1, the axis uses default value
 { "event": 4, "position": [-1, -1, 4] }
 ```
+
+**If the `position` property is invalid and there isn't any `z_pos` property, the load sequence will discard the event.**
 
 ### End & Repetition of Song
 
 Events that range from one to two will be considered as the end of the song in the loading sequence, then proper event block will be placed, for 1 it will be `black_glazed_terracotta` that forces a song end, for 2 it will be `purple_glazed_terracotta` that repeats the song until stopped or moved from the centerline.
 
 ```json
-({ "event": 1, "z_pos": 5 }, // This is black glazed terracotta
-{ "event": 2, "z_pos": 5 }) // This is purple glazed terracotta
+({ "event": 1, "z_pos": 5 }, { "event": 2, "z_pos": 5 })
 ```
 
 ### Redirection
@@ -71,10 +89,10 @@ Events that range from one to two will be considered as the end of the song in t
 The last event (still not supported) is redirection that uses the value 3, this one contains one extra parameter: `dir` that indicates the direction of the arrow:
 
 ```json
-({ "event": 3, "dir": 0, "z_pos": 2 }, // This is magenta glazed terracotta facing west
-{ "event": 3, "dir": 1, "z_pos": 2 }, // This is magenta glazed terracotta facing south
-{ "event": 3, "dir": 2, "z_pos": 2 }, // This is magenta glazed terracotta facing east
-{ "event": 3, "dir": 3, "z_pos": 2 }) // This is magenta glazed terracotta facing north
+({ "event": 3, "dir": 0, "z_pos": 2 },
+{ "event": 3, "dir": 1, "z_pos": 2 },
+{ "event": 3, "dir": 2, "z_pos": 2 },
+{ "event": 3, "dir": 3, "z_pos": 2 })
 ```
 
 ## How 3D data is stored
@@ -118,15 +136,14 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
    # 0 = False, 1 = True (with double)
    # 2 = True (without double)
   "raw_bpm": 0,
-  "compress_bpm": 0, # 0 = False, 1 = True
+  "comp_bpm": 0, # 0 = False, 1 = True
+  "nbs_bpm": 0, # 0 = False, 1 = True
 },
  "data": {
-  "notes": [
-    [], # X - 1
+  "notes": [ # X - 1
     [
       [{"tone": 15},{"tone": 15},{"tone": 15}]
-    ],
-    [] # X + 1
+    ]
   ],
   "events": [
     {

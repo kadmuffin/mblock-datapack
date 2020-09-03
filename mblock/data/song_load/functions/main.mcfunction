@@ -6,6 +6,7 @@ execute if entity @e[tag=z_pointer,tag=initial_moved,scores={sload_run=250..}] r
 
 execute unless entity @e[tag=z_pointer] if entity @e[tag=y_pointer] run function song_load:utils/loop/fail
 execute unless entity @e[tag=z_pointer] if entity @e[tag=z_pointer_extra] run function song_load:utils/loop/fail
+execute if score #operation_state sload_run matches 1 unless entity @e[tag=z_pointer] run function song_load:utils/loop/fail
 
 tag @a remove load_question
 tag @a remove load_menu
