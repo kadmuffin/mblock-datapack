@@ -15,4 +15,4 @@ scoreboard players set #operation_state sload_run 0
 
 execute as @a at @s run playsound minecraft:block.anvil.destroy master @s
 
-tellraw @a ["",{"text": "[MusicBlocks] ", "color": "gray"},{"text": "The Operation has failed to execute!", "color": "red"}]
+tellraw @a ["",{"text": "[MusicBlocks] ", "color": "dark_gray"},{"text": "The Operation has failed to execute!", "color": "red"}]

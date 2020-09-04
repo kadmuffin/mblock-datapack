@@ -14,4 +14,4 @@ playsound block.conduit.deactivate master @a ~ ~ ~ 1 1.865
 
 scoreboard players set #operation_state sload_run 0
 
-tellraw @a ["",{"text": "[MusicBlocks] ", "color": "gray"},{"text": "The Operation was suspended correctly!", "color": "blue"}]
+tellraw @a ["",{"text": "[MusicBlocks] ", "color": "dark_gray"},{"text": "The Operation was suspended correctly!", "color": "blue"}]
