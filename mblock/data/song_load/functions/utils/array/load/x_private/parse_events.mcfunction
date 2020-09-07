@@ -7,3 +7,4 @@ scoreboard players set #x_pos sload_tmp 0
 execute as @s[tag=!fail_at_parse] run function song_load:utils/array/load/x_private/parse_events/cycle_x
 #execute as @s[tag=!fail_at_parse] run function song_load:utils/array/load/x_private/parse_events/x_cl
 
+execute store result bossbar song_load:progress value run scoreboard players get @s sload_tmp

@@ -3,4 +3,8 @@ tellraw @a[tag=debug] ["",{"text": "[MusicBlocks] ","color":"dark_gray"},{"text"
 
 execute as @s[tag=copy_settings] run function song_load:utils/method/copy_settings_to_player
 
-#execute as @s[tag=parse_events] run function song_load:utils/array/precompute/x_private/parse_events/x_cl@stag @s remove parse_events@stag @s remove preprocessingnctifunction song_load:utils/bossbar/load
+#execute as @s[tag=parse_events] run function song_load:utils/array/load/x_private/parse_events/x_cl
+tag @s remove parse_events
+tag @s remove preprocessing
+
+function song_load:utils/bossbar/load
