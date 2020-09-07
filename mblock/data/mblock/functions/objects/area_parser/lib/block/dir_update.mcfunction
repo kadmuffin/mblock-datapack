@@ -21,7 +21,10 @@ tag @s[tag=!disable_redirection,tag=!look_neg,tag=_look_neg] add look_neg
 # Move entity outside of the old box and align
 
 execute if entity @s[tag=!disable_redirection,tag=direction_changed] run tp ~ ~ ~
-scoreboard players operation @s _aparse_tmp6 = @s aparse.xsize
+scoreboard players operation @s[tag=!z_pointer] _aparse_tmp6 = @s aparse.xsize
+scoreboard players operation @s[tag=z_pointer] _aparse_tmp6 = song_xmiddle sload
+scoreboard players remove @s[tag=z_pointer] _aparse_tmp6 2
+scoreboard players add @s[tag=note_player] _aparse_tmp6 1
 
 execute if entity @s[tag=!disable_redirection,tag=direction_changed] run function mblock:objects/area_parser/lib/redirect
 

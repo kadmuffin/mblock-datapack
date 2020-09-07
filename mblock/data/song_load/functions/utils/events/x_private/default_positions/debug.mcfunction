@@ -1,0 +1,8 @@
+execute if score #x_event sload_tmp >= song_xsize sload run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.x is bigger than array.length","color": "gray"}]
+execute unless score #x_event sload_tmp matches -1.. run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.x doesn't meet minimum value: -1","color": "gray"}]
+
+execute if score #y_event sload_tmp >= song_ysize sload run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.y is bigger than size.y","color": "gray"}]
+execute unless score #y_event sload_tmp matches -1.. run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.y doesn't meet minimum value: -1","color": "gray"}]
+
+execute if score #length_diff sload_tmp matches 30.. run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.z doesn't meet the maximum distance (30 blocks) away from the song end","color": "gray"}]
+execute as @s unless score #z_event sload_tmp matches -1.. run tellraw @a[tag=debug] ["",{"text": " + ", "color": "red","hoverEvent": {"action": "show_text","value": "Error"}}, {"text": "pop(): ","color":"gray"},{"text": "Position.z doesn't meet minimum value: -1","color": "gray"}]

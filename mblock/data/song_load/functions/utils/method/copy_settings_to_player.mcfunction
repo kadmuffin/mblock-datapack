@@ -1,3 +1,5 @@
+tellraw @a[tag=debug] ["",{"text": "[MusicBlocks] ","color":"dark_gray"},{"text": "Copying song data to MusicPlayer", "color":"gold"}]
+
 tag @s add calculate_xsize
 execute if data entity @s ArmorItems[3].tag.song.xsize if score #force_xsize sload_tmp matches 1.. run function song_load:utils/parse/parse_xsize
 execute as @s[tag=calculate_xsize] run function song_load:utils/xsize_to_width
@@ -9,7 +11,7 @@ scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.zs
 scoreboard players add @e[tag=music_player,sort=nearest,limit=1] aparse.zsize 3
 
 execute if data entity @s ArmorItems[3].tag.song.bpm store result score @e[tag=music_player,sort=nearest,limit=1] mb.bpm run data get entity @s ArmorItems[3].tag.song.bpm
-execute unless data entity @s ArmorItems[3].tag.song.bpm run title @a actionbar {"text": "[MBlock] Couldn't find BPM on Data!", "color": "yellow"}
+execute unless data entity @s ArmorItems[3].tag.song.bpm run tellraw @a[tag=debug] ["",{"text": " + ","color":"red","hoverEvent": {"action": "show_text","value": "Error"}},{"text": "Couldn't find BPM on song.bpm", "color":"gray"}]
 
 # Parse Raw BPM
 execute if data entity @s ArmorItems[3].tag.song.raw_bpm run function song_load:utils/parse/raw_nbs

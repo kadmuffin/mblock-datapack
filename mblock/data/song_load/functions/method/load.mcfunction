@@ -27,6 +27,7 @@ execute if entity @s[tag=self_align] run tag @e[tag=new_pointer] add in_box
 execute as @e[tag=new_pointer] run function song_load:utils/load_dir
 execute as @e[tag=z_pointer_extra] run function song_load:utils/load_dir
 
+scoreboard players set @e[tag=new_pointer,limit=1] sload 0
 tag @e[tag=new_pointer,limit=1] add asking
 
 tag @e[tag=new_pointer] remove new_pointer

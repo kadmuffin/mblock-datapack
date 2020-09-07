@@ -16,7 +16,7 @@ execute if score @s mb_z_pos matches 1000001..8000000 run scoreboard players set
 
 execute if score #tmp mb.bpm_accuracy < @s mb.bpm_accuracy run scoreboard players operation @s mb.bpm_accuracy = #tmp mb.bpm_accuracy
 
-execute unless score @s mb.bpm_accuracy matches 0.. run tellraw @a [{"text": "[MBlock - Error] ", "color": "red"},{"text": "This feature is not supported at [x|z] > 8.000.000 blocks!"}]
+execute unless score @s mb.bpm_accuracy matches 0.. run tellraw @a ["",{"text": "[MBlock - Error] ", "color": "red"},{"text": "This feature is not supported at [x|z] > 8.000.000 blocks!"}]
 execute unless score @s mb.bpm_accuracy matches 0.. run tag @s add invalid_pos
 
 execute as @s[tag=!invalid_pos] if score @s mb.bpm_accuracy matches 0 run title @a actionbar [{"text": "BPM Accuracy: ", "color": "gold"},{"text": "Super Low", "color": "red"}]

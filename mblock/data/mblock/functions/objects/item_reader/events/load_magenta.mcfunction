@@ -1,8 +1,5 @@
-scoreboard players operation internal_zsize _array_tmp -= @s aparse.zsize
-scoreboard players operation length _array_tmp = @s aparse.zsize
+execute store result score @s _aparse_tmp5 run data get entity @s ArmorItems[3].tag.event.dir
 
-tag @s add magenta_terracotta
-
-execute if entity @s[tag=!on_area] if entity @s[tag=y_zero] run function mblock:objects/area_parser/lib/block/set_magenta
-execute if entity @s[tag=!on_area] if entity @s[tag=y_zero] run function mblock:objects/area_parser/lib/block/set_dir_from_score
-execute if entity @s[tag=on_area] run setblock ~ ~ ~ pink_glazed_terracotta
+execute if entity @s[tag=!in_box] run function mblock:objects/area_parser/lib/block/set_magenta
+execute if entity @s[tag=!in_box] run function mblock:objects/area_parser/lib/block/set_dir_from_score
+execute if entity @s[tag=in_box] run setblock ~ ~ ~ pink_glazed_terracotta
