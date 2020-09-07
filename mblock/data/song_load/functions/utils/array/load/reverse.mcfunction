@@ -8,4 +8,4 @@ scoreboard players reset #xsize_tmp sload_tmp
 data modify entity @s ArmorItems[3].tag.tmp2 set value []
 
 execute if score #x_length sload_tmp matches 1.. run tag @s add reversing
-execute if score #x_length sload_tmp matches 1.. run function song_load:utils/array/precompute/timers/reverse
+execute if score #x_length sload_tmp matches 1.. run function song_load:utils/array/load/timers/reverse

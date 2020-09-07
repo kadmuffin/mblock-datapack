@@ -4,4 +4,4 @@ data modify entity @s ArmorItems[3].tag.data.events append from entity @s ArmorI
 data remove entity @s ArmorItems[3].tag.data.events[0]
 
 scoreboard players set #sp_count sload_tmp 0
-function song_load:utils/array/precompute/x_private/fill_event/y
+function song_load:utils/array/load/x_private/fill_event/y

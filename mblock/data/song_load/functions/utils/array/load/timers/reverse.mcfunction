@@ -7,10 +7,10 @@ execute unless score #length sload_tmp matches 1.. store result score #length sl
 execute unless score #force_ysize sload_tmp matches 1.. if score #y_length sload_tmp > song_ysize sload run scoreboard players operation song_ysize sload = #y_length sload_tmp
 
 scoreboard players reset #iter_count sload_tmp
-execute if score #length sload_tmp matches 1.. run function song_load:utils/array/precompute/x_private/reverse
+execute if score #length sload_tmp matches 1.. run function song_load:utils/array/load/x_private/reverse
 
 
-execute unless score #length sload_tmp matches 1.. run function song_load:utils/array/precompute/x_private/reverse/length_is_zero
-execute unless score #length sload_tmp matches 1.. unless score #y_length sload_tmp matches 1.. run function song_load:utils/array/precompute/x_private/reverse/y_length_is_zero
+execute unless score #length sload_tmp matches 1.. run function song_load:utils/array/load/x_private/reverse/length_is_zero
+execute unless score #length sload_tmp matches 1.. unless score #y_length sload_tmp matches 1.. run function song_load:utils/array/load/x_private/reverse/y_length_is_zero
 
-execute unless score #x_length sload_tmp matches 1.. run function song_load:utils/array/precompute/x_private/reverse/end_operation
+execute unless score #x_length sload_tmp matches 1.. run function song_load:utils/array/load/x_private/reverse/end_operation

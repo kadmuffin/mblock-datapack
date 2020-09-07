@@ -7,7 +7,7 @@ data modify entity @e[tag=z_pointer,limit=1] ArmorItems[3].tag.data.events set v
 tag @s remove spacing
 tag @s add fill_event
 scoreboard players set #sp_count sload_tmp 0
-function song_load:utils/array/precompute/x_private/fill_event/x
+function song_load:utils/array/load/x_private/fill_event/x
 scoreboard players operation @s sload_tmp = song_xsize sload
 #scoreboard players remove @s sload_tmp 1
 scoreboard players set @s sload_tmp 0

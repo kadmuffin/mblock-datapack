@@ -12,7 +12,7 @@ execute store result score #force_xsize sload_tmp run data get entity @e[tag=z_p
 execute unless score #force_length sload_tmp matches 1.. run scoreboard players set song_length sload 0
 execute unless score #force_ysize sload_tmp matches 1.. run scoreboard players set song_ysize sload 0
 
-execute as @e[tag=z_pointer,tag=asking,limit=1] run function song_load:utils/array/precompute/reverse
+execute as @e[tag=z_pointer,tag=asking,limit=1] run function song_load:utils/array/load/reverse
 
 tag @s remove __menu
 tag @s remove load_question
