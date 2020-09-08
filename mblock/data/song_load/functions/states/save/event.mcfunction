@@ -1,0 +1,2 @@
+execute as @s[tag=center,tag=floor] if block ~ ~ ~ black_glazed_terracotta run function song_load:states/save/event/stop
+execute as @s[tag=center,tag=floor] if block ~ ~ ~ purple_glazed_terracotta run function song_load:states/save/event/repeat

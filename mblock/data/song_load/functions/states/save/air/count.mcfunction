@@ -1,0 +1,2 @@
+execute if data entity @s ArmorItems[3].tag.data.notes[0][0][-1].air run function song_load:states/save/air/has_count
+execute unless data entity @s ArmorItems[3].tag.data.notes[0][0][-1].air run function song_load:states/save/air/no_count

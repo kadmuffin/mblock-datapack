@@ -1,8 +1,6 @@
-data modify entity @s ArmorItems[3].tag.event.position set value [0, 0, 0]
+scoreboard players operation #x_pos sload_tmp = @e[tag=x_pointer,limit=1] sload
+scoreboard players operation #y_pos sload_tmp = @e[tag=y_pointer,limit=1] sload
+scoreboard players operation #z_pos sload_tmp = @s sload
 
-execute store result entity @s ArmorItems[3].tag.event.position[0] int 1 run scoreboard players get @e[tag=x_pointer,limit=1] sload
-execute store result entity @s ArmorItems[3].tag.event.position[1] int 1 run scoreboard players get @e[tag=y_pointer,limit=1] sload
-execute store result entity @s ArmorItems[3].tag.event.position[2] int 1 run scoreboard players get @s sload
-
-data modify entity @s ArmorItems[3].tag.data.events append from entity @s ArmorItems[3].tag.event
-data remove entity @s ArmorItems[3].tag.event
+execute if entity @s[tag=use_zpos] run function song_load:utils/events/x_private/push/old_pos
+execute if entity @s[tag=!use_zpos] run function song_load:utils/events/x_private/push/new_pos

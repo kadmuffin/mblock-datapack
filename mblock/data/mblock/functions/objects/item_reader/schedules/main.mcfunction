@@ -15,3 +15,4 @@ tag @e[tag=save_stage_6] remove _save_scheduled
 tag @e[tag=save_stage_6] remove save_stage_6
 
 execute as @e[tag=load_sequence,limit=1] unless entity @e[tag=z_pointer] run function mblock:objects/item_reader/schedules/xyz_private/load
+execute as @e[tag=save_sequence,limit=1] unless entity @e[tag=z_pointer] run function mblock:objects/item_reader/schedules/xyz_private/saving

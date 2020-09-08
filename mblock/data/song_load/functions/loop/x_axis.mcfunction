@@ -1,6 +1,7 @@
 scoreboard players add @s sload 1
 
-execute as @e[tag=z_pointer,limit=1] run function song_load:states/load/main
+execute as @e[tag=z_pointer,limit=1] if entity @s[tag=load] run function song_load:states/load/main
+execute as @e[tag=z_pointer,limit=1] if entity @s[tag=save] run function song_load:states/save/main
 
 
 tag @s[tag=skip_x] add __skip_x

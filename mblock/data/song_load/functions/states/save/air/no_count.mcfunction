@@ -1,0 +1,1 @@
+data modify entity @s ArmorItems[3].tag.data.notes[0][0][-1].air set value 2
