@@ -1,0 +1,1 @@
+data remove entity @s ArmorItems[3].tag.note

@@ -15,6 +15,7 @@ scoreboard players operation #middle sload_tmp2 /= #2 sload
 function song_load:utils/summon/summon
 execute if entity @s[tag=self_align] run tag @e[tag=z_pointer] add in_box
 
+data modify entity @e[tag=z_pointer,limit=1] CustomName set value "{\"text\":\"§aNew Song!\"}"
 data modify entity @e[tag=z_pointer,limit=1] CustomName set from entity @s Item.tag.display.Name
 data modify entity @e[tag=z_pointer,limit=1] ArmorItems[3].tag.data set value {notes: [], events: []}
 

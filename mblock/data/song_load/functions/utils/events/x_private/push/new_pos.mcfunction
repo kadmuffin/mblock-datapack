@@ -1,6 +1,5 @@
 data modify entity @s ArmorItems[3].tag.event.position set value [0, 0, 0]
 
-scoreboard players operation #x_pos sload_tmp = #x_pos sload
 scoreboard players remove #x_pos sload_tmp 1
 execute if score #x_pos sload_tmp = #middle sload_tmp2 run scoreboard players set #x_pos sload_tmp -1
 

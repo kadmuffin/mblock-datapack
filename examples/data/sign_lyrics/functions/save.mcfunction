@@ -7,3 +7,5 @@ data modify entity @s ArmorItems[3].tag.event.text2 set from block ~ ~ ~ Text2
 
 # Push Event
 function song_load:utils/events/push
+
+tag @s add 1234_ready

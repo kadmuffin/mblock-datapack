@@ -1,3 +1,4 @@
+scoreboard players set waitNextTick sload_tick 0
 scoreboard players set @s sload_tick 0
 scoreboard players add @s sload_run 1
 

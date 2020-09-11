@@ -1,4 +1,5 @@
 scoreboard objectives add sload dummy
+scoreboard objectives add sload_mov dummy
 scoreboard objectives add sload_tick dummy
 scoreboard objectives add sload_run dummy
 scoreboard objectives add sload_tmp dummy

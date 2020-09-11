@@ -2,7 +2,7 @@ execute at @e[tag=xyz_pointers] run particle firework ~ ~ ~ 0.5 0.5 0.5 0.1 10
 function mblock:interface/utils/clear_chat
 tellraw @a ["",{"text": "[MusicBlocks] ", "color": "gray"},{"text": "The Travelled Distance was: ", "color": "green"}, {"score": {"objective": "sload", "name": "@e[tag=z_pointer,limit=1]"},"color": "gold"},{"text": " blocks!", "color": "green"}]
 
-execute as @e[tag=z_pointer,limit=1] at @s if entity @s[tag=save] run summon item ~ ~ ~ {Item: {id: "book", Count: 1b}}
+execute as @e[tag=z_pointer,limit=1] at @p if entity @s[tag=save] run summon item ~ ~ ~ {Item: {id: "book", Count: 1b}, PickupDelay: 0s}
 
 kill @e[tag=xyz_pointers]
 

@@ -9,3 +9,5 @@ execute if score #y_pos sload_tmp matches 0 run tag @s add floor
 execute if score #x_pos sload_tmp = #middle sload_tmp2 run tag @s add center
 
 data modify entity @s ArmorItems[3].tag.event set value {}
+
+function mblock:objects/music_player/plugins/note_player/utils/assign_tags

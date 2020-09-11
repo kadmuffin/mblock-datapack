@@ -1,0 +1,1 @@
+execute if data entity @s ArmorItems[3].tag.note.test_block run function sample_block:load

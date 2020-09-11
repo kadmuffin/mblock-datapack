@@ -1,7 +1,8 @@
 
 scoreboard players add @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] sload_tick 1
 
-execute as @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] at @s if score @s sload_tick >= waitPerRuns sload_tick run function song_load:loop/main
+execute as @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] at @s if score @s sload_tick >= waitPerRuns sload_tick unless score @s sload_tick <= waitNextTick sload_tick run function song_load:loop/main
+
 execute if entity @e[tag=z_pointer,tag=initial_moved,scores={sload_run=250..}] run function song_load:utils/loop/fail
 
 execute unless entity @e[tag=z_pointer] if entity @e[tag=y_pointer] run function song_load:utils/loop/fail
@@ -21,5 +22,5 @@ execute as @e[tag=fill_notes,limit=1] at @s run function song_load:utils/array/s
 execute as @e[tag=z_pointer,tag=!asking,limit=1] at @s run tag @p add sload_menu
 execute as @e[tag=z_pointer,tag=!asking,limit=1] at @s run tag @p[tag=!debug] add __menu
 
-scoreboard players add @e[tag=load_event] sload_tmp 1
-kill @e[tag=load_event,scores={sload_tmp=2..}]
+scoreboard players add @e[tag=event_sequence] sload_tmp 1
+kill @e[tag=event_sequence,scores={sload_tmp=2..}]

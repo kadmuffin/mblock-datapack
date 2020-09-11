@@ -8,7 +8,7 @@ execute as @s[tag=calculate_xsize] run function song_load:utils/xsize_to_width
 scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.xsize = song_width sload
 scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.ysize = song_ysize sload
 scoreboard players operation @e[tag=music_player,sort=nearest,limit=1] aparse.zsize = song_length sload
-scoreboard players add @e[tag=music_player,sort=nearest,limit=1] aparse.zsize 3
+scoreboard players add @e[tag=music_player,sort=nearest,limit=1] aparse.zsize 2
 
 execute if data entity @s ArmorItems[3].tag.song.bpm store result score @e[tag=music_player,sort=nearest,limit=1] mb.bpm run data get entity @s ArmorItems[3].tag.song.bpm
 execute unless data entity @s ArmorItems[3].tag.song.bpm run tellraw @a[tag=debug] ["",{"text": " + ","color":"red","hoverEvent": {"action": "show_text","value": "Error"}},{"text": "Couldn't find BPM on song.bpm", "color":"gray"}]

@@ -1,5 +1,5 @@
 # Summon Target Event
-summon armor_stand ~ ~ ~ {Tags: [load_event, new_load_event], Invisible: 1b, NoGravity: 1b, ArmorItems: [{}, {}, {}, {id: "command_block", Count: 1b, tag: {event: {}}}], DisabledSlots: 72682}
+summon armor_stand ~ ~ ~ {Tags: [load_event, new_load_event, event_sequence], Invisible: 1b, NoGravity: 1b, ArmorItems: [{}, {}, {}, {id: "command_block", Count: 1b, tag: {event: {}}}], DisabledSlots: 72682}
 
 # Copy Data
 data modify entity @e[tag=new_load_event,limit=1] ArmorItems[3].tag.event set from entity @s ArmorItems[3].tag.event

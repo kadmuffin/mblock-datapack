@@ -10,3 +10,5 @@ tag @s remove center
 
 execute if score @e[tag=y_pointer,limit=1] sload matches 1 run tag @s add floor
 execute if score @e[tag=x_pointer,limit=1] sload = #middle sload_tmp2 run tag @s add center
+
+function mblock:objects/music_player/plugins/note_player/utils/assign_tags
