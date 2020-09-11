@@ -1,2 +1,0 @@
-tag @s add soundable_in_air
-execute unless block ~ ~-1 ~ #mblock:octaves unless block ~ ~1 ~ #mblock:octaves unless block ~1 ~ ~ #mblock:octaves unless block ~-1 ~ ~ #mblock:octaves unless block ~ ~ ~1 #mblock:octaves unless block ~ ~ ~-1 #mblock:octaves run tag @s remove soundable_in_air
