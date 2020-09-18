@@ -34,7 +34,7 @@ scoreboard players operation @e[tag=_new_schedule] aparse.ysize = @s aparse.ysiz
 execute if score @s aparse.ysize matches 2.. run scoreboard players remove @e[tag=_new_schedule] aparse.ysize 1
 
 scoreboard players operation @e[tag=_new_schedule] aparse.zsize = @s aparse.zsize
-scoreboard players remove @e[tag=_new_schedule] aparse.zsize 1
+scoreboard players add @e[tag=_new_schedule] aparse.zsize 2
 scoreboard players operation @e[tag=_new_schedule] _aparse_tmp1 = @s aparse.zsize
 scoreboard players set #2 aparse.zsize 2
 scoreboard players operation @e[tag=_new_schedule] _aparse_tmp1 %= #2 aparse.zsize

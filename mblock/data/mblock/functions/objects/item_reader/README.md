@@ -52,13 +52,7 @@ Here is a example note with all parameters:
 
 ## Events
 
-They are stored in `data.events`, there are 3 types of events (magenta still not supported), they range between 1 and 3, the datapack will ignore events that have a zero in the event tag, for example:
-
-Events with value `0` are ignored:
-
-```json
-{ "event": 0, "something": 1 }
-```
+They are stored in `data.events`, there are 4 types of built-in events:
 
 Events with value 1-3 store the position using `z_pos`:
 
@@ -86,7 +80,7 @@ Events that range from one to two will be considered as the end of the song in t
 
 ### Redirection
 
-The last event (still not supported) is redirection that uses the value 3, this one contains one extra parameter: `dir` that indicates the direction of the arrow:
+The last event is redirection that uses the value 3, this one contains one extra parameter: `dir` that indicates the direction of the arrow:
 
 ```json
 ({ "event": 3, "dir": 0, "z_pos": 2 },
@@ -132,7 +126,8 @@ This Item.tag contains three sequential notes (note: 15), the code is formatted 
   "ysize": 2,
   "zsize": 4,
   "bpm": 35,
-   # Raw BPM:
+  "gb_sound": 0,
+   # Raw BPM (debug only):
    # 0 = False, 1 = True (with double)
    # 2 = True (without double)
   "raw_bpm": 0,

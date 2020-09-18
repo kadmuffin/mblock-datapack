@@ -1,3 +1,5 @@
+function mblock:interface/utils/draw_line
+function mblock:interface/utils/draw_title
 
 # BPM: < [180] >
 function mblock:interface/langs/spanish/normal/bpm
@@ -10,8 +12,13 @@ function mblock:interface/langs/spanish/normal/width_size
 
 function mblock:interface/utils/jump_line
 
-function mblock:interface/langs/spanish/normal/raw_bpm
+function mblock:interface/langs/spanish/normal/show_top
+function mblock:interface/langs/spanish/normal/compress_bpm
 
 function mblock:interface/utils/jump_line
 
 function mblock:interface/langs/spanish/normal/play_and_stop
+
+
+function mblock:interface/utils/jump_line
+function mblock:interface/utils/end_line

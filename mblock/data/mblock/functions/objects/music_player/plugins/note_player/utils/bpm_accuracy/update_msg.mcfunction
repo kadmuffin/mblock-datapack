@@ -1,9 +1,11 @@
-execute if score @s mb.bpm_accuracy matches 0 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Super Low", "color": "red"}]
-execute if score @s mb.bpm_accuracy matches 1 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Low", "color": "yellow"}]
-execute if score @s mb.bpm_accuracy matches 2 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Medium", "color": "green"}]
+execute if score @s mb.bpm_accuracy matches 0 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Low", "color": "red"}]
+execute if score @s mb.bpm_accuracy matches 1 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Medium", "color": "yellow"}]
+execute if score @s mb.bpm_accuracy matches 2 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "Normal", "color": "green"}]
 execute if score @s mb.bpm_accuracy matches 3 run title @a actionbar [{"text": "Updated Accuracy: ", "color": "gold"},{"text": "High", "color": "blue"}]
 
 tag @s add updating_accuracy
+function mblock:objects/music_player/plugins/note_player/utils/bpm_update
+
 function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/set
 
 scoreboard players operation .x_1 _mbtmp = @s mb_x_pos

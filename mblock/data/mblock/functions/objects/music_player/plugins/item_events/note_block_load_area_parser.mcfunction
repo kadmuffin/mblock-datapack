@@ -1,3 +1,4 @@
+execute if entity @e[type=item,tag=!_loaded,distance=0..1.6,limit=1,nbt={Item: {id: "minecraft:enchanted_book"}, OnGround: 1b},nbt={Item: {tag: {contains_song: 1b}}},tag=!_loaded,tag=!_saved] run tag @s add mplayer_block
 execute as @e[type=item,tag=!_loaded,distance=0..1.6,limit=1,nbt={Item: {id: "minecraft:enchanted_book"}, OnGround: 1b},nbt={Item: {tag: {contains_song: 1b}}},tag=!_loaded,tag=!_saved] at @s align xyz positioned ~.5 ~.5 ~.5 run tag @s add disable_bpm
 execute as @e[type=item,tag=!_loaded,distance=0..1.6,limit=1,nbt={Item: {id: "minecraft:enchanted_book"}, OnGround: 1b},nbt={Item: {tag: {contains_song: 1b}}},tag=!_loaded,tag=!_saved] at @s align xyz positioned ~.5 ~.5 ~.5 run tag @s add disable_size
 execute as @e[type=item,tag=!_loaded,distance=0..1.6,limit=1,nbt={Item: {id: "minecraft:enchanted_book"}, OnGround: 1b},nbt={Item: {tag: {contains_song: 1b}}},tag=!_loaded,tag=!_saved] at @s align xyz positioned ~.5 ~.5 ~.5 run tag @s add self_align

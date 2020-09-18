@@ -21,6 +21,7 @@ scoreboard players remove @s aparse.xsize 1
 #scoreboard players remove @s aparse.ysize 1
 scoreboard players set @s aparse.zsize 0
 scoreboard players set @s mb_ztravel 0
+setblock ~ ~2 ~ barrier
 
 function mblock:objects/area_parser/lib/block/cast_dir_to_mbdir
 

@@ -1,6 +1,7 @@
 scoreboard players reset @s mb.bpm_accuracy
 
 tag @s remove music_player
+tag @s remove mb_menu
 tag @s add dying_item_frame
 
 particle lava ~ ~ ~ 0.1 0.5 0.1 0.1 15

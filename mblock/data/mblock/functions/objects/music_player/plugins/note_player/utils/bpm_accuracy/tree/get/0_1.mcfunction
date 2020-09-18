@@ -1,2 +1,2 @@
-execute if score @s mb.bpm_accuracy matches 0 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/get/super_low
-execute if score @s mb.bpm_accuracy matches 1 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/get/low
+execute if score @s mb.bpm_accuracy matches 0 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/get/low
+execute if score @s mb.bpm_accuracy matches 1 run function mblock:objects/music_player/plugins/note_player/utils/bpm_accuracy/get/medium

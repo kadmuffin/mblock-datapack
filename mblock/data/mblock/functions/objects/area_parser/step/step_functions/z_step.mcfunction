@@ -1,9 +1,6 @@
 scoreboard players add @s _aparse_tmp2 1
 tag @s add step_executed
 
-# Debug tellraw
-#tellraw @p ["",{"score": {"objective": "_aparse_tmp2", "name": "@s"}}, {"text": " X: "},{"score": {"objective": "_aparse_tmp1", "name": "@s"}}, {"text": " Z MAX: "},{"score": {"objective": "aparse.zsize", "name": "@s"}}, {"text": " Y[]: "},{"score": {"objective": "_aparse_tmp", "name": "@s[tag=skip_x]"}}]
-
 tag @s[tag=!force_render,tag=skip_x] add __skip_x
 tag @s[tag=!force_render,tag=skip_x] remove skip_x
 
@@ -14,11 +11,7 @@ tag @s remove force_render
 
 function mblock_events:get_event
 function mblock_events:box/main
-#function mblock:objects/area_parser/step/step_functions/detect_event
-#execute if block ~ ~ ~ #mblock:event_block run tag @s add event_block
 
-#execute as @s[tag=_ancled] unless score @s _aparse_tmp2 < @s aparse.zsize run function mblock:objects/area_parser/step/reverse
-#execute as @s[tag=_ancled_pos] at @s unless score @s _aparse_tmp2 < @s aparse.zsize run function mblock:objects/area_parser/step/reverse_pos
 scoreboard players operation #x_1 aparse.zsize = @s aparse.zsize
 scoreboard players remove #x_1 aparse.zsize 1
 execute as @s if score @s _aparse_tmp2 > #x_1 aparse.zsize run tag @s remove skip_x
@@ -37,10 +30,10 @@ scoreboard players operation @s[tag=floor_line] _aparse_tmp2 = @s _aparse_tmp7
 execute if entity @s[scores={aparse.dir=0},tag=!_not_pos_update] run function mblock:objects/area_parser/step/movement/z_step/depth_x
 execute if entity @s[scores={aparse.dir=1},tag=!_not_pos_update] run function mblock:objects/area_parser/step/movement/z_step/depth_z
 
-
 function mblock:objects/area_parser/lib/on_step_call
-#function mblock:objects/area_parser/lib/utils/set_tags
-
 
 
 tag @s[tag=_not_pos_update] remove _not_pos_update
+
+execute at @s unless entity @e[tag=music_player,distance=0..30] unless entity @a[distance=0..50] run kill @s
+execute at @s if entity @e[tag=music_player,distance=0..30] unless entity @a[distance=0..70] run kill @s

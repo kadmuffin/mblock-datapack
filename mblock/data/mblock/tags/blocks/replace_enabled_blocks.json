@@ -1,7 +1,7 @@
 {
   "values": [
     "air",
-    "#mblock:floor",
+    "#mb_plugin:floor",
     "#minecraft:signs",
     "#minecraft:rails",
     "#minecraft:saplings"

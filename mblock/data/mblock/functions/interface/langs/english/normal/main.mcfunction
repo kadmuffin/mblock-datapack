@@ -1,3 +1,5 @@
+function mblock:interface/utils/draw_line
+function mblock:interface/utils/draw_title
 
 # BPM: < [180] >
 function mblock:interface/langs/english/normal/bpm
@@ -20,3 +22,7 @@ function mblock:interface/langs/english/normal/raw_bpm
 function mblock:interface/utils/jump_line
 
 function mblock:interface/langs/english/normal/play_and_stop
+
+
+function mblock:interface/utils/jump_line
+function mblock:interface/utils/end_line

@@ -1,4 +1,4 @@
-summon armor_stand ~ ~ ~ {Tags: ["note_player", "new_note_player", "player", "disable_redraw"], Invisible: 1b, NoGravity: 1b, Small: 1b, ArmorItems: [{}, {}, {}, {id: "minecraft:blue_terracotta", Count: 1b}], DisabledSlots: 72689}
+summon armor_stand ~ ~ ~ {Tags: ["note_player", "new_note_player", "player", "disable_redraw", "mb_menu"], Invisible: 1b, NoGravity: 1b, Small: 1b, ArmorItems: [{}, {}, {}, {id: "minecraft:blue_terracotta", Count: 1b}], DisabledSlots: 72689}
 
 scoreboard players operation @e[tag=new_note_player,limit=1] mb.true_bpm = @s mb.true_bpm
 scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm = @s mb.bpm
@@ -8,10 +8,12 @@ scoreboard players operation @e[tag=new_note_player,limit=1] aparse.ysize = @s a
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.zsize = @s mb_tmpz
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.dir = @s aparse.dir
 scoreboard players operation @e[tag=new_note_player,limit=1] mb_tmp2 = @s mb_tmp2
-scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm_accuracy = @s mb.bpm_accuracy
+execute unless score @s mb.bpm_accuracy > @s mb.max_accuracy run scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm_accuracy = @s mb.bpm_accuracy
+execute if score @s mb.bpm_accuracy > @s mb.max_accuracy run scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm_accuracy = @s mb.max_accuracy
+scoreboard players operation @e[tag=new_note_player,limit=1] mb.max_accuracy = @s mb.max_accuracy
 
 scoreboard players set @e[tag=new_note_player,limit=1] mb_ztravel 0
-scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 1
+scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 4
 
 execute as @s[tag=copy_travel] run scoreboard players operation @e[tag=new_note_player,limit=1] mb_ztravel = @s mb_ztravel
 execute as @s[tag=on_z_center] run tag @e[tag=new_note_player,limit=1] add note_player_center
@@ -20,6 +22,7 @@ execute as @s[tag=middle_layer] run tag @e[tag=new_note_player,limit=1] add midd
 execute as @s[tag=disable_extended] run tag @e[tag=new_note_player,limit=1] add disable_extended
 execute as @s[scores={aparse.xsize=5..}] run tag @e[tag=new_note_player,limit=1] add height_enable
 execute as @s[tag=compress_bpm] run tag @e[tag=new_note_player,limit=1] add compress_bpm
+execute as @s[tag=nbs_bpm] run tag @e[tag=new_note_player,limit=1] add nbs_bpm
 
 execute as @e[tag=new_note_player,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/assign_tags
 

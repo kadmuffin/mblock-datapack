@@ -11,6 +11,7 @@ execute if score #operation_state sload_run matches 1 unless entity @e[tag=z_poi
 
 tag @a remove save_question
 tag @a remove load_question
+tag @a remove sload_question
 tag @a remove sload_menu
 
 execute as @e[tag=asking,limit=1] at @s run function song_load:utils/loop/ask_load

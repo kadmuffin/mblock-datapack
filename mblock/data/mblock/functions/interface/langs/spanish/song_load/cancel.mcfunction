@@ -1,0 +1,2 @@
+tellraw @a[scores={mb.menu.lang=1}] ["",{"text": "[MusicBlocks] ", "color": "dark_gray"},{"text": "La distancia recorrida fue: ", "color": "green"}, {"score": {"objective": "sload", "name": "@e[tag=z_pointer,limit=1]"},"color": "gold"},{"text": " bloques!", "color": "green"}]
+tellraw @a[scores={mb.menu.lang=1}] ["",{"text": "[MusicBlocks] ", "color": "dark_gray"},{"text": "¡La operación fue suspendida correctamente!", "color": "blue"}]

@@ -1,0 +1,1 @@
+tellraw @a[scores={mb.menu.lang=1}] ["",{"text": "[MusicBlocks] ", "color": "dark_gray"},{"text": "The Operation has failed to execute!", "color": "red"}]

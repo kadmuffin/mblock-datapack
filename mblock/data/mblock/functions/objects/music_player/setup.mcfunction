@@ -20,6 +20,7 @@ scoreboard objectives add mb.max_length dummy
 scoreboard objectives add mb.bpm dummy
 scoreboard objectives add mb.true_bpm dummy
 scoreboard objectives add mb.bpm_accuracy dummy
+scoreboard objectives add mb.max_accuracy dummy
 scoreboard objectives add mb.dir dummy
 scoreboard objectives add mb.arrow_dir dummy
 scoreboard objectives add mb_tmp dummy

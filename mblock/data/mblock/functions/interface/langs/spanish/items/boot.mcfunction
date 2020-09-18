@@ -1,0 +1,1 @@
+give @s[scores={mb.menu.lang=1}] minecraft:leather_boots{player: 1b, display: {color: 15790320, Name: '"§aNote §7Extender"', Lore: ['"§9Expande la cantidad de notas"', '"§9que pueden ser activadas."']}}
