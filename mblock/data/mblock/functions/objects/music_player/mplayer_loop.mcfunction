@@ -7,6 +7,6 @@ execute as @s[tag=runned,tag=!invalid_pos] positioned ~ ~-1 ~ if block ~ ~ ~ not
 
 execute if entity @s[nbt=!{Item: {id: "minecraft:arrow"}}] run function mblock:objects/music_player/block/end
 execute unless block ~ ~-1 ~ note_block run function mblock:objects/music_player/block/end
-execute unless block ~ ~ ~ air unless block ~ ~ ~ barrier run function mblock:objects/music_player/block/end
+execute unless block ~ ~ ~ air run function mblock:objects/music_player/block/end
 
 function mblock:objects/music_player/plugins/box_display/main
