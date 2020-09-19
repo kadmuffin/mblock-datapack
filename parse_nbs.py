@@ -17,15 +17,15 @@ from src import create_datapack
     help="Sets the datapack folder name.  (Default : 'exported')",
     )
 
-@click.option("--layers", default=True, help="Controls if the parsed music is flat or 3D")
+@click.option("--layers", default=1, help="Controls if the parsed music is flat or 3D")
 
 def main(input_file, target_path, datapack_name, layers):
 
     raw_data = pynbs.read(input_file)
 
-    nbs_song = song(raw_data.header)
+    nbs_song = song(raw_data.header, input_file)
 
-    nbs_song.get_notes(raw_data, True, layers)
+    nbs_song.get_notes(raw_data, False, True if layers >= 1 else False)
 
     create_datapack(target_path, datapack_name, input_file, nbs_song)
 

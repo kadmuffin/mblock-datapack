@@ -1,4 +1,3 @@
-
 scoreboard players operation song_xmiddle sload = song_xsize sload
 scoreboard players add song_xmiddle sload 1
 scoreboard players operation song_xmiddle sload /= #2 sload

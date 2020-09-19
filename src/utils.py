@@ -38,7 +38,7 @@ def create_datapack(target_path, datapack_name, input_file, nbs_song):
 class metadata(object):
     """This class manages pynbs data."""
 
-    def __init__(self, header):
+    def __init__(self, header, file_name):
         super(metadata, self).__init__()
 
         self.loop = False
@@ -55,7 +55,7 @@ class metadata(object):
             self.loop = header.loop
             self.name = header.song_name
             if self.name == "":
-                self.name = header.song_origin
+                self.name = file_name 
             self.bpm = int(header.tempo * 20)
             self.tempo = header.tempo
             self.artist = header.song_author

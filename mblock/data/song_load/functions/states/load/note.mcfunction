@@ -13,6 +13,6 @@ function song_load:utils/notes/load/count
 function mblock:sound/tones/set_tone_block
 function mblock:sound/sounds/xyz_private/set_sound_block_dir
 execute if score #sound _mbtmp matches 0 if score gb_sound sload matches 1.. run scoreboard players operation #sound _mbtmp = gb_sound sload
-function mblock:sound/play
+execute as @s[tag=!mute] run function mblock:sound/play
 
 function song_load:utils/notes/continue

@@ -5,8 +5,5 @@ execute as @s[tag=!self_align] at @e[tag=music_player,sort=nearest,limit=1] alig
 
 data merge entity @s {NoGravity: 1b, PickupDelay: -32760s, Motion: [0.0d, 0.0d, 0.0d]}
 
-execute if entity @e[tag=z_pointer] run tellraw @p ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"A Song is already saving/loading, waiting for it.","color":"red"}]
-execute if entity @e[tag=z_pointer] run data modify entity @s CustomName set value '"§8[MBlock] §4Waiting for process"'
-execute if entity @e[tag=z_pointer] run data modify entity @s CustomNameVisible set value 1b
-
+execute if entity @e[tag=z_pointer] run function mblock:objects/item_reader/wait
 tag @s add save_sequence

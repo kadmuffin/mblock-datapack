@@ -5,7 +5,7 @@ class x_data(object):
         super(x_data, self).__init__()
         self.blocks = [[]]
         self.instrument = instrument
-        self.tick = [0]
+        self.tick = [-1]
 
     def __str__(self):
         return str(self.blocks)
@@ -16,7 +16,7 @@ class x_data(object):
     def append_note(self, note, tick, index):
         if index >= len(self.blocks):
             self.blocks.extend([] for i in range(index))
-            self.tick.extend(0 for i in range(index))
+            self.tick.extend(-1 for i in range(index))
 
         self._append_spacing(tick, index)
 
