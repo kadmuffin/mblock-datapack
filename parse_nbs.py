@@ -7,44 +7,27 @@ from src import create_datapack
 
 @click.command()
 @click.option(
-    "--target_path", default=".", help="The path that defines where export the song."
-)
+        "--input_file", default=click.File('r'), help="The File to parse.")
 @click.option(
-    "--datapack",
-    default=False,
-    help="Sets if the code should create a datapack folder for the song. (Default : False)",
+    "--target_path", default=".", help="The path that defines where export the song datapack."
 )
 @click.option(
     "--datapack_name",
     default="exported",
     help="Sets the datapack folder name.  (Default : 'exported')",
-)
-@click.option(
-    "--align_data",
-    default=False,
-    help="Aligns the data to the center (Default : True)",
-)
-@click.argument("input_file")
-def main(target_path, datapack, datapack_name, align_data, input_file):
+    )
+
+@click.option("--layers", default=True, help="Controls if the parsed music is flat or 3D")
+
+def main(input_file, target_path, datapack_name, layers):
 
     raw_data = pynbs.read(input_file)
 
     nbs_song = song(raw_data.header)
 
-    align_data_ = False
-    if (align_data is str and str.lower(align_data) == "true") or align_data:
-        align_data_ = True
+    nbs_song.get_notes(raw_data, True, layers)
 
-    nbs_song.get_notes(raw_data, align_data_)
-
-    if (datapack is str and str.lower(datapack) == "true") or datapack:
-        create_datapack(target_path, datapack_name, input_file, nbs_song)
-        return
-
-    with open(os.path.join(target_path, input_file + ".mcfunction"), "w") as file:
-        file.write(nbs_song.generate_give())
-
-    pass
+    create_datapack(target_path, datapack_name, input_file, nbs_song)
 
 
 if __name__ == "__main__":

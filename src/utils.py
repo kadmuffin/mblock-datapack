@@ -23,7 +23,7 @@ def create_datapack(target_path, datapack_name, input_file, nbs_song):
                 str(
                     {
                         '"pack"': {
-                            '"pack_format"': 5,
+                            '"pack_format"': 6,
                             '"description"': '"\u00c2\u00a77MusicBlocks: \u00c2\u00a79Exported NBS files!"',
                         }
                     }
@@ -48,7 +48,8 @@ class metadata(object):
         self.artist = ""
         self.length = 0
         # Updated on song.py by get_notes()
-        self.xsize = 0
+        self.xsize = 1
+        self.ysize = 1
 
         if header != None:
             self.loop = header.loop
