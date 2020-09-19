@@ -38,20 +38,33 @@ class song(object):
         self.data[x].blocks[y][z] = dict
         pass
 
-    def get_notes(self, raw_nbs, align=True):
+    def get_notes(self, raw_nbs, align=False, layers=True):
         """Parses chords and converts them to notes"""
+        y_size = 1
+        z_size = 0
         for tick, chord in raw_nbs:
+            z_size = tick - 1
+            if not layers and y_size < len(chord):
+                y_size = len(chord)
 
             for index, note in enumerate(chord):
 
-                if any([note.instrument == axis.instrument for axis in self.data]):
+                if layers and any([note.layer == axis.instrument for axis in self.data]):
+                    for axis in self.data:
+                        if note.layer == axis.instrument:
+                            axis.append_note(convert_note(note), tick, 0)
+
+                    continue
+
+
+                if not layers and any([note.instrument == axis.instrument for axis in self.data]):
                     for axis in self.data:
                         if note.instrument == axis.instrument:
                             axis.append_note(convert_note(note), tick, index)
 
                     continue
 
-                self.data.append(x_data(note.instrument))
+                self.data.append(x_data(note.layer if layers else note.instrument))
                 self.data[-1].append_note(convert_note(note), tick, 0)
                 # self.data[-1].blocks[0].append(convert_note(note))
                 pass
@@ -63,8 +76,11 @@ class song(object):
                 self.data.insert(0, [])
         else:
             self.metadata.xsize = len(self.data) // 2
-
-        self.metadata.length = len(self.data[-1].blocks[0])
+            if (self.metadata.xsize % 2 == 0):
+                self.metadata.xsize += 1
+            
+            self.metadata.length = z_size
+            self.metadata.ysize = y_size
 
     def generate_give(self):
         """Creates a command for your song"""
@@ -76,10 +92,10 @@ class song(object):
                 self.metadata.name,
                 self.metadata.bpm,
                 self.metadata.xsize,
-                len(self.data[-1].blocks),
+                self.metadata.ysize,
                 self.metadata.length,
                 self.metadata.xsize,
-                len(self.data[-1].blocks),
+                self.metadata.ysize,
                 self.metadata.length,
                 self.metadata.bpm,
                 self.data,

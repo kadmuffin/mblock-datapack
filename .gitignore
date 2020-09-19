@@ -1,3 +1,5 @@
+exported/
+*.zip
 *.nbs
 *.nbs.mcfunction
 *.vscode
