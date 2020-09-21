@@ -18,6 +18,7 @@ scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 4
 execute as @s[tag=copy_travel] run scoreboard players operation @e[tag=new_note_player,limit=1] mb_ztravel = @s mb_ztravel
 execute as @s[tag=on_x_center] run tag @e[tag=new_note_player,limit=1] add camera_center
 execute as @s[tag=on_z_center] run tag @e[tag=new_note_player,limit=1] add note_player_center
+execute as @s[scores={_aparse_tmp1=0}] run tag @e[tag=new_note_player,limit=1] add center
 execute as @s[tag=look_neg] run tag @e[tag=new_note_player,limit=1] add look_neg
 execute as @s[tag=middle_layer] run tag @e[tag=new_note_player,limit=1] add middle_layer
 execute as @s[scores={aparse.xsize=..4}] run tag @e[tag=new_note_player,limit=1] add disable_extended
