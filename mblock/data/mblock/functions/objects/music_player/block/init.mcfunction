@@ -18,12 +18,12 @@ scoreboard players set @s aparse.xsize 3
 scoreboard players set @s aparse.ysize 3
 scoreboard players set @s aparse.zsize 9
 
-#scoreboard players add global mb_id 1
-#scoreboard players operation @s mb_id = global mb_id
+#scoreboard players add global mb.id 1
+#scoreboard players operation @s mb.id = global mb.id
 
 scoreboard players operation @s _mb.floor = #floor_type _aparse_tmp
-scoreboard players operation @s mb_id > @e[tag=music_player] mb_id
-scoreboard players add @s mb_id 1
+scoreboard players operation @s mb.id > @e[tag=music_player] mb.id
+scoreboard players add @s mb.id 1
 
 function mblock:objects/music_player/xyz_private/get_player_view
 

@@ -30,9 +30,9 @@ scoreboard objectives add mb_tmpx dummy
 scoreboard objectives add mb_tmpz dummy
 scoreboard objectives add mb_x_pos dummy
 scoreboard objectives add mb_z_pos dummy
-scoreboard objectives add mb_id dummy
+scoreboard objectives add mb.id dummy
 
-scoreboard players set global mb_id 0
+scoreboard players set global mb.id 0
 
 #scoreboard players set .bpm_div mb.true_bpm 112
 scoreboard players set .bpm_div_s mb.true_bpm 60

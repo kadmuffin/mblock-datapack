@@ -40,7 +40,7 @@ scoreboard objectives remove mb_tmp1
 scoreboard objectives remove mb_tmp2
 scoreboard objectives remove mb_tmpx
 scoreboard objectives remove mb_tmpz
-scoreboard objectives remove mb_id
+scoreboard objectives remove mb.id
 
 # NoteWand folder
 scoreboard objectives remove _rayc_tmp

@@ -2,7 +2,7 @@ summon armor_stand ~ ~ ~ {Tags: ["note_player", "new_note_player", "player", "di
 
 scoreboard players operation @e[tag=new_note_player,limit=1] mb.true_bpm = @s mb.true_bpm
 scoreboard players operation @e[tag=new_note_player,limit=1] mb.bpm = @s mb.bpm
-scoreboard players operation @e[tag=new_note_player,limit=1] mb_id = @s mb_id
+scoreboard players operation @e[tag=new_note_player,limit=1] mb.id = @s mb.id
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.xsize = @s aparse.xsize
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.ysize = @s aparse.ysize
 scoreboard players operation @e[tag=new_note_player,limit=1] aparse.zsize = @s mb_tmpz

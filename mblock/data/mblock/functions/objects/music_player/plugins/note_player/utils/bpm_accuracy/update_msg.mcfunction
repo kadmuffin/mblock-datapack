@@ -19,6 +19,6 @@ scoreboard players operation @s mb_tmpz = .z_1 _mbtmp
 function mblock:objects/music_player/plugins/note_player/utils/bpm_update
 
 scoreboard players operation #new_accuracy mb.bpm_accuracy = @s mb.bpm_accuracy
-execute as @e[tag=note_player,tag=!updating_accuracy] if score @s mb_id = @e[tag=updating_accuracy,limit=1] mb_id run scoreboard players operation @s mb.bpm_accuracy = #new_accuracy mb.bpm_accuracy
+execute as @e[tag=note_player,tag=!updating_accuracy] if score @s mb.id = @e[tag=updating_accuracy,limit=1] mb.id run scoreboard players operation @s mb.bpm_accuracy = #new_accuracy mb.bpm_accuracy
 
 tag @s remove updating_accuracy

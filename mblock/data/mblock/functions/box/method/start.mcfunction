@@ -1,0 +1,1 @@
+execute if score @s box.x matches 1.. if score @s box.y matches 1.. if score @s box.z matches 1..
