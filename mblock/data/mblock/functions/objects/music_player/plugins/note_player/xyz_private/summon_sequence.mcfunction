@@ -16,14 +16,15 @@ scoreboard players set @e[tag=new_note_player,limit=1] mb_ztravel 0
 scoreboard players add @e[tag=new_note_player,limit=1] aparse.zsize 4
 
 execute as @s[tag=copy_travel] run scoreboard players operation @e[tag=new_note_player,limit=1] mb_ztravel = @s mb_ztravel
+execute as @s[tag=on_x_center] run tag @e[tag=new_note_player,limit=1] add camera_center
 execute as @s[tag=on_z_center] run tag @e[tag=new_note_player,limit=1] add note_player_center
 execute as @s[tag=look_neg] run tag @e[tag=new_note_player,limit=1] add look_neg
 execute as @s[tag=middle_layer] run tag @e[tag=new_note_player,limit=1] add middle_layer
-execute as @s[tag=disable_extended] run tag @e[tag=new_note_player,limit=1] add disable_extended
-execute as @s[scores={aparse.xsize=5..}] run tag @e[tag=new_note_player,limit=1] add height_enable
+execute as @s[scores={aparse.xsize=..4}] run tag @e[tag=new_note_player,limit=1] add disable_extended
 execute as @s[tag=compress_bpm] run tag @e[tag=new_note_player,limit=1] add compress_bpm
 execute as @s[tag=nbs_bpm] run tag @e[tag=new_note_player,limit=1] add nbs_bpm
 
 execute as @e[tag=new_note_player,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/assign_tags
+execute as @e[tag=new_note_player,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/update_look
 
 tag @e[tag=new_note_player,limit=1] remove new_note_player
