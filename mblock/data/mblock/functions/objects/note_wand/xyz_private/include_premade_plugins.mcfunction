@@ -6,7 +6,7 @@ function mblock:objects/note_wand/plugins/note_get/main
 
 # Find Tone Value & Changes the tone at click (depends on note_get)
 execute as @s[tag=_octave_found] run function mblock:objects/note_wand/plugins/note_viewer/main
-execute as @s[tag=_octave_found,tag=clicking] run function mblock:objects/note_wand/plugins/note_changer/main
+execute as @s[tag=_octave_found,tag=clicking,tag=!_off_hand] run function mblock:objects/note_wand/plugins/note_changer/main
 
 # Returns the block to the player while on off hand and sneaking  (depends on note_get)
 #function mblock:objects/note_wand/plugins/give_blocks/main

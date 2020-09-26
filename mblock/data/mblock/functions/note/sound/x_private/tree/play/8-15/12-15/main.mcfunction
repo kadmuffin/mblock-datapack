@@ -1,0 +1,2 @@
+execute if score #sound _mbtmp matches 12..13 run function mblock:note/sound/x_private/tree/play/8-15/12-15/12-13
+execute if score #sound _mbtmp matches 14..15 run function mblock:note/sound/x_private/tree/play/8-15/12-15/14-15

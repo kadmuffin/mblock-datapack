@@ -1,5 +1,6 @@
-execute as @s[tag=!_played] at @s run function mblock:block/check_at_pos
-execute as @s[tag=!_played] at @s if score #sound _mbtmp matches 1..4 align xyz positioned ~.5 ~.5 ~.5 run particle minecraft:explosion ~ ~ ~ 0.3 0.3 0.3 0.4 1
+execute as @s[tag=!_played] unless entity @a[tag=play_here] at @s run function mblock:note/utils/check_at_pos
+execute as @s[tag=!_played] if entity @a[tag=play_here] at @a[tag=play_here,limit=1] run function mblock:objects/music_player/plugins/note_player/utils/note_check
+#execute as @s[tag=!_played] at @s if score #sound _mbtmp matches 1..4 align xyz positioned ~.5 ~.5 ~.5 run particle minecraft:explosion ~ ~ ~ 0.3 0.3 0.3 0.4 1
 
 tag @s add _played
 

@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #mblock:sounds/8-14/8-11/8-9 run function mblock:note/sound/x_private/tree/get/8-14/8-11/8-9
+execute if block ~ ~ ~ #mblock:sounds/8-14/8-11/10-11 run function mblock:note/sound/x_private/tree/get/8-14/8-11/10-11

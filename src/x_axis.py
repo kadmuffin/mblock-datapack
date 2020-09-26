@@ -18,9 +18,10 @@ class x_data(object):
             self.blocks.extend([] for i in range(index))
             self.tick.extend(-1 for i in range(index))
 
-        self._append_spacing(tick, index)
+        if note != None:
+            self._append_spacing(tick, index)
 
-        self.blocks[index].append(note)
+            self.blocks[index].append(note)
 
     def _append_spacing(self, new_tick, index):
         spacing = (new_tick - self.tick[index]) - 1

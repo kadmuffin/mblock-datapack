@@ -4,7 +4,7 @@ import pynbs
 
 def convert_note(note):
     """Limit the note and tries to convert it"""
-    if note.key > 32 and note.key < 58:
+    if note.key > 8 and note.key < 82:
         if note.instrument > 0:
             return {"tone": note.key - 33, "sound": note.instrument}
         return {"tone": note.key - 33}
@@ -55,7 +55,7 @@ class metadata(object):
             self.loop = header.loop
             self.name = header.song_name
             if self.name == "":
-                self.name = file_name 
+                self.name = file_name
             self.bpm = int(header.tempo * 20)
             self.tempo = header.tempo
             self.artist = header.song_author

@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #mblock:octaves/0-12/0-6/0-2/0-1 run function mblock:note/tone/x_private/tree/get/0-12/0-6/0-2/0-1
+execute if block ~ ~ ~ yellow_terracotta run scoreboard players set #tone _mbtmp 2

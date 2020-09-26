@@ -1,0 +1,2 @@
+execute if score #tone _mbtmp matches 0..12 run function mblock:note/tone/x_private/tree/set/0-12/main
+execute if score #tone _mbtmp matches 13..24 run function mblock:note/tone/x_private/tree/set/13-24/main

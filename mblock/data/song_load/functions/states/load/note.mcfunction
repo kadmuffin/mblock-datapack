@@ -10,9 +10,9 @@ execute unless score #sound_dir _mbtmp matches 0.. run function song_load:states
 # Use Util for Count
 function song_load:utils/notes/load/count
 
-function mblock:sound/tones/set_tone_block
-function mblock:sound/sounds/xyz_private/set_sound_block_dir
+function mblock:note/tone/set
+function mblock:note/sound/set_dir
 execute if score #sound _mbtmp matches 0 if score gb_sound sload matches 1.. run scoreboard players operation #sound _mbtmp = gb_sound sload
-execute as @s[tag=!mute] run function mblock:sound/play
+execute as @s[tag=!mute] run function mblock:note/play
 
 function song_load:utils/notes/continue

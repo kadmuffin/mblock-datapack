@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ #mblock:octaves/0-12/0-6/0-2 run function mblock:note/tone/x_private/tree/get/0-12/0-6/0-2/main
+execute if block ~ ~ ~ #mblock:octaves/0-12/0-6/3-6 run function mblock:note/tone/x_private/tree/get/0-12/0-6/3-6/main
