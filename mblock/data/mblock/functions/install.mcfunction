@@ -9,6 +9,7 @@ function mblock:objects/music_player/setup
 function mblock:objects/area_parser/setup
 function mblock:objects/item_reader/setup
 function mblock:interface/setup
+function mblock:box/setup
 function song_load:setup
 function mblock_events:setup
 
@@ -25,3 +26,4 @@ scoreboard players set #external_events _mbtmp 0
 kill @e[tag=_block]
 kill @e[tag=z_step]
 kill @e[tag=y_step]
+kill @e[tag=x_step]

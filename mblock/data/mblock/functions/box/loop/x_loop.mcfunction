@@ -1,0 +1,1 @@
+execute positioned ~ ~.2 ~ if block ~ ~ ~ air run function mblock:box/utils/particles

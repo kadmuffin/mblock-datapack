@@ -1,1 +1,1 @@
-execute if score @s box.x matches 1.. if score @s box.y matches 1.. if score @s box.z matches 1..
+execute if score @s box.x matches 1.. if score @s box.y matches 1.. if score @s box.z matches 1.. if score @s mb.dir matches 0..4 run function mblock:box/utils/summon/z_pointer

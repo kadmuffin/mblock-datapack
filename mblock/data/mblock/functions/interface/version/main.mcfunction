@@ -1,3 +1,5 @@
+execute if score schedule_z _aparse_tmp matches 0.. as @e[tag=music_player] run function mblock:interface/version/x_private/v0.7.0
+
 # Datapack version (x.y.z) -> (v0.8.0)
 scoreboard players set #version_x_tmp _mbtmp 0
 scoreboard players set #version_y_tmp _mbtmp 8
