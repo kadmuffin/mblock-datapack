@@ -3,12 +3,12 @@ function mblock:interface/utils/draw_title
 
 # BPM: < [180] >
 function mblock:interface/langs/english/normal/bpm
-# Song Length: < [15] >
-function mblock:interface/langs/english/normal/song_length
 # Avaliable Height: < [4] >
 function mblock:interface/langs/english/normal/height_size
 # Avaliable Width: < [3] >
 function mblock:interface/langs/english/normal/width_size
+# Song Length: < [15] >
+function mblock:interface/langs/english/normal/song_length
 
 function mblock:interface/utils/jump_line
 

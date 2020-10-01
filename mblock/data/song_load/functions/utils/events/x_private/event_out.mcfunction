@@ -3,7 +3,7 @@ summon armor_stand ~ ~ ~ {Tags: [load_event, new_load_event, event_sequence], In
 
 # Copy Data
 data modify entity @e[tag=new_load_event,limit=1] ArmorItems[3].tag.event set from entity @s ArmorItems[3].tag.event
-scoreboard players operation @e[tag=new_load_event,limit=1] mb_id = #event_id sload_tmp
+scoreboard players operation @e[tag=new_load_event,limit=1] mb.id = #event_id sload_tmp
 
 tag @e[tag=new_load_event,limit=1] remove new_load_event
 

@@ -5,11 +5,11 @@ tag @s remove _waiting
 scoreboard players set #min_mov sload_tick 3
 execute if entity @s[tag=self_align] run scoreboard players set #min_mov sload_tick 0
 
-execute as @s[tag=self_align] if entity @e[tag=mplayer_block,tag=!look_neg,scores={aparse.dir=0}] at @s positioned ~ ~-1 ~-1 run function song_load:method/load
-execute as @s[tag=self_align] if entity @e[tag=mplayer_block,tag=!look_neg,scores={aparse.dir=1}] at @s positioned ~-1 ~-1 ~ run function song_load:method/load
+execute as @s[tag=self_align] if entity @e[tag=mplayer_block,scores={mb.dir=0}] at @s positioned ~ ~-1 ~-1 run function song_load:method/load
+execute as @s[tag=self_align] if entity @e[tag=mplayer_block,scores={mb.dir=3}] at @s positioned ~-1 ~-1 ~ run function song_load:method/load
 
-execute as @s[tag=self_align] if entity @e[tag=mplayer_block,tag=look_neg,scores={aparse.dir=0}] at @s positioned ~ ~-1 ~1 run function song_load:method/load
-execute as @s[tag=self_align] if entity @e[tag=mplayer_block,tag=look_neg,scores={aparse.dir=1}] at @s positioned ~1 ~-1 ~ run function song_load:method/load
+execute as @s[tag=self_align] if entity @e[tag=mplayer_block,scores={mb.dir=1}] at @s positioned ~ ~-1 ~1 run function song_load:method/load
+execute as @s[tag=self_align] if entity @e[tag=mplayer_block,scores={mb.dir=2}] at @s positioned ~1 ~-1 ~ run function song_load:method/load
 
 
 execute as @s[tag=!self_align] at @s positioned ~ ~-1 ~ run function song_load:method/load

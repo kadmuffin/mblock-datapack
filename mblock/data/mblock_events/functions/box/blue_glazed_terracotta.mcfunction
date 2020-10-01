@@ -1,5 +1,7 @@
-tag @s[tag=skip_x] add force_render
-tag @s add floor_line
-tag @s remove skip_x
-scoreboard players operation @s _aparse_tmp7 = @s _aparse_tmp2
-scoreboard players operation @s _aparse_tmp2 = @s aparse.zsize
+tag @s[tag=skip_x,scores={_aparse.z=2..}] add force_render
+tag @s[tag=skip_x,scores={_aparse.z=2..}] remove skip_x
+
+scoreboard players set @s mbn.sound 0
+function mblock:note/utils/get_sound
+
+scoreboard players operation @s mbn.sound = #sound _mbtmp

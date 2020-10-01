@@ -3,8 +3,9 @@ execute if entity @s[tag=!getting_tone,tag=!sneaking,tag=!_off_hand] run particl
 execute if entity @s[tag=!getting_tone,tag=sneaking,tag=!_off_hand] run scoreboard players remove #tone_scaled _mbtmp 1
 #execute if entity @s[tag=!getting_tone,tag=sneaking] run particle minecraft:angry_villager ~ ~0.7 ~ 0 0 0 0.1 0
 
-execute if score #tone_scaled _mbtmp matches ..-1 run scoreboard players set #tone_scaled _mbtmp 24
-execute if score #tone_scaled _mbtmp matches 25.. run scoreboard players set #tone_scaled _mbtmp 0
+execute if score #octave _mbtmp matches -1 run function mblock:objects/note_wand/plugins/note_changer/-1
+execute if score #octave _mbtmp matches 1 run function mblock:objects/note_wand/plugins/note_changer/1
+execute unless score #octave _mbtmp matches 1 unless score #octave _mbtmp matches -1 run function mblock:objects/note_wand/plugins/note_changer/0
 
 scoreboard players operation #tone _mbtmp = #tone_scaled _mbtmp
 function mblock:note/tone/set

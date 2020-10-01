@@ -1,7 +1,7 @@
 scoreboard players operation song_length sload = @e[tag=music_player,sort=nearest,limit=1] aparse.zsize
 scoreboard players operation song_xsize sload = @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
 scoreboard players operation song_xsize sload += @e[tag=music_player,sort=nearest,limit=1] aparse.xsize
-scoreboard players add song_xsize sload 1
+scoreboard players remove song_xsize sload 1
 
 scoreboard players operation song_ysize sload = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 scoreboard players operation song_bpm sload = @e[tag=music_player,sort=nearest,limit=1] mb.bpm

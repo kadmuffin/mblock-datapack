@@ -1,6 +1,6 @@
 scoreboard objectives add _mbtmp dummy
 scoreboard objectives add _mbtmp1 dummy
-scoreboard objectives add mb_player dummy
+scoreboard objectives add mb.menu.tmp dummy
 scoreboard objectives add flying minecraft.custom:minecraft.fly_one_cm
 
 # Include objects setups
@@ -9,6 +9,7 @@ function mblock:objects/music_player/setup
 function mblock:objects/area_parser/setup
 function mblock:objects/item_reader/setup
 function mblock:interface/setup
+function mblock:note/setup
 function song_load:setup
 function mblock_events:setup
 

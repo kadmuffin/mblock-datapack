@@ -20,7 +20,7 @@ execute as @s[tag=_off_hand,tag=holding_block] positioned ~ ~1 ~ unless entity @
 # Plays the example sound for the particular block
 execute if block ~ ~ ~ #mblock:soundable as @s[tag=clicking,tag=!sneaking,tag=!holding_block,tag=!_off_hand] run function mblock:objects/note_wand/plugins/hear_sound/main
 
-# Rotates the magenta glazed terracotta block
-function mblock:objects/note_wand/plugins/rotate_magenta/main
+# Changes the scale block
+execute as @s[tag=clicking,tag=!_off_hand] if block ~ ~ ~ #mblock:octaves/extra run function mblock:objects/note_wand/plugins/flip_scale/main
 
 execute as @s[tag=!holding_block,tag=_octave_found,tag=sneaking,tag=clicking,tag=_off_hand] run function mblock:objects/note_wand/plugins/change_scale/main

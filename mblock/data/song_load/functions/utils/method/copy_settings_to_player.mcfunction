@@ -5,7 +5,7 @@ execute if data entity @s ArmorItems[3].tag.song.xsize if score #force_xsize slo
 execute as @s[tag=calculate_xsize] run function song_load:utils/xsize_to_width
 
 # Reset Trigger Saves
-scoreboard players reset @a mb_id
+scoreboard players reset @a mb.id
 
 # Paste Box Size
 scoreboard players operation @e[tag=mplayer_block,limit=1] aparse.xsize = song_width sload

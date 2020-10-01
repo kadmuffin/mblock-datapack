@@ -1,5 +1,5 @@
 scoreboard players operation #tone _mbtmp = @s mb.tone
-scoreboard players operation #sound _mbtmp = @s mb.sound
+scoreboard players operation #sound _mbtmp = @s _aparse.tmp3
 
 function mblock:note/play
 

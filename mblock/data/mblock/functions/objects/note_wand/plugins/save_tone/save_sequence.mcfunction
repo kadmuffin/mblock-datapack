@@ -1,5 +1,5 @@
 scoreboard players operation @s _mbtmp1 = #tone _mbtmp
-scoreboard players operation @s _aparse_tmp4 = #sound _mbtmp
+scoreboard players operation @s _aparse.tmp3 = #sound _mbtmp
 title @s actionbar {"text": "Tone Block saved!","color":"blue"}
 playsound minecraft:block.coral_block.hit block @s ~ ~ ~ 1 1.2
 particle minecraft:totem_of_undying ~ ~1 ~ 0 0 0 0.1 3

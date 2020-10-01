@@ -1,7 +1,0 @@
-execute as @s[tag=!on_z_center,tag=on_bottom,tag=!on_end,tag=!on_side,scores={aparse.xsize=..10}] if block ~ ~ ~ #mblock:event_block at @s unless block ~ ~ ~ #mblock:event_block run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 4
-execute as @s[tag=!on_z_center,tag=on_bottom,tag=!on_end,tag=!on_side,scores={aparse.xsize=..10,aparse.dir=1},tag=look_neg] positioned ~-1 ~ ~ if block ~ ~ ~ #mblock:event_block at @s positioned ~-1 ~ ~ unless block ~ ~ ~ #mblock:event_block run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 4
-execute as @s[tag=!on_z_center,tag=on_bottom,tag=!on_end,tag=!on_side,scores={aparse.xsize=..10,aparse.dir=1},tag=!look_neg] positioned ~1 ~ ~ if block ~ ~ ~ #mblock:event_block at @s positioned ~1 ~ ~ unless block ~ ~ ~ #mblock:event_block run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 4
-execute as @s[tag=!on_z_center,tag=on_bottom,tag=!on_end,tag=!on_side,scores={aparse.xsize=..10,aparse.dir=0},tag=look_neg] positioned ~ ~ ~-1 if block ~ ~ ~ #mblock:event_block at @s positioned ~ ~ ~-1 unless block ~ ~ ~ #mblock:event_block run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 4
-execute as @s[tag=!on_z_center,tag=on_bottom,tag=!on_end,tag=!on_side,scores={aparse.xsize=..10,aparse.dir=0},tag=!look_neg] positioned ~ ~ ~1 if block ~ ~ ~ #mblock:event_block at @s positioned ~ ~ ~1 unless block ~ ~ ~ #mblock:event_block run particle minecraft:totem_of_undying ~ ~1 ~ 0 0.3 0 0 4
-
-execute as @s[tag=is_air,tag=on_side,tag=!on_side_center] run function mblock:objects/area_parser/lib/on_sides

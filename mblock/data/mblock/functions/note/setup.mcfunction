@@ -1,3 +1,3 @@
-scoreboard objectives add mb.tone dummy
-scoreboard objectives add mb.sound dummy
-scoreboard objectives add mb_tmp2 dummy
+scoreboard objectives add _mbtmp dummy
+scoreboard objectives add mbn.sound dummy
+scoreboard objectives add mbn.dir dummy

@@ -5,9 +5,10 @@
     "smooth_stone",
     "stone_bricks",
     "dark_prismarine",
-    "#minecraft:small_flowers",
+    "#small_flowers",
     "tall_grass",
     "grass",
+    "dirt",
     "air"
   ]
 }

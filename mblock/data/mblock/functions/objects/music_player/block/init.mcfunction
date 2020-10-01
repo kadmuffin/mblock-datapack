@@ -18,27 +18,14 @@ scoreboard players set @s aparse.xsize 3
 scoreboard players set @s aparse.ysize 3
 scoreboard players set @s aparse.zsize 9
 
-#scoreboard players add global mb_id 1
-#scoreboard players operation @s mb_id = global mb_id
+#scoreboard players add global mb.id 1
+#scoreboard players operation @s mb.id = global mb.id
 
-scoreboard players operation @s _mb.floor = #floor_type _aparse_tmp
-scoreboard players operation @s mb_id > @e[tag=music_player] mb_id
-scoreboard players add @s mb_id 1
+scoreboard players operation @s mb.floor = #floor_type _aparse_tmp
+scoreboard players operation @s mb.id > @e[tag=music_player] mb.id
+scoreboard players add @s mb.id 1
 
 function mblock:objects/music_player/xyz_private/get_player_view
-
-
-execute store result score @s mb_tmp run data get entity @s ItemRotation
-
-execute if score @s mb_tmp matches 1 run scoreboard players set @s aparse.dir 1
-execute if score @s mb_tmp matches 1 run tag @s remove look_neg
-execute if score @s mb_tmp matches 3 run scoreboard players set @s aparse.dir 0
-execute if score @s mb_tmp matches 3 run tag @s remove look_neg
-execute if score @s mb_tmp matches 5 run scoreboard players set @s aparse.dir 1
-execute if score @s mb_tmp matches 5 run tag @s add look_neg
-execute if score @s mb_tmp matches 7 run scoreboard players set @s aparse.dir 0
-execute if score @s mb_tmp matches 7 run tag @s add look_neg
-
 
 function mblock:objects/music_player/xyz_private/update_dir
 
