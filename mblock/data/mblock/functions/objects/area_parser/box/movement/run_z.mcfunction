@@ -3,7 +3,7 @@
 # North = 1
 # West = 2
 # East = 3
-scoreboard players add @s[tag=!force_render] _aparse.z 1
+scoreboard players add @s _aparse.z 1
 
 execute as @s[scores={mb.dir=0}] at @s run tp ~ ~ ~1
 execute as @s[scores={mb.dir=3}] at @s run tp ~1 ~ ~
