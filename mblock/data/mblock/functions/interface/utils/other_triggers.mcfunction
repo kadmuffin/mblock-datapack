@@ -17,3 +17,7 @@ execute as @a[scores={mb.play=-2..}] run scoreboard players set @s mb.play -3
 scoreboard players enable @a mb.stop
 execute as @a[scores={mb.stop=-2..}] at @s run function mblock:interface/commands/end_player
 execute as @a[scores={mb.stop=-2..}] run scoreboard players set @s mb.stop -3
+
+scoreboard players enable @a mb.reset_sound
+execute as @a[scores={mb.reset_sound=1..}] at @s run function mblock:block/player/entity/x_private/clear_old
+execute as @a[scores={mb.reset_sound=1..}] run scoreboard players set @s mb.reset_sound 0

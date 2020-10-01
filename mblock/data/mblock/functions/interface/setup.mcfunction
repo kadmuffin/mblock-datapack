@@ -12,5 +12,6 @@ scoreboard objectives add mb.width trigger
 
 scoreboard objectives add mb.floor.id trigger
 scoreboard objectives add mb.gb.box_speed trigger
+scoreboard objectives add mb.reset_sound trigger
 
 execute unless score #max_lang mb.menu.lang matches 1.. run scoreboard players set #max_lang mb.menu.lang 1

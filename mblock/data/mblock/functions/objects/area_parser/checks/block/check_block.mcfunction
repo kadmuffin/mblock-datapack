@@ -10,4 +10,4 @@ execute as @s[scores={_aparse.tmp=0}] unless score @s _aparse.z >= @s aparse.zsi
 
 execute as @s[tag=!render, scores={_aparse.tmp=0}] run function mblock:objects/area_parser/checks/block/x_private/not_render
 
-execute if entity @a[distance=0..1] run function mblock:block/player/entity/set_default
+execute if entity @a[distance=0..3] run function mblock:block/player/entity/set_default

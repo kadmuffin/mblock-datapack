@@ -4,10 +4,10 @@ tag @s[nbt={OnGround: 1b}] remove flying
 tag @s remove extended
 tag @s[nbt={Inventory: [{Slot: 100b, id: "minecraft:leather_boots", tag: {player: 1b}}]},gamemode=!spectator] add extended
 
-scoreboard players add @s[scores={mbn.sound=1..}] _aparse.x 1
-execute as @s[tag=!manual_gb_sound,scores={_aparse.x=40..}] unless entity @e[tag=z_step,distance=0..60] run function mblock:block/player/entity/reset_default
-execute as @s[tag=!manual_gb_sound,scores={_aparse.x=70..}] run function mblock:block/player/entity/reset_default
-execute as @s[tag=manual_gb_sound,scores={_aparse.x=400..}] run function mblock:block/player/entity/reset_default
+scoreboard players add @s[tag=!manual_gb_sound,scores={mbn.sound=1..}] _aparse.x 1
+execute as @s[scores={_aparse.x=60..}] unless entity @e[tag=box_step,distance=0..100] run function mblock:block/player/entity/reset_default
+execute as @s[scores={_aparse.x=90..}] run function mblock:block/player/entity/reset_default
+#execute as @s[tag=manual_gb_sound,scores={_aparse.x=400..}] run function mblock:block/player/entity/reset_default
 
 execute as @s[tag=!anim_boots,tag=extended] run particle note ~ ~1 ~ 1 1 1 0.1 8
 execute as @s[tag=!anim_boots,tag=extended] run playsound minecraft:block.note_block.bit player @a[distance=0..15] ~ ~1 ~ 1 1.65
