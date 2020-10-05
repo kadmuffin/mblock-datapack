@@ -5,7 +5,9 @@
       "shulker_box",
       "command_block",
       "chain_command_block",
-      "repeating_command_block"
+      "repeating_command_block",
+      "red_glazed_terracotta",
+      "green_glazed_terracotta"
     ]
   }
   

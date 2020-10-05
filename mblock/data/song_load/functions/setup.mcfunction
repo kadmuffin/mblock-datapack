@@ -21,3 +21,4 @@ scoreboard players set #-1 sload -1
 
 bossbar add song_load:progress "§5Item Reader"
 bossbar set song_load:progress players @a
+bossbar set song_load:progress visible false
