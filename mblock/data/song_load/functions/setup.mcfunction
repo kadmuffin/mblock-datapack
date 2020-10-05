@@ -9,7 +9,6 @@ scoreboard objectives add sload_tmp3 dummy
 # Defines the amount of max call of z loops
 #scoreboard players set maxRuns_x sload_run 6
 scoreboard players set maxRuns_y sload_run -1
-scoreboard players set maxRuns_z sload_run -1
 scoreboard players set waitPerRuns sload_tick -1
 
 # Constants

@@ -19,6 +19,8 @@ function mblock:interface/langs/english/normal/show_top
 # [x] Show Signature
 function mblock:interface/langs/english/normal/show_signature
 
+tellraw @s {"text": "--------","color": "dark_gray"}
+
 # [x] Use Raw BPM
 function mblock:interface/langs/english/normal/raw_bpm
 

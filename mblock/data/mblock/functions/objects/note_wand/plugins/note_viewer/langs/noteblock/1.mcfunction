@@ -1,0 +1,25 @@
+execute if score #tone_scaled _mbtmp matches 0 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§8Note: §a0\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 1 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a1\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 2 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a2\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 3 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a3\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 4 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a4\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 5 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a5\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 6 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a6\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 7 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a7\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 8 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a8\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 9 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a9\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 10 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a10\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 11 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a11\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 12 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a12\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 13 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a13\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 14 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a14\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 15 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a15\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 16 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a16\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 17 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a17\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 18 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a18\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 19 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a19\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 20 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a20\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 21 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a21\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 22 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a22\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 23 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a23\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}
+execute if score #tone_scaled _mbtmp matches 24 run summon area_effect_cloud ~ ~.65 ~ {CustomName:"\"§5(1) §8Note: §a24\"",CustomNameVisible:1b,Age:-25s,Particle:"block air",Tags:["_toneName"]}

@@ -12,7 +12,13 @@ function mblock:interface/langs/spanish/normal/song_length
 
 function mblock:interface/utils/jump_line
 
+# [x] Show Top
 function mblock:interface/langs/spanish/normal/show_top
+# [x] Show Signature
+function mblock:interface/langs/spanish/normal/show_signature
+
+tellraw @s {"text": "--------","color": "dark_gray"}
+
 function mblock:interface/langs/spanish/normal/compress_bpm
 
 function mblock:interface/utils/jump_line

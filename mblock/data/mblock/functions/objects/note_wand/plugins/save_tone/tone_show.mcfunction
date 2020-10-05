@@ -1,6 +1,6 @@
 scoreboard players operation #tone_scaled _mbtmp = @s _mbtmp1
-execute if score #tone_scaled _mbtmp matches -24..-1 run scoreboard players add #tone_scaled _mbtmp 25
-execute if score #tone_scaled _mbtmp matches 25..48 run scoreboard players remove #tone_scaled _mbtmp 25
+execute if score #tone_scaled _mbtmp matches -24..-1 run scoreboard players add #tone_scaled _mbtmp 24
+execute if score #tone_scaled _mbtmp matches 25..48 run scoreboard players remove #tone_scaled _mbtmp 24
 
 execute if score #tone_scaled _mbtmp matches 0 run summon falling_block ~ ~.65 ~ {BlockState:{Name:"minecraft:lime_terracotta"},CustomName:"\"§aClick to Drop!\"",CustomNameVisible:1b,NoGravity:1b}
 execute if score #tone_scaled _mbtmp matches 1 run summon falling_block ~ ~.65 ~ {BlockState:{Name:"minecraft:green_terracotta"},CustomName:"\"§aClick to Drop!\"",CustomNameVisible:1b,NoGravity:1b}
