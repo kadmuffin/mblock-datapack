@@ -43,5 +43,5 @@ execute as @s[tag=look_neg,scores={mb.dir=2..3}] positioned ~-1 ~ ~ if block ~ ~
 
 tag @s[tag=_not_pos_update] remove _not_pos_update
 
-execute at @s unless entity @e[tag=music_player,distance=0..30] unless entity @a[distance=0..50] run kill @s
-execute at @s if entity @e[tag=music_player,distance=0..30] unless entity @a[distance=0..70] run kill @s
+execute at @s unless entity @e[tag=music_player,distance=0..60] unless entity @a[distance=0..90] run kill @s
+execute at @s if entity @e[tag=music_player,distance=0..60] unless entity @a[distance=0..120] run kill @s

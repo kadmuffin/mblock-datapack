@@ -17,9 +17,6 @@ execute as @s[tag=!_off_hand,tag=holding_block] run function mblock:objects/note
 execute as @s[tag=clicking,tag=_off_hand] positioned ~ ~1 ~ unless entity @e[tag=music_player,distance=0..1,limit=1] positioned ~ ~-1 ~ run function mblock:objects/note_wand/plugins/save_tone/main
 execute as @s[tag=_off_hand,tag=holding_block] positioned ~ ~1 ~ unless entity @e[tag=music_player,distance=0..1,limit=1] positioned ~ ~-1 ~ if block ~ ~1 ~ air positioned ~ ~.5 ~ run function mblock:objects/note_wand/plugins/save_tone/tone_show
 
-# Plays the example sound for the particular block
-execute if block ~ ~ ~ #mblock:soundable as @s[tag=clicking,tag=!sneaking,tag=!holding_block,tag=!_off_hand] run function mblock:objects/note_wand/plugins/hear_sound/main
-
 # Changes the scale block
 execute as @s[tag=clicking,tag=!_off_hand] if block ~ ~ ~ #mblock:octaves/extra run function mblock:objects/note_wand/plugins/flip_scale/main
 
