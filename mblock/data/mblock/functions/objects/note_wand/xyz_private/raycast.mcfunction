@@ -13,5 +13,6 @@ execute as @s anchored eyes positioned ^ ^ ^1 if block ~ ~ ~ #mblock:raycast/not
 execute unless score @s _rayc_tmp <= #LimitDistance _rayc_tmp as @s[tag=!block_hitted] anchored eyes positioned ^ ^ ^1 align xyz positioned ~.5 ~ ~.5 run function mblock:objects/note_wand/plugins/on_block_not_hit
 tag @s remove block_hitted
 
+execute unless score @s _rayc_tmp <= #LimitDistance _rayc_tmp run scoreboard players reset #last_run _rayc_tmp
 execute unless score @s _rayc_tmp <= #LimitDistance _rayc_tmp run scoreboard players reset @s _rayc_tmp
 execute as @s if score @s _rayc_tmp <= #LimitDistance _rayc_tmp positioned ^ ^ ^1 run function mblock:objects/note_wand/xyz_private/raycast

@@ -10,4 +10,4 @@ execute unless score #sound _mbtmp = @s mbn.sound positioned ~ ~1 ~ run function
 scoreboard players reset @s[tag=!sneaking] _mbtmp1
 tag @s[tag=!sneaking] remove holding_block
 
-execute positioned ~ ~1 ~ run function mblock:objects/note_wand/plugins/note_get/play_note
+#execute positioned ~ ~1 ~ run function mblock:objects/note_wand/plugins/note_get/play_note

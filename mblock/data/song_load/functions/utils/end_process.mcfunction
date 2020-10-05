@@ -1,4 +1,4 @@
-execute as @e[tag=z_pointer,limit=1] if entity @s[tag=save] run function song_load:utils/method/copy_data_to_item
+execute as @s[tag=save] run function song_load:utils/method/copy_data_to_item
 tag @e[tag=mplayer_block,limit=1] remove mplayer_block
 
 function mblock:interface/utils/clear_chat

@@ -50,6 +50,7 @@ class metadata(object):
         # Updated on song.py by get_notes()
         self.xsize = 1
         self.ysize = 1
+        self.time_signature = 4
 
         if header != None:
             self.loop = header.loop
@@ -60,3 +61,4 @@ class metadata(object):
             self.tempo = header.tempo
             self.artist = header.song_author
             self.length = header.song_length
+            self.time_signature = header.time_signature

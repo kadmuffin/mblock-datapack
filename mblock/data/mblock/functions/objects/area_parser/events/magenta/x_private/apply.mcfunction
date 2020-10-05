@@ -15,3 +15,5 @@ scoreboard players reset @s _aparse.tmp1
 execute if entity @s[tag=!disable_redirection,tag=direction_changed] run function mblock:objects/area_parser/events/magenta/x_private/redirect
 
 tag @s add __skip_x
+tag @s add render_floor
+tag @s remove skip_floor

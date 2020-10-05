@@ -1,8 +1,10 @@
 {
-	"values": [
-		"air",
-		"water",
-		"#carpets",
-		"#slabs"
-	]
+    "values": [
+        "air",
+        "water",
+        "#carpets",
+        "#slabs",
+        "#standing_signs",
+        "#wall_signs"
+    ]
 }

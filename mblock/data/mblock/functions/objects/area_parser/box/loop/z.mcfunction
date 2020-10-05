@@ -2,7 +2,7 @@ function mblock:objects/area_parser/box/utils/tags
 function mblock:objects/area_parser/box/utils/z_step/skip_x
 
 function mblock_events:box/main
-
+execute as @s if score @s _aparse.z >= @s aparse.zsize run function mblock:objects/area_parser/box/utils/z_step/before_end
 execute as @s if score @s _aparse.z > @s aparse.zsize run kill @s
 
 execute as @s[tag=!skip_x] run function mblock:objects/area_parser/box/utils/z_step/render

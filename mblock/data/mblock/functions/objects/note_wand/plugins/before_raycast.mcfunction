@@ -16,5 +16,7 @@
 #title @s[tag=_off_hand] actionbar {"text": "You are on ", "color":"blue"},{"text":"Copy & Save", "color": "red"},{"text":" mode!", "color": "blue"}
 #title @s[tag=!_off_hand] actionbar {"text": "You are on ", "color":"blue"},{"text":"Change Tone", "color": "green"},{"text":" mode!", "color": "blue"}
 
+scoreboard players set @s[tag=_off_hand] _aparse.x 0
+
 # Adds a tag to the player for external plugins
 execute if score #external_plugins _rayc_tmp matches 1 run tag @s add _using_wand

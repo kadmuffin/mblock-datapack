@@ -23,6 +23,8 @@ execute if data entity @s ArmorItems[3].tag.song.comp_bpm run function song_load
 execute if data entity @s ArmorItems[3].tag.song.nbs_bpm run function song_load:utils/parse/nbs_bpm
 # Parse Global Sound
 execute if data entity @s ArmorItems[3].tag.song.gb_sound run function song_load:utils/parse/gb_sound
+# Parse Time Signature
+execute if data entity @s ArmorItems[3].tag.song.signature run function song_load:utils/parse/time_signature
 
 
 execute as @e[tag=z_step] if score @s aparse.id = @e[tag=mplayer_block,limit=1] aparse.id run kill @s

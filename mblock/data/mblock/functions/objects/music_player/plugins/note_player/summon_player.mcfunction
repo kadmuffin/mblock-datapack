@@ -22,20 +22,14 @@ scoreboard players remove @s aparse.xsize 1
 # West = 2
 # East = 3
 
-execute as @s[tag=instant_start,scores={mb.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~1.5 run function mblock:objects/area_parser/play_wall
-execute as @s[tag=instant_start,scores={mb.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-1.5 run function mblock:objects/area_parser/play_wall
-execute as @s[tag=instant_start,scores={mb.dir=2}] align xz positioned ~.5 ~ ~.5 positioned ~-1.5 ~ ~ run function mblock:objects/area_parser/play_wall
-execute as @s[tag=instant_start,scores={mb.dir=3}] align xz positioned ~.5 ~ ~.5 positioned ~1.5 ~ ~ run function mblock:objects/area_parser/play_wall
-
-execute as @s[tag=!instant_start,scores={mb.dir=0}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~.5 run function mblock:objects/area_parser/play_wall
-execute as @s[tag=!instant_start,scores={mb.dir=1}] align xz positioned ~.5 ~ ~.5 positioned ~ ~ ~-.5 run function mblock:objects/area_parser/play_wall
-execute as @s[tag=!instant_start,scores={mb.dir=2}] align xz positioned ~.5 ~ ~.5 positioned ~-.5 ~ ~ run function mblock:objects/area_parser/play_wall
-execute as @s[tag=!instant_start,scores={mb.dir=3}] align xz positioned ~.5 ~ ~.5 positioned ~.5 ~ ~ run function mblock:objects/area_parser/play_wall
+execute as @s[tag=play_2_blocks] run function mblock:objects/music_player/plugins/note_player/xyz_private/repeat
+execute as @s[tag=!play_2_blocks] run function mblock:objects/music_player/plugins/note_player/xyz_private/normal
 
 scoreboard players operation @s aparse.xsize = #x mb.travel
 
 tag @s remove _summon_player
 tag @s remove _not_align
 tag @s remove instant_start
+tag @s remove play_2_blocks
 
 playsound minecraft:block.barrel.close block @s ~ ~ ~ 1 1.8

@@ -87,7 +87,7 @@ class song(object):
         if not self.metadata.xsize > 0:
             self.metadata.xsize = len(self.data)
         return (
-                'give @s minecraft:enchanted_book{display:{Name:"\\"\u00c2\u00a75%s\\"",Lore:["\\"\u00c2\u00a76Song BPM:\\"","\\"\u00c2\u00a79%s\\"","\\"\u00c2\u00a76Size:\\"","\\"\u00c2\u00a79%s - %s - %s\\"","\\"\u00c2\u00a76NBS File:\\"","\\"\u00c2\u00a7aTrue\\""]}, contains_song:1b, song:{xsize:%s,ysize:%s,zsize:%s,bpm:%s, nbs_bpm: 1b}, data:{events:[],notes:%s}}'
+                'give @s minecraft:enchanted_book{display:{Name:"\\"\u00c2\u00a75%s\\"",Lore:["\\"\u00c2\u00a76Song BPM:\\"","\\"\u00c2\u00a79%s\\"","\\"\u00c2\u00a76Size:\\"","\\"\u00c2\u00a79%s - %s - %s\\"","\\"\u00c2\u00a76NBS File:\\"","\\"\u00c2\u00a7aTrue\\""]}, contains_song:1b, song:{xsize:%s,ysize:%s,zsize:%s,bpm:%s, signature: [%s, 4], nbs_bpm: 1b}, data:{events:[],notes:%s}}'
             % (
                 self.metadata.name,
                 self.metadata.bpm,
@@ -98,6 +98,7 @@ class song(object):
                 self.metadata.ysize,
                 self.metadata.length,
                 self.metadata.bpm,
+                self.metadata.time_signature,
                 self.data,
             )
         )

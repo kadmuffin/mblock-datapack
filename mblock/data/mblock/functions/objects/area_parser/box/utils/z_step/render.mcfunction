@@ -1,3 +1,5 @@
+execute as @s[tag=show_signature] run function mblock:objects/area_parser/box/utils/z_step/calculate_signature
+
 execute as @s[tag=!show_top,tag=!on_center] positioned ~ ~.5 ~ run function mblock:objects/area_parser/box/utils/summon_y
 execute as @s[tag=show_top] positioned ~ ~.5 ~ run function mblock:objects/area_parser/box/utils/summon_y
 

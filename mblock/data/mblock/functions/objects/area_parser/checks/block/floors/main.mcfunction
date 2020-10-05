@@ -1,6 +1,7 @@
-execute if score @s mb.floor matches 1 run function mblock:objects/area_parser/checks/block/floors/set_grass_block
-execute if score @s mb.floor matches 2 run function mblock:objects/area_parser/checks/block/floors/set_smooth_stone
-execute if score @s mb.floor matches 3 run function mblock:objects/area_parser/checks/block/floors/set_stone_bricks
-execute if score @s mb.floor matches 4 run function mblock:objects/area_parser/checks/block/floors/set_dark_prismarine
+scoreboard players operation #travel _aparse.z = @s _aparse.z
 
-function #mb_plugin:floor
+execute unless block ~ ~-1 ~ #mb_plugin:floor/not_replaceable run function mblock:objects/area_parser/checks/block/floors/x_private/floors
+
+scoreboard players add #travel _aparse.z 1
+
+execute as @s[tag=!skip_floor] run function mblock:objects/area_parser/checks/block/floors/x_private/next

@@ -7,11 +7,20 @@ scoreboard players operation song_ysize sload = @e[tag=music_player,sort=nearest
 scoreboard players operation song_bpm sload = @e[tag=music_player,sort=nearest,limit=1] mb.bpm
 scoreboard players operation gb_sound sload = @e[tag=music_player,sort=nearest,limit=1] mb_tmp2
 
+scoreboard players operation song_length sload_tmp = song_length sload
+scoreboard players remove song_length sload_tmp 1
+
 scoreboard players operation #middle sload_tmp2 = song_xsize sload
 scoreboard players operation #middle sload_tmp2 /= #2 sload
 
-execute if entity @e[tag=mblock_player,tag=nbs_bpm,limit=1] run tag @s add nbs_bpm
-execute if entity @e[tag=mblock_player,tag=compress_bpm,limit=1] run tag @s add compress_bpm
+scoreboard players operation signature_a sload = @e[tag=music_player,sort=nearest,limit=1] mb.sig.a
+scoreboard players operation signature_b sload = @e[tag=music_player,sort=nearest,limit=1] mb.sig.b
+
+scoreboard players set nbs_bpm sload 0
+scoreboard players set compress_bpm sload 0
+
+execute as @e[tag=music_player,sort=nearest,limit=1] if entity @s[tag=nbs_bpm] run scoreboard players set nbs_bpm sload 1
+execute as @e[tag=music_player,sort=nearest,limit=1] if entity @s[tag=compress_bpm] run scoreboard players set compress_bpm sload 1
 
 function song_load:utils/summon/summon
 execute if entity @s[tag=self_align] run tag @e[tag=z_pointer] add in_box

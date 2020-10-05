@@ -12,16 +12,16 @@ playsound minecraft:block.beacon.power_select neutral @a[distance=0..25] ~ ~ ~ 1
 fill ~1 ~-2 ~1 ~-1 ~-2 ~-1 black_glazed_terracotta[facing=west]
 
 scoreboard players set @s mb.bpm 90
+# Time Signature: 4/4
+scoreboard players set @s mb.sig.a 4
+scoreboard players set @s mb.sig.b 4
 
-#scoreboard players set @s aparse.dir 1
 scoreboard players set @s aparse.xsize 3
 scoreboard players set @s aparse.ysize 3
 scoreboard players set @s aparse.zsize 9
 
-#scoreboard players add global mb.id 1
-#scoreboard players operation @s mb.id = global mb.id
 
-scoreboard players operation @s mb.floor = #floor_type _aparse_tmp
+scoreboard players set @s mb.floor 0
 scoreboard players operation @s mb.id > @e[tag=music_player] mb.id
 scoreboard players add @s mb.id 1
 

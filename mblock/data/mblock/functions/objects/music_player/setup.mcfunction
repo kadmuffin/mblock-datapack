@@ -8,6 +8,10 @@ scoreboard objectives add mb.travel dummy
 scoreboard objectives add mb_x_pos dummy
 scoreboard objectives add mb_z_pos dummy
 scoreboard objectives add mb.id dummy
+# Signatures:
+scoreboard objectives add mb.sig.a dummy
+scoreboard objectives add mb.sig.b dummy
+
 
 scoreboard players set global mb.id 0
 
