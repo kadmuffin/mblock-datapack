@@ -6,8 +6,8 @@ tellraw @s ["",{"text": " Velocidad de Lectura: ","color": "gray", "hoverEvent":
 
 function mblock:interface/utils/jump_line
 
-execute if entity @e[tag=z_pointer,tag=!pause_load] run tellraw @s ["",{"text": " "},{"text": " ▶ Pausar", "color": "blue", "clickEvent": {"action": "run_command","value": "/tag @e[tag=z_pointer] add pause_load"}},{"text": "    "},{"text": "[x] Detener", "color": "light_purple", "clickEvent": {"action": "run_command","value": "/function song_load:method/cancel"}}]
-execute if entity @e[tag=z_pointer,tag=pause_load] run tellraw @s ["",{"text": " "},{"text": " ▶ Continuar", "color": "gold", "clickEvent": {"action": "run_command","value": "/tag @e[tag=z_pointer] remove pause_load"}},{"text": "    "},{"text": "[x] Detener", "color": "light_purple", "clickEvent": {"action": "run_command","value": "/function song_load:method/cancel"}}]
+execute if entity @e[tag=z_pointer,tag=!pause_process] run tellraw @s ["",{"text": " "},{"text": " ▶ Pausar", "color": "blue", "clickEvent": {"action": "run_command","value": "/tag @e[tag=z_pointer] add pause_load"}},{"text": "    "},{"text": "[x] Detener", "color": "light_purple", "clickEvent": {"action": "run_command","value": "/function song_load:method/cancel"}}]
+execute if entity @e[tag=z_pointer,tag=pause_process] run tellraw @s ["",{"text": " "},{"text": " ▶ Continuar", "color": "gold", "clickEvent": {"action": "run_command","value": "/tag @e[tag=z_pointer] remove pause_load"}},{"text": "    "},{"text": "[x] Detener", "color": "light_purple", "clickEvent": {"action": "run_command","value": "/function song_load:method/cancel"}}]
 
 function mblock:interface/utils/jump_line
 function mblock:interface/utils/end_line

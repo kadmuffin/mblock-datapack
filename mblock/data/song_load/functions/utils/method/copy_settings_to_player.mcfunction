@@ -26,6 +26,7 @@ execute if data entity @s ArmorItems[3].tag.song.gb_sound run function song_load
 # Parse Time Signature
 execute if data entity @s ArmorItems[3].tag.song.signature run function song_load:utils/parse/time_signature
 
+data modify entity @e[tag=mplayer_block,limit=1] Item.tag.display.Name set from entity @s CustomName
 
 execute as @e[tag=z_step] if score @s aparse.id = @e[tag=mplayer_block,limit=1] aparse.id run kill @s
 tag @e[tag=mplayer_block,limit=1] remove mplayer_block

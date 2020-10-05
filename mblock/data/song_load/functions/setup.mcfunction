@@ -17,7 +17,3 @@ scoreboard players set #2 sload 2
 scoreboard players set #3 sload 3
 scoreboard players set #4 sload 4
 scoreboard players set #-1 sload -1
-
-bossbar add song_load:progress "§5Item Reader"
-bossbar set song_load:progress players @a
-bossbar set song_load:progress visible false

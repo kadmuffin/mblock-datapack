@@ -1,3 +1,6 @@
+bossbar add song_load:progress "§5Item Reader"
+bossbar set song_load:progress players @a
+
 bossbar set song_load:progress visible false
 bossbar set song_load:progress name "§aSaving Song!"
 bossbar set song_load:progress value 0

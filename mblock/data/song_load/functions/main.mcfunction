@@ -2,6 +2,9 @@
 scoreboard players add @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] sload_tick 1
 
 execute as @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] at @s if score @s sload_tick >= waitPerRuns sload_tick unless score @s sload_tick <= waitNextTick sload_tick run function song_load:loop/main
+execute as @e[tag=z_pointer,tag=!preprocessing,tag=!pause_process] at @s if score @s sload_tick >= waitPerRuns sload_tick unless score @s sload_tick <= waitNextTick sload_tick run function song_load:loop/main
+execute as @e[tag=z_pointer,limit=1] at @s unless entity @a[distance=..35] run function song_load:utils/tp/tp_near_player
+
 
 execute if entity @e[tag=z_pointer,tag=initial_moved,scores={sload_run=250..}] run function song_load:utils/loop/fail
 
