@@ -4,6 +4,7 @@ scoreboard objectives add mb.menu.page dummy
 scoreboard objectives add mb.tp trigger
 scoreboard objectives add mb.play trigger
 scoreboard objectives add mb.stop trigger
+scoreboard objectives add mb.open trigger
 
 scoreboard objectives add mb.tempo trigger
 scoreboard objectives add mb.length trigger

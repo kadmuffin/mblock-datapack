@@ -21,3 +21,7 @@ execute as @a[scores={mb.stop=-2..}] run scoreboard players set @s mb.stop -3
 scoreboard players enable @a mb.reset_sound
 execute as @a[scores={mb.reset_sound=1..}] at @s run function mblock:block/player/entity/x_private/clear_old
 execute as @a[scores={mb.reset_sound=1..}] run scoreboard players set @s mb.reset_sound 0
+
+scoreboard players enable @a mb.open
+execute as @a[scores={mb.open=1..}] at @s run tag @s add __menu
+execute as @a[scores={mb.open=1..}] run scoreboard players set @s mb.open 0

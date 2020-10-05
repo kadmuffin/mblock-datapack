@@ -6,4 +6,4 @@ scoreboard players enable @s mb.tempo
 execute if score @s[scores={mb.width=1..}] mb.width matches 1..20 run function mblock:interface/utils/x_private/trigger/update.xsize
 execute if score @s[scores={mb.height=1..}] mb.height matches 1..14 run function mblock:interface/utils/x_private/trigger/update.ysize
 execute if score @s[scores={mb.length=1..}] mb.length matches 1.. run function mblock:interface/utils/x_private/trigger/update.zsize
-execute if score @s[scores={mb.bpm=5..}] mb.bpm matches 5.. run function mblock:interface/utils/x_private/trigger/update.bpm
+execute if score @s[scores={mb.tempo=5..}] mb.tempo matches 5.. run function mblock:interface/utils/x_private/trigger/update.bpm
