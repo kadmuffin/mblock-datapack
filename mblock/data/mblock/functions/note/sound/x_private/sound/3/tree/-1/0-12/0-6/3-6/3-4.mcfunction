@@ -1,4 +1,4 @@
 # A
-execute if score #t_tone _mbtmp matches 3 run playsound minecraft:block.note_block.click_-1 block @a[distance=0..78] ~ ~ ~ 3 0.594604
+execute if score #t_tone _mbtmp matches 3 run playsound minecraft:block.note_block.hat_-1 block @a[distance=0..78] ~ ~ ~ 3 0.594604
 # A#/Bb
-execute if score #t_tone _mbtmp matches 4 run playsound minecraft:block.note_block.click_-1 block @a[distance=0..78] ~ ~ ~ 3 0.629961
+execute if score #t_tone _mbtmp matches 4 run playsound minecraft:block.note_block.hat_-1 block @a[distance=0..78] ~ ~ ~ 3 0.629961

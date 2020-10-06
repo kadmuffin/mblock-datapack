@@ -1,4 +1,4 @@
 # G (Octave 2 from here)
-execute if score #t_tone _mbtmp matches 13 run playsound minecraft:block.note_block.bdrum_1 block @a[distance=0..78] ~ ~ ~ 3 1.059463
+execute if score #t_tone _mbtmp matches 13 run playsound minecraft:block.note_block.basedrum_1 block @a[distance=0..78] ~ ~ ~ 3 1.059463
 # G#/Ab
-execute if score #t_tone _mbtmp matches 14 run playsound minecraft:block.note_block.bdrum_1 block @a[distance=0..78] ~ ~ ~ 3 1.122462
+execute if score #t_tone _mbtmp matches 14 run playsound minecraft:block.note_block.basedrum_1 block @a[distance=0..78] ~ ~ ~ 3 1.122462
