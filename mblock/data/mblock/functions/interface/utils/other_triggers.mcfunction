@@ -1,3 +1,5 @@
+function mblock:interface/loop/trigger
+
 scoreboard players enable @a mb.gb.box_speed
 execute as @a[scores={mb.gb.box_speed=1}] run function mblock:interface/commands/increase_render_speed
 execute as @a[scores={mb.gb.box_speed=1}] run scoreboard players set @s mb.gb.box_speed 0

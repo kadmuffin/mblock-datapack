@@ -1,5 +1,6 @@
 scoreboard players set schedule_z _aparse.tmp 1
 
+execute unless entity @e[tag=music_player] run scoreboard players set .global aparse.id 0
 execute at @r if entity @e[tag=_scheduled2] run function mblock:objects/area_parser/box/utils/run_on_mblocks
 
 execute unless score #render_speed _aparse.tmp matches 1.. run schedule function mblock:objects/area_parser/box/schedule_z_step 4t

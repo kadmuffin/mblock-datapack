@@ -9,7 +9,6 @@ execute unless score #octave _mbtmp matches 1 unless score #octave _mbtmp matche
 
 scoreboard players operation #tone _mbtmp = #tone_scaled _mbtmp
 function mblock:note/tone/set
-function mblock:objects/note_wand/plugins/note_get/play_note
 
 playsound minecraft:block.bamboo.break block @s ~ ~ ~ 1 1.5 1
 

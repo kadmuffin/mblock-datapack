@@ -7,6 +7,7 @@ function mblock:interface/utils/draw_title
 execute if score #tmp mb.menu.tmp matches 0.. unless score #tmp mb.menu.tmp = @s mb.menu.tmp run playsound block.dispenser.fail block @s ~ ~ ~ 0.8 1.75
 execute if score #tmp mb.menu.lang matches 0.. unless score #tmp mb.menu.lang = @s mb.menu.lang run playsound block.dispenser.fail block @s ~ ~ ~ 0.8 1.75
 
+scoreboard players reset #tmp mb.max_accuracy
 scoreboard players operation #tmp mb.menu.tmp = @s mb.menu.tmp
 scoreboard players operation #tmp mb.menu.lang = @s mb.menu.lang
 scoreboard players operation #tmp mb.floor = @e[tag=music_player,sort=nearest,limit=1] mb.floor

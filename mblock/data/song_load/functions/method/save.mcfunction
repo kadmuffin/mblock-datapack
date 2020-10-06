@@ -5,7 +5,7 @@ scoreboard players remove song_xsize sload 1
 
 scoreboard players operation song_ysize sload = @e[tag=music_player,sort=nearest,limit=1] aparse.ysize
 scoreboard players operation song_bpm sload = @e[tag=music_player,sort=nearest,limit=1] mb.bpm
-scoreboard players operation gb_sound sload = @e[tag=music_player,sort=nearest,limit=1] mb_tmp2
+scoreboard players operation gb_sound sload = @e[tag=music_player,sort=nearest,limit=1] mbn.sound
 
 scoreboard players operation song_length sload_tmp = song_length sload
 scoreboard players remove song_length sload_tmp 1
