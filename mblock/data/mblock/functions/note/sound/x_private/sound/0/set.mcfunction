@@ -1,1 +1,1 @@
-execute if block ~ ~-1 ~ air run setblock ~ ~ ~ dirt
+execute if block ~ ~-1 ~ air if block ~ ~-2 ~ air run setblock ~ ~ ~ dirt

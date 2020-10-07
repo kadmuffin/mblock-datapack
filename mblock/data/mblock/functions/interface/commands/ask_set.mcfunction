@@ -1,0 +1,1 @@
+tellraw @s [{"text":"This will load a 32x32 structure. ","color":"yellow"},{"text":"[Continue]","color": "green", "clickEvent":{"action":"run_command","value":"/function mblock:interface/commands/set_notes"}}]

@@ -17,7 +17,7 @@ function mblock:interface/langs/spanish/normal/show_top
 # [x] Show Signature
 function mblock:interface/langs/spanish/normal/show_signature
 
-tellraw @s {"text": "--------","color": "gray"}
+execute if entity @e[tag=music_player] run tellraw @s {"text": "--------","color": "gray"}
 
 function mblock:interface/langs/spanish/normal/compress_bpm
 

@@ -9,4 +9,4 @@ execute as @s[tag=render_floor,scores={_aparse.tmp=0}] run function mblock:objec
 
 execute as @s[tag=!render, scores={_aparse.tmp=0}] run function mblock:objects/area_parser/checks/block/x_private/not_render
 
-execute if entity @a[distance=0..3] run function mblock:block/player/entity/set_default
+execute as @s[tag=!render] if entity @a[distance=0..3] run function mblock:block/player/entity/set_default
