@@ -1,0 +1,1 @@
+execute if block ~ ~1 ~ hopper if block ~ ~ ~ gray_glazed_terracotta run scoreboard players set @s mb.event 4562

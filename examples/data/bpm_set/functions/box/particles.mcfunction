@@ -1,0 +1,1 @@
+execute if score @s mb.event matches 4562 run particle dragon_breath ~ ~ ~ 0 0 0 0 1

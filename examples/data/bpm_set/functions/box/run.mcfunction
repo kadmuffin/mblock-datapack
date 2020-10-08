@@ -1,0 +1,1 @@
+execute if score @s mb.event matches 4562 run function bpm_set:box/x_private/run

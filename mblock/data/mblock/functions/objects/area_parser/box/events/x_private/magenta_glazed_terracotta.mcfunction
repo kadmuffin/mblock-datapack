@@ -1,0 +1,1 @@
+execute if score @s _aparse.z >= @s aparse.zsize run function mblock:objects/area_parser/box/events/x_private/x_private/magenta

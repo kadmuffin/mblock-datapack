@@ -1,1 +1,0 @@
-execute if score @s _aparse.z >= @s aparse.zsize run function mblock_events:box/x_private/magenta

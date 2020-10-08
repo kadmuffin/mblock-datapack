@@ -1,1 +1,0 @@
-scoreboard objectives add mb.event dummy

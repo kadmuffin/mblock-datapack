@@ -11,6 +11,7 @@ scoreboard objectives add aparse.id dummy
 scoreboard objectives add _aparse.tmp1 dummy
 scoreboard objectives add _aparse.tmp2 dummy
 scoreboard objectives add _aparse.tmp3 dummy
+scoreboard objectives add mb.event dummy
 
 # Schedules functions at start
 scoreboard players set schedule_y _aparse.tmp 0
