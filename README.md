@@ -10,7 +10,7 @@ This datapack experiment makes blocks be able to play notes and simulate NoteBlo
 
 You can grab the latest release of the datapack from [here](https://github.com/kadmuffin/mblock-datapack/releases).
 
-### Loading NBS Files
+## Loading NBS Files
 
 The python script requires click and pynbs, you can install this dependencies by running.
 

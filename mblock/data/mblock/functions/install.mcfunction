@@ -11,10 +11,9 @@ function mblock:objects/item_reader/setup
 function mblock:interface/setup
 function mblock:note/setup
 function song_load:setup
-function mblock_events:setup
 
 execute unless score $.installed _mbtmp matches 1 as @a at @s run function mblock:interface/version/x_private/first_install
-execute unless score $.installed _mbtmp matches 1 run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loaded and installed!, ","color":"gold"}, {"text":"(Click for Notes)", "color": "green", "clickEvent":{"action":"run_command", "value":"/function mblock:interface/commands/ask_set"}}]
+execute unless score $.installed _mbtmp matches 1 run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loaded and installed! ","color":"gold"}, {"text":"(Click for Notes)", "color": "green", "clickEvent":{"action":"run_command", "value":"/function mblock:interface/commands/ask_set"}}]
 execute if score $.installed _mbtmp matches 1 run tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Loaded and started! ","color":"gold"}, {"text":"(Click for Notes)", "color": "green", "clickEvent":{"action":"run_command", "value":"/function mblock:interface/commands/ask_set"}}]
 scoreboard players set $.installed _mbtmp 1
 
