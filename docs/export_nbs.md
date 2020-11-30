@@ -14,9 +14,7 @@
 
 1. Enter your world folder.
 
-2. Search for a folder called `generated`:
-
-![Generated Folder](../assets/images/nbt_exported_1.png)
+2. Search for a folder called `generated`.
 
 3. Enter the `minecraft/` folder and then the `structures/` folder.
 
