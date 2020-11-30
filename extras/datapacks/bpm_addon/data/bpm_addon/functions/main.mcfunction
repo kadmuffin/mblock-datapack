@@ -1,0 +1,1 @@
+execute if block ~ ~1 ~ #slabs if block ~ ~ ~ barrel run function bpm_addon:utils/set_bpm

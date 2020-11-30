@@ -1,0 +1,1 @@
+execute if data entity @s ArmorItems[3].tag.note.sign run function sign_addon:sload/load

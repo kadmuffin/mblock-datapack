@@ -1,0 +1,2 @@
+execute if score #tone _mbtmp matches 9..10 run function sounds_no_min:x_private/sound/11/tree/0/0-12/7-12/9-12/9-10
+execute if score #tone _mbtmp matches 11..12 run function sounds_no_min:x_private/sound/11/tree/0/0-12/7-12/9-12/11-12

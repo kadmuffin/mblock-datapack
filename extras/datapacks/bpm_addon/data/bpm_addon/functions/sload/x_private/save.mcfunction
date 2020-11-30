@@ -1,0 +1,1 @@
+execute as @s[tag=center,tag=floor] if block ~ ~1 ~ #slabs if block ~ ~ ~ barrel run function bpm_addon:sload/save

@@ -1,0 +1,16 @@
+execute if block ~ ~-1 ~ white_wool run scoreboard players set #color_id _mbtmp 0
+execute if block ~ ~-1 ~ yellow_wool run scoreboard players set #color_id _mbtmp 1
+execute if block ~ ~-1 ~ magenta_wool run scoreboard players set #color_id _mbtmp 2
+execute if block ~ ~-1 ~ red_wool run scoreboard players set #color_id _mbtmp 3
+execute if block ~ ~-1 ~ light_blue_wool run scoreboard players set #color_id _mbtmp 4
+execute if block ~ ~-1 ~ lime_wool run scoreboard players set #color_id _mbtmp 5
+execute if block ~ ~-1 ~ cyan_wool run scoreboard players set #color_id _mbtmp 6
+execute if block ~ ~-1 ~ gray_wool run scoreboard players set #color_id _mbtmp 7
+execute if block ~ ~-1 ~ light_gray_wool run scoreboard players set #color_id _mbtmp 8
+execute if block ~ ~-1 ~ orange_wool run scoreboard players set #color_id _mbtmp 9
+execute if block ~ ~-1 ~ purple_wool run scoreboard players set #color_id _mbtmp 10
+execute if block ~ ~-1 ~ pink_wool run scoreboard players set #color_id _mbtmp 11
+execute if block ~ ~-1 ~ brown_wool run scoreboard players set #color_id _mbtmp 12
+execute if block ~ ~-1 ~ green_wool run scoreboard players set #color_id _mbtmp 13
+execute if block ~ ~-1 ~ blue_wool run scoreboard players set #color_id _mbtmp 14
+execute if block ~ ~-1 ~ black_wool run scoreboard players set #color_id _mbtmp 15

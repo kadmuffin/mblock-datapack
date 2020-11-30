@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ #standing_signs run function sign_addon:sload/save

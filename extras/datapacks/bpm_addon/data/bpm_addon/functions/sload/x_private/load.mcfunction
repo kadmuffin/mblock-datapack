@@ -1,0 +1,1 @@
+execute if score #event_id sload_tmp matches 7265 run function bpm_addon:sload/load

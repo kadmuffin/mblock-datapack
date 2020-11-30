@@ -1,0 +1,16 @@
+execute if score #color_id _mbtmp matches 0 run setblock ~ ~-1 ~ white_wool
+execute if score #color_id _mbtmp matches 1 run setblock ~ ~-1 ~ yellow_wool
+execute if score #color_id _mbtmp matches 2 run setblock ~ ~-1 ~ magenta_wool
+execute if score #color_id _mbtmp matches 3 run setblock ~ ~-1 ~ red_wool
+execute if score #color_id _mbtmp matches 4 run setblock ~ ~-1 ~ light_blue_wool
+execute if score #color_id _mbtmp matches 5 run setblock ~ ~-1 ~ lime_wool
+execute if score #color_id _mbtmp matches 6 run setblock ~ ~-1 ~ cyan_wool
+execute if score #color_id _mbtmp matches 7 run setblock ~ ~-1 ~ gray_wool
+execute if score #color_id _mbtmp matches 8 run setblock ~ ~-1 ~ light_gray_wool
+execute if score #color_id _mbtmp matches 9 run setblock ~ ~-1 ~ orange_wool
+execute if score #color_id _mbtmp matches 10 run setblock ~ ~-1 ~ purple_wool
+execute if score #color_id _mbtmp matches 11 run setblock ~ ~-1 ~ pink_wool
+execute if score #color_id _mbtmp matches 12 run setblock ~ ~-1 ~ brown_wool
+execute if score #color_id _mbtmp matches 13 run setblock ~ ~-1 ~ green_wool
+execute if score #color_id _mbtmp matches 14 run setblock ~ ~-1 ~ blue_wool
+execute if score #color_id _mbtmp matches 15 run setblock ~ ~-1 ~ black_wool

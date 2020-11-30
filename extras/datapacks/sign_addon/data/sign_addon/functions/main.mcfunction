@@ -1,0 +1,1 @@
+execute if block ~ ~ ~ #standing_signs if block ~ ~-1 ~ #sign_addon:colors run function sign_addon:play

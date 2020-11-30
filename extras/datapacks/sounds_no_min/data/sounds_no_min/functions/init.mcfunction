@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Addon Loaded: ","color":"blue"},{"text":"Sounds Volume Expansion","color":"aqua","hoverEvent": {"action": "show_text","value":"§7MusicBlocks: §eSounds Volume Expansion.\n§8Expands Datapack Hearing Limitation on Default Sounds."}},{"text":".","color":"blue"}]

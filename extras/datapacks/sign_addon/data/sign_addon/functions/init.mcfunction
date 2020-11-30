@@ -1,0 +1,1 @@
+tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Addon Loaded: ","color":"blue"},{"text":"Sign with Lyrics Addon","color":"aqua","hoverEvent": {"action": "show_text","value":"§7MusicBlocks: §eSigns with Lyrics Addon."}},{"text":".","color":"blue"}]
