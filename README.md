@@ -12,7 +12,7 @@ You can grab the latest release of the datapack from [here](https://github.com/k
 
 ## Loading NBS Files
 
-The python script requires click and pynbs, you can install this dependencies by running.
+The python script requires [click](https://github.com/pallets/click) and [pynbs](https://github.com/vberlier/pynbs), you can install this dependencies by running.
 
 ```python
 pip -r requirements.txt
