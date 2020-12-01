@@ -5,4 +5,6 @@ function mblock:interface/version/messages/update
 execute if entity @a run scoreboard players operation #version_x _mbtmp = #version_x_tmp _mbtmp
 execute if entity @a run scoreboard players operation #version_y _mbtmp = #version_y_tmp _mbtmp
 execute if entity @a run scoreboard players operation #version_z _mbtmp = #version_z_tmp _mbtmp
+
+function mblock:interface/version/x_private/first_install
 scoreboard players set #version_test _mbtmp 0
