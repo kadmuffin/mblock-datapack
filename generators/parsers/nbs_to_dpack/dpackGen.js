@@ -14,12 +14,12 @@ function createPack(packName, songs) {
   pack.folder(`data/${packName}/functions/songs`);
 
   for (let i = 0; i < songs.length; i += 1) {
-    pack.file([`data/${packName}/functions/songs/${songs[i].name}.mcfunction`], songs[i].data);
-    listSongs = listSongs.concat(`tellraw @a ["",{"text":" - ", "color": "green"},{"text":"${songs[i].name}","color":"dark_gray","clickEvent":{"action":"run_command","value":"/function ${packName}:songs/${songs[i].name}"}}]\n`);
+    pack.file([`data/${packName}/functions/songs/${songs[i].name}.mcfunction`], songs[i].data.replace('{[name]}', songs[i].name));
+    listSongs = listSongs.concat(`tellraw @a ["",{"text":" - ", "color": "green"},{"text":"${songs[i].name}","color":"gray","clickEvent":{"action":"run_command","value":"/function ${packName}:songs/${songs[i].name}"}}]\n`);
   }
 
   pack.file([`data/${packName}/functions/list.mcfunction`], listSongs);
-  pack.file([`data/${packName}/functions/init.mcfunction`], `tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Songs Loaded: ","color":"green"},{"text":"${packName}.","color":"aqua","italics":"true","bold":"true","hoverEvent":{"action":"show_text","value":"Click to List Songs!"},"clickEvent":{"action":"run_command","action":"/function ${packName}:list"}}]`);
+  pack.file([`data/${packName}/functions/init.mcfunction`], `tellraw @a ["",{"text":"[MusicBlocks] ","color":"dark_gray"},{"text":"Songs Loaded: ","color":"green"},{"text":"${packName}.","color":"aqua","italics":"true","bold":"true","hoverEvent":{"action":"show_text","value":"Click to List Songs!"},"clickEvent":{"action":"run_command","value":"/function ${packName}:list"}}]`);
   pack.file(['data/minecraft/tags/functions/load.json'], `{"values": ["${packName}:init"]}`);
 
   pack.file(['pack.mcmeta'], JSON.stringify({
