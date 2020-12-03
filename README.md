@@ -10,7 +10,11 @@ This datapack experiment makes blocks be able to play notes and simulate NoteBlo
 
 You can grab the latest release of the datapack from [here](https://github.com/kadmuffin/mblock-datapack/releases).
 
-## Loading NBS Files
+## Custom Addons
+
+You can use the Github Pages website to generate custom addons or parse NBS files in your browser [here](https://kadmuffin.github.io/mblock-datapack).
+
+## Loading NBS Files (Python)
 
 The python script requires [click](https://github.com/pallets/click) and [pynbs](https://github.com/vberlier/pynbs), you can install this dependencies by running.
 
