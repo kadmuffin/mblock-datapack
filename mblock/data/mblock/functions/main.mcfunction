@@ -1,9 +1,13 @@
 function mblock:interface/main
 
 function mblock:objects/note_wand/main
-function mblock:objects/music_player/main
 function mblock:objects/item_reader/schedules/main
+
 function song_play:main
+function mblock:objects/music_player/main
+execute as @e[tag=_play_event_kill,tag=!_play_event_lg] at @s unless entity @e[tag=note_player,distance=0..3] run kill @s
+execute as @e[tag=_play_event_lg] if score @s _mbtmp matches 3.. run kill @s
+
 function song_load:main
 
 execute as @a[gamemode=!spectator] at @s run function mblock:block/player/entity/play_blocks
