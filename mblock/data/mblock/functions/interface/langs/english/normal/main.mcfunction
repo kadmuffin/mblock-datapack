@@ -19,10 +19,13 @@ function mblock:interface/langs/english/normal/show_top
 # [x] Show Signature
 function mblock:interface/langs/english/normal/show_signature
 
+# [x] Simpler Rendering
+function mblock:interface/langs/english/normal/lighter_render
+
 execute if entity @e[tag=music_player] run tellraw @s {"text": "--------","color": "gray"}
 
-# [x] Use Raw BPM
-function mblock:interface/langs/english/normal/raw_bpm
+# [x] Compress BPM
+function mblock:interface/langs/english/normal/bpm_related
 
 function mblock:interface/utils/jump_line
 

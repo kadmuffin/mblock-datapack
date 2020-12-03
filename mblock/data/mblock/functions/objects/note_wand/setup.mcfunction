@@ -19,4 +19,4 @@ scoreboard objectives add _rayc_tmp dummy
 scoreboard objectives add carrot minecraft.used:minecraft.carrot_on_a_stick
 scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
 
-scoreboard players set #LimitDistance _rayc_tmp 6
+scoreboard players set #LimitDistance _rayc_tmp 8

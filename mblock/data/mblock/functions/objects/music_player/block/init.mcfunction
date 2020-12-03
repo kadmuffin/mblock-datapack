@@ -3,6 +3,7 @@ tag @s add _ancled_pos
 tag @s add check_air
 tag @s add show_area
 tag @s add mb_menu
+tag @s add lighter_render
 tag @s remove dying_item_frame
 
 particle firework ~ ~ ~ 0.1 0.5 0.1 0.1 15

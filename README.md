@@ -1,8 +1,8 @@
-# MusicBlocks: Blocks as Notes (MC Datapack)
-
-This datapack experiment makes blocks be able to play notes and simulate NoteBlocks without using any Repeaters (WIP, MAY CONTAIN BUGS).
+# MusicBlocks (Minecraft Datapack)
 
 ![MusicBlocks Banner](assets/images/banner.webp)
+
+This datapack experiment makes blocks be able to play notes and simulate NoteBlocks without using any Repeaters.
 
 ## Installation
 
@@ -23,3 +23,9 @@ Then you will be ready to parse your .nbs (Open NoteBlock Studio) file:
 ```python
 python parse_nbs.py --input_file FILE_HERE
 ```
+
+## License
+
+This datapack is under the [MIT License](https://github.com/kadmuffin/mblock-datapack/tree/master/LICENSE).
+
+The MusicBlocks logo is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).

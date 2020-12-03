@@ -16,6 +16,8 @@ function mblock:interface/utils/jump_line
 function mblock:interface/langs/spanish/normal/show_top
 # [x] Show Signature
 function mblock:interface/langs/spanish/normal/show_signature
+# [x] Simpler Rendering
+function mblock:interface/langs/spanish/normal/lighter_render
 
 execute if entity @e[tag=music_player] run tellraw @s {"text": "--------","color": "gray"}
 

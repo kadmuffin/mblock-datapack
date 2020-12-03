@@ -3,6 +3,7 @@ function mblock:interface/main
 function mblock:objects/note_wand/main
 function mblock:objects/music_player/main
 function mblock:objects/item_reader/schedules/main
+function song_play:main
 function song_load:main
 
 execute as @a[gamemode=!spectator] at @s run function mblock:block/player/entity/play_blocks

@@ -10,4 +10,6 @@ tellraw @s ["",{"text": "- ", "color": "green"}, {"text": "Added more BPM modes"
 tellraw @s {"text": " "}
 tellraw @s ["",{"text": "- ", "color": "green"}, {"text": "Custom Sounds & Events", "color": "gold"}]
 tellraw @s {"text": " "}
+tellraw @s ["",{"text": "- ", "color": "green"}, {"text": "Patch for enabling a performance rendering. (v0.8.1)", "color": "gold"}]
+tellraw @s {"text": " "}
 tellraw @s ["",{"text": "- ", "color": "green"}, {"text": "More Changes on ", "color": "gold"},{"text": "Github", "color": "blue", "bold": true, "italic": true, "underlined": true, "clickEvent": {"action": "open_url","value": "https://github.com/kadmuffin/mblock-datapack/releases/latest"}},{"text": ".", "color": "gold"}]
