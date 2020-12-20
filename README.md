@@ -32,4 +32,4 @@ python parse_nbs.py --input_file FILE_HERE
 
 This datapack is under the [MIT License](https://github.com/kadmuffin/mblock-datapack/tree/master/LICENSE).
 
-The MusicBlocks logo is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The MusicBlocks logo is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode).
